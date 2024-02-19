@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-02-19T18:56:36 IST" name="Default suite" finished-at="2024-02-19T18:57:09 IST" duration-ms="33271">
+    <groups>
+    </groups>
+    <test started-at="2024-02-19T18:56:36 IST" name="Default test" finished-at="2024-02-19T18:57:09 IST" duration-ms="33271">
+      <class name="com.testscripts.LoginGoogleTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testscripts.LoginGoogleTest@5ba3f27a]" started-at="2024-02-19T18:56:36 IST" name="setup" finished-at="2024-02-19T18:56:45 IST" duration-ms="9002" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="VerifyLoginGoogle([Ljava.lang.String;)[pri:0, instance:com.testscripts.LoginGoogleTest@5ba3f27a]" started-at="2024-02-19T18:56:45 IST" name="VerifyLoginGoogle" data-provider="dataFetch" finished-at="2024-02-19T18:57:09 IST" duration-ms="23575" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@47b67fcb]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- VerifyLoginGoogle -->
+      </class> <!-- com.testscripts.LoginGoogleTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
