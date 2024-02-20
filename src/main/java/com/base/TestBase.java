@@ -14,7 +14,7 @@ public class TestBase {
 
 	FileInputStream file;
 	public Properties prop;
-	public WebDriver driver;
+	public static WebDriver driver;
 
 	public TestBase() {
 

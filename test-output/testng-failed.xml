@@ -3,12 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testscripts.LoginGoogleTest">
+      <class name="com.testscripts.LoginGoogleTests">
         <methods>
+          <include name="ValidateOrderId"/>
           <include name="setup"/>
-          <include name="VerifyLoginGoogle" invocation-numbers="0"/>
+          <include name="ValidateRegUrl"/>
+          <include name="validateViewTicketUrl"/>
         </methods>
-      </class> <!-- com.testscripts.LoginGoogleTest -->
+      </class> <!-- com.testscripts.LoginGoogleTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

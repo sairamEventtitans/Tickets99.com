@@ -3,6 +3,7 @@ package com.utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.util.Set;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
@@ -42,4 +43,16 @@ public class Utils extends TestBase {
 
 	}
 
+	public static void Windowhandless(String window) {
+		Set<String> handles = driver.getWindowHandles();
+
+		for (String hand : handles) {
+			if (!window.equals(hand)) {
+				driver.switchTo().window(hand);
+				driver.manage().window().maximize();
+
+			}
+		}
+
+	}
 }
