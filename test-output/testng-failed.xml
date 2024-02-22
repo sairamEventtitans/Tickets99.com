@@ -5,10 +5,8 @@
     <classes>
       <class name="com.testscripts.LoginGoogleTests">
         <methods>
-          <include name="ValidateOrderId"/>
           <include name="setup"/>
-          <include name="ValidateRegUrl"/>
-          <include name="validateViewTicketUrl"/>
+          <include name="ValidatecompleteReg" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.testscripts.LoginGoogleTests -->
     </classes>

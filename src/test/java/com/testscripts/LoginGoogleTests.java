@@ -24,12 +24,21 @@ public class LoginGoogleTests extends TestBase {
 	}
 
 	@BeforeClass
-	public void setup() {
+	public void setup() {                                        //prerequisites for testmethods are placed here
 
 		Initialization();
 		loginWithGoogle = new LoginWithGoogle(driver);
 
 	}
+
+//	@BeforeMethod
+//	public void testsetup() {                               //For quick checking 
+//
+//		Initialization();
+//		loginWithGoogle = new LoginWithGoogle(driver);
+//		driver.get("https://admin.tickets99.com/attendee/HvSTWX%20XvD0nnNCG1zQuqA==");
+//
+//	}
 
 	@Test(priority = 1, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
 	public void ValidateGoogleSigninDisablemail(String[] rowindex) throws Throwable {
@@ -38,10 +47,10 @@ public class LoginGoogleTests extends TestBase {
 
 	}
 
-	@Test(priority = 2)
-	public void ValidateWhatsappConfig() {
+	@Test(priority = 2, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	public void ValidateWhatsappConfig(String[] rowindex) throws Throwable {
 
-		loginWithGoogle.verifyWhatsappCongig();
+		loginWithGoogle.verifyWhatsappCongig(rowindex[7], rowindex[8], rowindex[9]);
 
 	}
 
@@ -70,6 +79,20 @@ public class LoginGoogleTests extends TestBase {
 	@Test(priority = 6)
 	public void ValidateOrderId() {
 		loginWithGoogle.verifyOrderId();
+	}
+
+	@Test(priority = 7, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	public void ValidateBuyerDetails(String[] rowindex) throws Throwable {
+
+		loginWithGoogle.verifyBuyerdetails(rowindex[7], rowindex[8]);
+
+	}
+
+	@Test(priority = 8, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	public void ValidatecompleteReg(String[] rowindex) throws Throwable {
+
+		loginWithGoogle.verifyCompleteRegistration(rowindex[10], rowindex[11], rowindex[12], rowindex[13]);
+
 	}
 
 //	@Test(dataProvider = "dataFetch", dataProviderClass = LoginGoogleTest.class)

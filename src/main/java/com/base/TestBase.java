@@ -49,8 +49,9 @@ public class TestBase {
 			System.out.println("Enter proper browser name");
 		}
 		driver.manage().window().maximize();
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.get(prop.getProperty("url"));
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 
 	}
 

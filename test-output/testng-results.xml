@@ -1,54 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-20T18:59:04 IST" name="Default suite" finished-at="2024-02-20T18:59:41 IST" duration-ms="36760">
+  <suite started-at="2024-02-21T18:29:20 IST" name="Default suite" finished-at="2024-02-21T18:30:17 IST" duration-ms="57308">
     <groups>
     </groups>
-    <test started-at="2024-02-20T18:59:04 IST" name="Default test" finished-at="2024-02-20T18:59:41 IST" duration-ms="36760">
+    <test started-at="2024-02-21T18:29:20 IST" name="Default test" finished-at="2024-02-21T18:30:17 IST" duration-ms="57308">
       <class name="com.testscripts.LoginGoogleTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.testscripts.LoginGoogleTests@82de64a]" started-at="2024-02-20T18:59:04 IST" name="setup" finished-at="2024-02-20T18:59:09 IST" duration-ms="5080" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:29:20 IST" name="setup" finished-at="2024-02-21T18:29:37 IST" duration-ms="17525" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ValidateGoogleSigninDisablemail([Ljava.lang.String;)[pri:1, instance:com.testscripts.LoginGoogleTests@82de64a]" started-at="2024-02-20T18:59:10 IST" name="ValidateGoogleSigninDisablemail" data-provider="dataFetch" finished-at="2024-02-20T18:59:24 IST" duration-ms="13710" status="PASS">
+        <test-method signature="ValidateGoogleSigninDisablemail([Ljava.lang.String;)[pri:1, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:29:39 IST" name="ValidateGoogleSigninDisablemail" data-provider="dataFetch" finished-at="2024-02-21T18:29:53 IST" duration-ms="14431" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@60f70249]]>
+                <![CDATA[[Ljava.lang.String;@7c2dfa2]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateGoogleSigninDisablemail -->
-        <test-method signature="ValidateWhatsappConfig()[pri:2, instance:com.testscripts.LoginGoogleTests@82de64a]" started-at="2024-02-20T18:59:24 IST" name="ValidateWhatsappConfig" finished-at="2024-02-20T18:59:24 IST" duration-ms="79" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateWhatsappConfig -->
-        <test-method signature="ValidateAttendee_orderconfrm([Ljava.lang.String;)[pri:3, instance:com.testscripts.LoginGoogleTests@82de64a]" started-at="2024-02-20T18:59:24 IST" name="ValidateAttendee_orderconfrm" data-provider="dataFetch" finished-at="2024-02-20T18:59:36 IST" duration-ms="12120" status="PASS">
+        <test-method signature="ValidateWhatsappConfig([Ljava.lang.String;)[pri:2, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:29:54 IST" name="ValidateWhatsappConfig" data-provider="dataFetch" finished-at="2024-02-21T18:29:54 IST" duration-ms="113" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@31ee2fdb]]>
+                <![CDATA[[Ljava.lang.String;@661d88a]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateWhatsappConfig -->
+        <test-method signature="ValidateAttendee_orderconfrm([Ljava.lang.String;)[pri:3, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:29:54 IST" name="ValidateAttendee_orderconfrm" data-provider="dataFetch" finished-at="2024-02-21T18:30:07 IST" duration-ms="13116" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@5cc9d3d0]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateAttendee_orderconfrm -->
-        <test-method signature="validateViewTicketUrl()[pri:4, instance:com.testscripts.LoginGoogleTests@82de64a]" started-at="2024-02-20T18:59:36 IST" name="validateViewTicketUrl" finished-at="2024-02-20T18:59:37 IST" duration-ms="1181" status="PASS">
+        <test-method signature="validateViewTicketUrl()[pri:4, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:30:07 IST" name="validateViewTicketUrl" finished-at="2024-02-21T18:30:08 IST" duration-ms="1273" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateViewTicketUrl -->
-        <test-method signature="ValidateRegUrl()[pri:5, instance:com.testscripts.LoginGoogleTests@82de64a]" started-at="2024-02-20T18:59:37 IST" name="ValidateRegUrl" finished-at="2024-02-20T18:59:40 IST" duration-ms="2899" status="PASS">
+        <test-method signature="ValidateRegUrl()[pri:5, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:30:08 IST" name="ValidateRegUrl" finished-at="2024-02-21T18:30:12 IST" duration-ms="3714" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateRegUrl -->
-        <test-method signature="ValidateOrderId()[pri:6, instance:com.testscripts.LoginGoogleTests@82de64a]" started-at="2024-02-20T18:59:40 IST" name="ValidateOrderId" finished-at="2024-02-20T18:59:41 IST" duration-ms="835" status="PASS">
+        <test-method signature="ValidateOrderId()[pri:6, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:30:12 IST" name="ValidateOrderId" finished-at="2024-02-21T18:30:12 IST" duration-ms="509" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateOrderId -->
+        <test-method signature="ValidateBuyerDetails([Ljava.lang.String;)[pri:7, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:30:12 IST" name="ValidateBuyerDetails" data-provider="dataFetch" finished-at="2024-02-21T18:30:13 IST" duration-ms="807" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@313f8301]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateBuyerDetails -->
+        <test-method signature="ValidatecompleteReg([Ljava.lang.String;)[pri:8, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:30:13 IST" name="ValidatecompleteReg" data-provider="dataFetch" finished-at="2024-02-21T18:30:17 IST" duration-ms="3682" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[Ljava.lang.String;@4b0b64cc]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidatecompleteReg -->
       </class> <!-- com.testscripts.LoginGoogleTests -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
