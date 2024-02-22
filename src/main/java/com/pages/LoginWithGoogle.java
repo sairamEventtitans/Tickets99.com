@@ -23,10 +23,10 @@ public class LoginWithGoogle extends TestBase {
 
 	SoftAssert soft = new SoftAssert();
 
-	@FindBy(xpath = "//span[@onclick='redirecttoticket(this)']")     // Address of the Webelements
+	@FindBy(xpath = "//span[@onclick='redirecttoticket(this)']") // Address of the Webelements
 	WebElement buyButton;
 
-	@FindBy(xpath = "(//span[text()='+'])[1]") 
+	@FindBy(xpath = "(//span[text()='+'])[1]")
 	WebElement Addticket;
 
 	@FindBy(xpath = "//div[@onclick='proceedwithtickets()']")
@@ -131,17 +131,17 @@ public class LoginWithGoogle extends TestBase {
 	@FindBy(xpath = "(//div[@class='note-editable'])[2]")
 	WebElement pitch;
 
-	public LoginWithGoogle(WebDriver driver) {          // initializing the webelements address using constructor
+	public LoginWithGoogle(WebDriver driver) { // initializing the webelements address using constructor
 
 		PageFactory.initElements(driver, this);
 	}
 
 	public void VerifyGooglesignIn(String uname, String pword) throws Throwable {
 
-		buyButton.click();                  // verifying the sign in functionality for booking the eventtickets
+		buyButton.click(); // verifying the sign in functionality for booking the eventtickets
 
 		for (int i = 1; i <= ticketcount; i++) {
-			Addticket.click();                   // adding tickets based on quantity
+			Addticket.click(); // adding tickets based on quantity
 		}
 
 		proceedticketbtn.click();
@@ -174,7 +174,6 @@ public class LoginWithGoogle extends TestBase {
 //		buyerMobile.sendKeys(bmobile);
 //		
 
-	
 		// if whatsapp config not displayed need to pass the data after clicking edit
 		// button
 
@@ -186,9 +185,10 @@ public class LoginWithGoogle extends TestBase {
 
 	public void verifyAttendee_orderConfirmantion(String fname, String lname, String email, String mobile) {
 
-		String attendee = prop.getProperty("ticketforattendee");         // Verifying the Order confirmation
+		String attendee = prop.getProperty("ticketforattendee"); // Verifying the Order confirmation by validating order
+																	// success message
 
-		if (attendee.equalsIgnoreCase("yes")) {            // if ticket is for attendee then give yes in configprop
+		if (attendee.equalsIgnoreCase("yes")) { // if ticket is for attendee then give yes in configprop
 			attendeebox.click();
 			fnamevalue.clear();
 			fnamevalue.sendKeys(fname);
@@ -198,11 +198,9 @@ public class LoginWithGoogle extends TestBase {
 			attendeeemailvalue.sendKeys(email);
 			mobilenumvalue.clear();
 			mobilenumvalue.sendKeys(mobile);
-
 		}
-		js.executeScript("arguments[0].click();", whatsappcheckbox);
 
-		// whatsappcheckbox.click();
+		js.executeScript("arguments[0].click();", whatsappcheckbox);
 		js.executeScript("arguments[0].scrollIntoView(true);", proceedlast);
 		js.executeScript("arguments[0].click();", proceedlast);
 		boolean orderSuccessMsg = ordersuccessFul.isDisplayed();
@@ -210,7 +208,7 @@ public class LoginWithGoogle extends TestBase {
 
 	}
 
-	public void verifyViewticketUrl() throws Throwable {
+	public void verifyViewticketUrl() throws Throwable { // verify when user clicks on view ticket url
 
 //		viewTickets.click();
 //		String viewTicketUrl = driver.getCurrentUrl();
@@ -241,7 +239,7 @@ public class LoginWithGoogle extends TestBase {
 		String regUrl = driver.getCurrentUrl();
 		String actualregUrl = "https://admin.tickets99.com/attendee/8vcGE9MKLXRs7x9Yj0Yn1g==";
 
-		soft.assertEquals(regUrl, actualregUrl);	
+		soft.assertEquals(regUrl, actualregUrl);
 		driver.switchTo().window(windowreg); // checked
 	}
 
