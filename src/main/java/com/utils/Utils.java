@@ -39,6 +39,8 @@ public class Utils extends TestBase {
 
 			}
 		}
+		workbook.close();
+		stream.close();
 		return data;
 
 	}

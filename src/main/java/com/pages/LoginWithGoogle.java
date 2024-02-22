@@ -2,10 +2,13 @@ package com.pages;
 
 import org.apache.xmlbeans.impl.xb.xsdschema.All;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
@@ -16,10 +19,14 @@ public class LoginWithGoogle extends TestBase {
 
 	int ticketcount = 1;
 
-	@FindBy(xpath = "//span[@onclick='redirecttoticket(this)']")
+	JavascriptExecutor js = (JavascriptExecutor) driver;
+
+	SoftAssert soft = new SoftAssert();
+
+	@FindBy(xpath = "//span[@onclick='redirecttoticket(this)']")     // Address of the Webelements
 	WebElement buyButton;
 
-	@FindBy(xpath = "(//span[text()='+'])[1]") // Address of the Webelements
+	@FindBy(xpath = "(//span[text()='+'])[1]") 
 	WebElement Addticket;
 
 	@FindBy(xpath = "//div[@onclick='proceedwithtickets()']")
@@ -37,11 +44,20 @@ public class LoginWithGoogle extends TestBase {
 	@FindBy(name = "Passwd")
 	WebElement passwordvalue;
 
-	@FindBy(xpath = "(//div[@class='VfPpkd-RLmnJb'])[2]")
+	@FindBy(xpath = "//span[text()='Next']")
 	WebElement continuebtn;
 
 	@FindBy(xpath = "//i[@class='icon-edit-3 fs-6']")
 	WebElement editbtn;
+
+	@FindBy(id = "textbuyerfirstname")
+	WebElement buyerFname;
+
+	@FindBy(id = "textbuyerlastname")
+	WebElement buyerLname;
+
+	@FindBy(id = "textbuyerphone")
+	WebElement buyerMobile;
 
 	@FindBy(id = "textbuyeremail")
 	WebElement disablemail;
@@ -85,6 +101,12 @@ public class LoginWithGoogle extends TestBase {
 	@FindBy(xpath = "//button[text()='Complete Registration']")
 	WebElement Registrationbtn;
 
+	@FindBy(xpath = "//div[@class='userdetibdg pt-3']//h4")
+	WebElement fnamereg;
+
+	@FindBy(xpath = "//div[@class='userdetibdg pt-3']//h5")
+	WebElement reglname;
+
 	@FindBy(id = "primarytextcontactnumber")
 	WebElement AttendeeMobilereg; // value
 
@@ -97,24 +119,36 @@ public class LoginWithGoogle extends TestBase {
 	@FindBy(xpath = "//h5[text()='THANKS FOR COMPLETING YOUR REGISTRATION']")
 	WebElement completemsg;
 
-	public LoginWithGoogle(WebDriver driver) { // initializing the webelements address
+	@FindBy(xpath = "//input[@id='autointerestedin']")
+	WebElement InterstedIn;
+
+	@FindBy(id = "autocanhelpyou")
+	WebElement canYouhelp;
+
+	@FindBy(xpath = "(//div[@class='note-editable'])[1]")
+	WebElement aboutme;
+
+	@FindBy(xpath = "(//div[@class='note-editable'])[2]")
+	WebElement pitch;
+
+	public LoginWithGoogle(WebDriver driver) {          // initializing the webelements address using constructor
 
 		PageFactory.initElements(driver, this);
-
 	}
 
 	public void VerifyGooglesignIn(String uname, String pword) throws Throwable {
 
-		buyButton.click(); // verifying the sign in functionality for booking the eventtickets
+		buyButton.click();                  // verifying the sign in functionality for booking the eventtickets
 
 		for (int i = 1; i <= ticketcount; i++) {
-			Addticket.click(); // adding tickets based on quantity
+			Addticket.click();                   // adding tickets based on quantity
 		}
 
 		proceedticketbtn.click();
 		signInGoogle.click();
 		emailvalue.sendKeys(uname);
 		nextbtn.click();
+
 		passwordvalue.sendKeys(pword);
 		Thread.sleep(2000);
 		continuebtn.click();
@@ -123,21 +157,38 @@ public class LoginWithGoogle extends TestBase {
 		boolean checkemail = disablemail.isEnabled();
 		Assert.assertFalse(checkemail);
 		System.out.println("checking email is disabled expected false " + checkemail);
-		
-	}
 
-	public void verifyWhatsappCongig() { // verifying whatsapp configuration link is dispalyed in the webpage
+	} // checked
+
+	public void verifyWhatsappCongig(String bfname, String blname, String bmobile) throws Throwable { // verifying
+																										// whatsapp
+																										// configuration
+		// link is dispalyed in the
+		// webpage
+//
+//		buyerFname.clear();
+//		buyerFname.sendKeys(bfname);
+//		buyerLname.clear();
+//		buyerLname.sendKeys(blname);
+//		buyerMobile.clear();
+//		buyerMobile.sendKeys(bmobile);
+//		
+
+	
+		// if whatsapp config not displayed need to pass the data after clicking edit
+		// button
 
 		boolean whatsappconfirm = whatsappConfig.isDisplayed();
-		Assert.assertTrue(whatsappconfirm);          //logic needs to updated (with new email)
+		Assert.assertTrue(whatsappconfirm);
+		// logic needs to updated (with new email) //checked
 
 	}
 
 	public void verifyAttendee_orderConfirmantion(String fname, String lname, String email, String mobile) {
 
-		String attendee = prop.getProperty("ticketforattendee");
+		String attendee = prop.getProperty("ticketforattendee");         // Verifying the Order confirmation
 
-		if (attendee.equalsIgnoreCase("yes")) { // Verifying the Order confirmation
+		if (attendee.equalsIgnoreCase("yes")) {            // if ticket is for attendee then give yes in configprop
 			attendeebox.click();
 			fnamevalue.clear();
 			fnamevalue.sendKeys(fname);
@@ -149,17 +200,13 @@ public class LoginWithGoogle extends TestBase {
 			mobilenumvalue.sendKeys(mobile);
 
 		}
-		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].click();", whatsappcheckbox);
-		
-		//whatsappcheckbox.click();
-		
+
+		// whatsappcheckbox.click();
 		js.executeScript("arguments[0].scrollIntoView(true);", proceedlast);
 		js.executeScript("arguments[0].click();", proceedlast);
-
 		boolean orderSuccessMsg = ordersuccessFul.isDisplayed();
-
-		Assert.assertTrue(orderSuccessMsg);
+		Assert.assertTrue(orderSuccessMsg); // checked
 
 	}
 
@@ -171,21 +218,18 @@ public class LoginWithGoogle extends TestBase {
 //		Assert.assertEquals("https://admin.tickets99.com/ticket/ASuLvCVm9%204uT6W-PPjrBw==", viewTicketUrl);
 
 		String window1 = driver.getWindowHandle();
-
 		viewTickets.click();
 		Thread.sleep(1000);
-
 		String viewTicketUrl = driver.getCurrentUrl();
-		
-		System.out.println(viewTicketUrl);   //check test
+		System.out.println(viewTicketUrl); // check test
 		String UrlActual = "https://admin.tickets99.com/ticket/ASuLvCVm9%204uT6W-PPjrBw==";
 		Utils.Windowhandless(window1);
-		
-		SoftAssert sf=new SoftAssert();
-		
-		sf.assertEquals(viewTicketUrl, UrlActual);
-		//Assert.assertEquals(viewTicketUrl, UrlActual);
-		driver.switchTo().window(window1);
+
+		SoftAssert soft = new SoftAssert();
+
+		soft.assertEquals(viewTicketUrl, UrlActual);
+		// Assert.assertEquals(viewTicketUrl, UrlActual);
+		driver.switchTo().window(window1); // checked
 
 	}
 
@@ -193,11 +237,12 @@ public class LoginWithGoogle extends TestBase {
 
 		String windowreg = driver.getWindowHandle();
 		Registrationbtn.click();
-		String regUrl = driver.getCurrentUrl();
-		String actualregUrl = "https://admin.tickets99.com/attendee/ASuLvCVm9%204uT6W-PPjrBw==";
 		Utils.Windowhandless(windowreg);
+		String regUrl = driver.getCurrentUrl();
+		String actualregUrl = "https://admin.tickets99.com/attendee/8vcGE9MKLXRs7x9Yj0Yn1g==";
 
-		driver.switchTo().window(windowreg);
+		soft.assertEquals(regUrl, actualregUrl);	
+		driver.switchTo().window(windowreg); // checked
 	}
 
 	public void verifyOrderId() {
@@ -209,38 +254,62 @@ public class LoginWithGoogle extends TestBase {
 		String ticketID = ticketverify.getText();
 		Assert.assertEquals(orderID, ticketID);
 
+		driver.switchTo().window(ticketwindow);
+
 	}
 
-//	public void VerifyGoogleLoginAttendee(String uname, String pword, String afanme, String alname, String amail,
-//			String amobile) throws Throwable {
-//
-//		String attendee = prop.getProperty("ticketforattendee");
-//
-//		buyButton.click();
-//		Addticket.click();
-//		proceedticketbtn.click();
-//		signInGoogle.click();
-//		emailvalue.sendKeys(uname);
-//		nextbtn.click();
-//		passwordvalue.sendKeys(pword);
-//		Thread.sleep(2000);
-//
-//		continuebtn.click();
-//		Thread.sleep(2000);
-//		Thread.sleep(2000);
-//
-//		if (attendee.equalsIgnoreCase("yes")) {
-//			attendeebox.click();
-//			fnamevalue.sendKeys(afanme);
-//			lnamevalue.sendKeys(alname);
-//			attendeeemailvalue.sendKeys(amail);
-//			mobilenumvalue.sendKeys(amobile);
-//
-//		}
-//		JavascriptExecutor js = (JavascriptExecutor) driver;
-//		js.executeScript("arguments[0].scrollIntoView(true);", proceedlast);
-//		js.executeScript("arguments[0].click();", proceedlast);
-//
-//	}
+	public void verifyBuyerdetails(String regfirstname, String regLastname) {
+
+		String windowreg = driver.getWindowHandle();
+		Registrationbtn.click();
+		Utils.Windowhandless(windowreg);
+
+		String regFname = fnamereg.getText();
+
+		String reg_lname = reglname.getText();
+
+		String actualfname = regfirstname;
+
+		String actuallname = regLastname;
+
+		Assert.assertEquals(actualfname, regFname);
+		Assert.assertEquals(actuallname, regLastname);
+
+		driver.switchTo().window(windowreg);
+
+	}
+
+	public void verifyCompleteRegistration(String intrestin, String helpwith, String about, String Picth) {
+
+		String windowregcomplete = driver.getCurrentUrl();
+		Registrationbtn.click();
+		Utils.Windowhandless(windowregcomplete);
+
+		InterstedIn.clear();
+		InterstedIn.sendKeys(intrestin);
+		InterstedIn.sendKeys(Keys.ENTER);
+
+		canYouhelp.clear();
+		canYouhelp.sendKeys(helpwith);
+		canYouhelp.sendKeys(Keys.ENTER);
+
+		aboutme.clear();
+		aboutme.sendKeys(about);
+
+		pitch.clear();
+		pitch.sendKeys(Picth);
+
+		js.executeScript("arguments[0].click();", completeregbtn);
+
+		// completeregbtn.click();
+
+		boolean checkcompleteionmsg = completemsg.isDisplayed();
+
+		System.out.println("printing msg " + completemsg.getText());
+		System.out.println("printing msg " + completemsg.isDisplayed());
+
+		// Assert.assertTrue(checkcompleteionmsg);
+
+	}
 
 }
