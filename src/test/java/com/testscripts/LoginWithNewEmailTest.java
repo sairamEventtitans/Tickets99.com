@@ -63,7 +63,7 @@ public class LoginWithNewEmailTest extends TestBase {
 	}
 
 	@Test(priority = 3)
-	public void ValidateEmailDisableEmail() {
+	public void ValidateEmailDisable_Email() {
 		newEmail.verifyEmailDisable();
 	}
 
@@ -74,7 +74,7 @@ public class LoginWithNewEmailTest extends TestBase {
 	}
 
 	@Test(priority = 5, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
-	public void ValidateAttendeeEmail(String[] row) {
+	public void validateAttendeeEmail(String[] row) {
 
 		login.verifyAttendee_orderConfirmantion(row[6], row[7], row[8], row[9]);
 
