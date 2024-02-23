@@ -3,12 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testscripts.LoginGoogleTests">
+      <class name="com.testscripts.LoginWithNewEmailTest">
         <methods>
+          <include name="ValidateCoupon_Email" invocation-numbers="0"/>
           <include name="setup"/>
-          <include name="ValidatecompleteReg" invocation-numbers="0"/>
+          <include name="ValidateOrderIdFree_email"/>
+          <include name="validateAttendeeRegistration_Vip" invocation-numbers="0"/>
+          <include name="ValidateAttendeeEmail" invocation-numbers="0"/>
+          <include name="teardown"/>
+          <include name="validateOrderifVip_email"/>
         </methods>
-      </class> <!-- com.testscripts.LoginGoogleTests -->
+      </class> <!-- com.testscripts.LoginWithNewEmailTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
