@@ -1,80 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="7" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-21T18:29:20 IST" name="Default suite" finished-at="2024-02-21T18:30:17 IST" duration-ms="57308">
+  <suite started-at="2024-02-23T10:54:03 IST" name="Default suite" finished-at="2024-02-23T10:54:56 IST" duration-ms="52986">
     <groups>
     </groups>
-    <test started-at="2024-02-21T18:29:20 IST" name="Default test" finished-at="2024-02-21T18:30:17 IST" duration-ms="57308">
+    <test started-at="2024-02-23T10:54:03 IST" name="Default test" finished-at="2024-02-23T10:54:56 IST" duration-ms="52986">
       <class name="com.testscripts.LoginGoogleTests">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:29:20 IST" name="setup" finished-at="2024-02-21T18:29:37 IST" duration-ms="17525" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-23T10:54:03 IST" name="setup" finished-at="2024-02-23T10:54:17 IST" duration-ms="14233" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ValidateGoogleSigninDisablemail([Ljava.lang.String;)[pri:1, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:29:39 IST" name="ValidateGoogleSigninDisablemail" data-provider="dataFetch" finished-at="2024-02-21T18:29:53 IST" duration-ms="14431" status="PASS">
+        <test-method signature="ValidateGoogleSigninDisablemail([Ljava.lang.String;)[pri:1, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-23T10:54:18 IST" name="ValidateGoogleSigninDisablemail" data-provider="dataFetch" finished-at="2024-02-23T10:54:33 IST" duration-ms="14915" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@7c2dfa2]]>
+                <![CDATA[[Ljava.lang.String;@dd71b20]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateGoogleSigninDisablemail -->
-        <test-method signature="ValidateWhatsappConfig([Ljava.lang.String;)[pri:2, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:29:54 IST" name="ValidateWhatsappConfig" data-provider="dataFetch" finished-at="2024-02-21T18:29:54 IST" duration-ms="113" status="PASS">
+        <test-method signature="ValidateWhatsappConfig([Ljava.lang.String;)[pri:2, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-23T10:54:33 IST" name="ValidateWhatsappConfig" data-provider="dataFetch" finished-at="2024-02-23T10:54:33 IST" duration-ms="125" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@661d88a]]>
+                <![CDATA[[Ljava.lang.String;@5114b7c7]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateWhatsappConfig -->
-        <test-method signature="ValidateAttendee_orderconfrm([Ljava.lang.String;)[pri:3, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:29:54 IST" name="ValidateAttendee_orderconfrm" data-provider="dataFetch" finished-at="2024-02-21T18:30:07 IST" duration-ms="13116" status="PASS">
+        <test-method signature="ValidateAttendee_orderconfrm([Ljava.lang.String;)[pri:3, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-23T10:54:33 IST" name="ValidateAttendee_orderconfrm" data-provider="dataFetch" finished-at="2024-02-23T10:54:47 IST" duration-ms="13999" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@5cc9d3d0]]>
+                <![CDATA[[Ljava.lang.String;@767f6ee7]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateAttendee_orderconfrm -->
-        <test-method signature="validateViewTicketUrl()[pri:4, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:30:07 IST" name="validateViewTicketUrl" finished-at="2024-02-21T18:30:08 IST" duration-ms="1273" status="PASS">
+        <test-method signature="validateViewTicketUrl()[pri:4, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-23T10:54:47 IST" name="validateViewTicketUrl" finished-at="2024-02-23T10:54:49 IST" duration-ms="1281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateViewTicketUrl -->
-        <test-method signature="ValidateRegUrl()[pri:5, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:30:08 IST" name="ValidateRegUrl" finished-at="2024-02-21T18:30:12 IST" duration-ms="3714" status="PASS">
+        <test-method signature="ValidateRegUrl()[pri:5, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-23T10:54:49 IST" name="ValidateRegUrl" finished-at="2024-02-23T10:54:50 IST" duration-ms="1373" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateRegUrl -->
-        <test-method signature="ValidateOrderId()[pri:6, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:30:12 IST" name="ValidateOrderId" finished-at="2024-02-21T18:30:12 IST" duration-ms="509" status="PASS">
+        <test-method signature="ValidateOrderId()[pri:6, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-23T10:54:50 IST" name="ValidateOrderId" finished-at="2024-02-23T10:54:51 IST" duration-ms="1041" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateOrderId -->
-        <test-method signature="ValidateBuyerDetails([Ljava.lang.String;)[pri:7, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:30:12 IST" name="ValidateBuyerDetails" data-provider="dataFetch" finished-at="2024-02-21T18:30:13 IST" duration-ms="807" status="PASS">
+        <test-method signature="ValidateBuyerDetails([Ljava.lang.String;)[pri:7, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-23T10:54:51 IST" name="ValidateBuyerDetails" data-provider="dataFetch" finished-at="2024-02-23T10:54:52 IST" duration-ms="897" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@313f8301]]>
+                <![CDATA[[Ljava.lang.String;@7b6c6e70]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidateBuyerDetails -->
-        <test-method signature="ValidatecompleteReg([Ljava.lang.String;)[pri:8, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-21T18:30:13 IST" name="ValidatecompleteReg" data-provider="dataFetch" finished-at="2024-02-21T18:30:17 IST" duration-ms="3682" status="PASS">
+        <test-method signature="ValidatecompleteReg([Ljava.lang.String;)[pri:8, instance:com.testscripts.LoginGoogleTests@4310d43]" started-at="2024-02-23T10:54:52 IST" name="ValidatecompleteReg" data-provider="dataFetch" finished-at="2024-02-23T10:54:56 IST" duration-ms="3604" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@4b0b64cc]]>
+                <![CDATA[[Ljava.lang.String;@24534cb0]]>
               </value>
             </param>
           </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at org.testng.Assert.assertTrue(Assert.java:55)
+at com.pages.LoginWithGoogle.verifyCompleteRegistration(LoginWithGoogle.java:313)
+at com.testscripts.LoginGoogleTests.ValidatecompleteReg(LoginGoogleTests.java:99)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- ValidatecompleteReg -->
