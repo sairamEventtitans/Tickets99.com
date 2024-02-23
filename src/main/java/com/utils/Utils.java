@@ -3,6 +3,7 @@ package com.utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Set;
 
 import org.apache.poi.ss.usermodel.DataFormatter;
@@ -18,13 +19,22 @@ public class Utils extends TestBase {
 	static FileInputStream stream;
 	static XSSFWorkbook workbook;
 
-	public static String[][] FetchData(String sheetname) throws Throwable {
+	public static String[][] FetchData(String sheetname)  {
 
 		file = new File("./src/main/java/com/testdata/TestData.xlsx");
-		stream = new FileInputStream(file);
-		workbook = new XSSFWorkbook(stream);
+		try {
+			stream = new FileInputStream(file);
+		} catch (FileNotFoundException e) {
+			System.out.println("Check file");
+			e.printStackTrace();
+		}
+		try {
+			workbook = new XSSFWorkbook(stream);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 
-		XSSFSheet sheet = workbook.getSheet("logincred");
+		XSSFSheet sheet = workbook.getSheet(sheetname);
 		int rows = sheet.getPhysicalNumberOfRows();
 
 		int cells = sheet.getRow(0).getLastCellNum();
@@ -35,13 +45,26 @@ public class Utils extends TestBase {
 
 				DataFormatter df = new DataFormatter();
 				data[i][j] = df.formatCellValue(sheet.getRow(i + 1).getCell(j));
-				System.out.println(data[i][j]);
+			
 
 			}
+			
 		}
-		workbook.close();
-		stream.close();
+		
+		try {
+			workbook.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			stream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return data;
+	
 
 	}
 
@@ -57,4 +80,13 @@ public class Utils extends TestBase {
 		}
 
 	}
+	
+	public void javaScriptExecuter() {
+		
+		
+		
+	}
+	
+	
+	
 }

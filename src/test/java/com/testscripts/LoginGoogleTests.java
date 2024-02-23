@@ -16,7 +16,12 @@ public class LoginGoogleTests extends TestBase {
 
 	LoginWithGoogle loginWithGoogle;
 
-	String sheetname = "log";
+	String sheetname = "logincred";
+
+	public LoginGoogleTests() {
+
+		super();
+	}
 
 	@DataProvider
 	public String[][] dataFetch() throws Throwable {
@@ -24,7 +29,7 @@ public class LoginGoogleTests extends TestBase {
 	}
 
 	@BeforeClass
-	public void setup() {                                        //prerequisites for testmethods are placed here
+	public void setup() { // prerequisites for testmethods are placed here
 
 		Initialization();
 		loginWithGoogle = new LoginWithGoogle(driver);

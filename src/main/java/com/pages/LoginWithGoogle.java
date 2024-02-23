@@ -23,7 +23,7 @@ public class LoginWithGoogle extends TestBase {
 
 	SoftAssert soft = new SoftAssert();
 
-	@FindBy(xpath = "//span[@onclick='redirecttoticket(this)']") // Address of the Webelements
+	@FindBy(xpath = "//div[@onclick='redirecttoticket(this)']") // Address of the Webelements
 	WebElement buyButton;
 
 	@FindBy(xpath = "(//span[text()='+'])[1]")
@@ -92,7 +92,7 @@ public class LoginWithGoogle extends TestBase {
 	@FindBy(xpath = "//div[@id='OrderDiv']//span")
 	WebElement orderid;
 
-	@FindBy(xpath = "//button[@onclick='return ViewMyTicket(this);']")
+	@FindBy(xpath = "(//button[@onclick='return ViewMyTicket(this);'])[1]")
 	WebElement viewTickets;
 
 	@FindBy(xpath = "//td//span[@id='orderid']")
@@ -130,6 +130,9 @@ public class LoginWithGoogle extends TestBase {
 
 	@FindBy(xpath = "(//div[@class='note-editable'])[2]")
 	WebElement pitch;
+
+	@FindBy(id = "btneventpage")
+	WebElement eventpagebtn;
 
 	public LoginWithGoogle(WebDriver driver) { // initializing the webelements address using constructor
 
@@ -218,10 +221,9 @@ public class LoginWithGoogle extends TestBase {
 		String window1 = driver.getWindowHandle();
 		viewTickets.click();
 		Thread.sleep(1000);
-		String viewTicketUrl = driver.getCurrentUrl();
-		System.out.println(viewTicketUrl); // check test
 		String UrlActual = "https://admin.tickets99.com/ticket/ASuLvCVm9%204uT6W-PPjrBw==";
 		Utils.Windowhandless(window1);
+		String viewTicketUrl = driver.getCurrentUrl();
 
 		SoftAssert soft = new SoftAssert();
 
@@ -306,6 +308,9 @@ public class LoginWithGoogle extends TestBase {
 		System.out.println("printing msg " + completemsg.getText());
 		System.out.println("printing msg " + completemsg.isDisplayed());
 
+		boolean buttonevent = eventpagebtn.isDisplayed();
+
+		// Assert.assertTrue(buttonevent);
 		// Assert.assertTrue(checkcompleteionmsg);
 
 	}
