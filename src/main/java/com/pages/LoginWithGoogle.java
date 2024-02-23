@@ -133,6 +133,9 @@ public class LoginWithGoogle extends TestBase {
 
 	@FindBy(id = "btneventpage")
 	WebElement eventpagebtn;
+	
+	@FindBy (id="btnproceed")
+	WebElement proceedPayment;
 
 	public LoginWithGoogle(WebDriver driver) { // initializing the webelements address using constructor
 
@@ -204,8 +207,12 @@ public class LoginWithGoogle extends TestBase {
 		}
 
 		js.executeScript("arguments[0].click();", whatsappcheckbox);
-		js.executeScript("arguments[0].scrollIntoView(true);", proceedlast);
-		js.executeScript("arguments[0].click();", proceedlast);
+//		js.executeScript("arguments[0].scrollIntoView(true);", proceedlast);
+//		js.executeScript("arguments[0].click();", proceedlast);
+//		
+		//proceedPayment.click();
+		js.executeScript("arguments[0].click();", proceedPayment);
+		
 		boolean orderSuccessMsg = ordersuccessFul.isDisplayed();
 		Assert.assertTrue(orderSuccessMsg); // checked
 

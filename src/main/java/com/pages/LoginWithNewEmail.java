@@ -144,6 +144,15 @@ public class LoginWithNewEmail extends TestBase {
 
 	@FindBy(xpath = "//input[@onblur='return ValidateOnBlurEmailId(this)']")
 	WebElement Attendee2emailvalue;
+	
+	@FindBy(xpath = "//h3[text()='Your order is completed']")
+	WebElement ordersuccessFul;
+	
+	@FindBy (id="btnproceed")
+	WebElement proceedPayment;
+	
+	@FindBy (xpath="(//button[@id='btnproceed'])[1]")
+	WebElement proceed2;
 
 	public LoginWithNewEmail(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -296,6 +305,40 @@ public class LoginWithNewEmail extends TestBase {
 //
 //		boolean buttonevent = eventpagebtn.isDisplayed();		
 //		Assert.assertTrue(buttonevent);
+
+	}
+	
+	
+	public void verifyAttendee_orderConfirmantion(String fname, String lname, String email, String mobile) {
+
+		String attendee = prop.getProperty("ticketforattendee"); // Verifying the Order confirmation by validating order
+																	// success message
+
+		if (attendee.equalsIgnoreCase("yes")) { // if ticket is for attendee then give yes in configprop
+			attendeebox.click();
+			fnamevalue.clear();
+			fnamevalue.sendKeys(fname);
+			lnamevalue.clear();
+			lnamevalue.sendKeys(lname);
+			attendeeemailvalue.clear();
+			attendeeemailvalue.sendKeys(email);
+			mobilenumvalue.clear();
+			mobilenumvalue.sendKeys(mobile);
+		}
+
+		js.executeScript("arguments[0].click();", whatsappcheckbox);
+//		js.executeScript("arguments[0].scrollIntoView(true);", proceedlast);
+//		js.executeScript("arguments[0].click();", proceedlast);
+//		
+		//proceedPayment.click();
+		js.executeScript("arguments[0].click();", proceedPayment);
+		
+		js.executeScript("arguments[0].click();", proceed2);
+
+		
+		
+		boolean orderSuccessMsg = ordersuccessFul.isDisplayed();
+		Assert.assertTrue(orderSuccessMsg); // checked
 
 	}
 
