@@ -1,5 +1,12 @@
 package com.testscripts;
 
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -49,14 +56,14 @@ public class LoginWithNewEmailTest extends TestBase {
 
 	@Test(priority = 2, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
 
-	public void ValidateCoupon(String[] row) {
+	public void ValidateCoupon_Email(String[] row) {
 
 		newEmail.verifyCoupon(row[1]);
 
 	}
 
 	@Test(priority = 3)
-	public void ValidateEmailDisable() {
+	public void ValidateEmailDisableEmail() {
 		newEmail.verifyEmailDisable();
 	}
 
@@ -67,14 +74,14 @@ public class LoginWithNewEmailTest extends TestBase {
 	}
 
 	@Test(priority = 5, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
-	public void ValidateAttendee(String[] row) {
+	public void ValidateAttendeeEmail(String[] row) {
 
 		login.verifyAttendee_orderConfirmantion(row[6], row[7], row[8], row[9]);
 
 	}
 
 	@Test(priority = 6)
-	public void validateOrderifVip() {
+	public void validateOrderifVip_email() {
 
 		newEmail.verifyOderVip();
 
@@ -90,22 +97,37 @@ public class LoginWithNewEmailTest extends TestBase {
 //		
 //		
 //	}
-	
+
 	@Test(priority = 7)
-	public void ValidateOrderIdFree() {
+	public void ValidateOrderIdFree_email() {
 
 		newEmail.verifyOrderIdFree();
 
 	}
-	
-	@Test(priority = 8,dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
+
+	@Test(priority = 8, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
 	public void validateAttendeeRegistration_Vip(String[] row) {
-		
-		newEmail.VerifyAttendeeRegistration_Vip(row[10], row[11], row[12], row[13], row[14], row[15],row[16]);
-		
+
+		newEmail.VerifyAttendeeRegistration_Vip(row[10], row[11], row[12], row[13], row[14], row[15], row[16]);
+
 	}
-	
-	
-	
+
+	@AfterMethod
+
+	public void teardown(ITestResult result) throws Throwable {
+
+		if (result.getStatus() == ITestResult.FAILURE) {
+
+			capture(result.getMethod().getMethodName());
+
+		}
+
+	}
+
+	public void capture(String methodname) throws Throwable {
+
+		Utils.CapturescreenShot(methodname);
+
+	}
 
 }

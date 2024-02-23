@@ -83,7 +83,7 @@ public class LoginWithGoogle extends TestBase {
 	@FindBy(id = "isWhatsappYes")
 	WebElement whatsappcheckbox;
 
-	@FindBy(xpath = "//button[text()='Proceed']")
+	@FindBy(xpath = "//button[@onclick='proceedfromcheckout()']")
 	WebElement proceedlast;
 
 	@FindBy(xpath = "//h3[text()='Your order is completed']")

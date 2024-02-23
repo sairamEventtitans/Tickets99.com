@@ -14,10 +14,8 @@ import com.utils.Utils;
 
 public class LoginWithNewEmail extends TestBase {
 
-	
 	JavascriptExecutor js = (JavascriptExecutor) driver;
-	
-	
+
 	@FindBy(xpath = "//div[@onclick='redirecttoticket(this)']") // Address of the Webelements
 	WebElement buyButton;
 
@@ -87,7 +85,7 @@ public class LoginWithNewEmail extends TestBase {
 	@FindBy(id = "isWhatsappYes")
 	WebElement whatsappcheckbox;
 
-	@FindBy(xpath = "//button[text()='Proceed']")
+	@FindBy(id = "btnproceed")
 	WebElement proceedlast;
 
 	@FindBy(xpath = "(//button[@onclick='return ViewMyTicket(this);'])[1]")
@@ -104,11 +102,10 @@ public class LoginWithNewEmail extends TestBase {
 
 	@FindBy(xpath = "(//button[text()='Complete Registration'])[1]")
 	WebElement Registrationbtnvip;
-	
+
 	@FindBy(xpath = "(//button[text()='Complete Registration'])[2]")
 	WebElement Registrationbtnfree;
-	
-	
+
 	@FindBy(xpath = "//input[@id='autointerestedin']")
 	WebElement InterstedIn;
 
@@ -123,32 +120,31 @@ public class LoginWithNewEmail extends TestBase {
 
 	@FindBy(id = "btneventpage")
 	WebElement eventpagebtn;
-	
+
 	@FindBy(xpath = "//button[text()='  Complete Registration']")
 	WebElement completeregbtn;
 
 	@FindBy(xpath = "//h5[text()='THANKS FOR COMPLETING YOUR REGISTRATION']")
 	WebElement completemsg;
 
-	@FindBy (id="textcompanyname")
+	@FindBy(id = "textcompanyname")
 	WebElement companyNameAttendee;
-	
-	@FindBy (id="textdesignationname")
+
+	@FindBy(id = "textdesignationname")
 	WebElement JobtitleAttendee;
-	
-	@FindBy (xpath = "(//div[@class='selected-flag'])[1]")
+
+	@FindBy(xpath = "(//div[@class='selected-flag'])[1]")
 	WebElement countrydropdown1;
-	
-	@FindBy (xpath = "(//div[@class='selected-flag'])[2]")
+
+	@FindBy(xpath = "(//div[@class='selected-flag'])[2]")
 	WebElement countrydopdown2;
-	
-	@FindBy (xpath = "//span[text()='+91 India (भारत)']")
+
+	@FindBy(xpath = "//span[text()='+91 India (भारत)']")
 	WebElement countryphonenumber;
-	
-	@FindBy (xpath="//input[@onblur='return ValidateOnBlurEmailId(this)']")
+
+	@FindBy(xpath = "//input[@onblur='return ValidateOnBlurEmailId(this)']")
 	WebElement Attendee2emailvalue;
-	
-	
+
 	public LoginWithNewEmail(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -250,24 +246,23 @@ public class LoginWithNewEmail extends TestBase {
 		driver.switchTo().window(ticketwindow);
 
 	}
-	
-	
-	public void VerifyAttendeeRegistration_Vip(String company,String job,String intrestin, String helpwith, String about, String Picth,String attendee2mail ) {
-		
-		
+
+	public void VerifyAttendeeRegistration_Vip(String company, String job, String intrestin, String helpwith,
+			String about, String Picth, String attendee2mail) {
+
 		String windowregcomplete = driver.getCurrentUrl();
 		Registrationbtnvip.click();
 		Utils.Windowhandless(windowregcomplete);
-		
+
 		countrydropdown1.click();
 		countryphonenumber.click();
 
 		companyNameAttendee.clear();
 		companyNameAttendee.sendKeys(company);
-		
+
 		JobtitleAttendee.clear();
 		JobtitleAttendee.sendKeys(job);
-		
+
 		InterstedIn.clear();
 		InterstedIn.sendKeys(intrestin);
 		InterstedIn.sendKeys(Keys.ENTER);
@@ -281,14 +276,13 @@ public class LoginWithNewEmail extends TestBase {
 
 		pitch.clear();
 		pitch.sendKeys(Picth);
-		
-		
+
 //		countrydopdown2.click();
 //		countryphonenumber.click();
-		
+
 		Attendee2emailvalue.clear();
 		Attendee2emailvalue.sendKeys(attendee2mail);
-		
+
 //		js.executeScript("arguments[0].value='sairam234@gmail.com';", Attendee2emailvalue);
 
 		js.executeScript("arguments[0].click();", completeregbtn);
@@ -303,16 +297,6 @@ public class LoginWithNewEmail extends TestBase {
 //		boolean buttonevent = eventpagebtn.isDisplayed();		
 //		Assert.assertTrue(buttonevent);
 
-		
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
 }

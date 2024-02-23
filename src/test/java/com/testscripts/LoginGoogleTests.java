@@ -3,6 +3,8 @@ package com.testscripts;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -108,5 +110,23 @@ public class LoginGoogleTests extends TestBase {
 //		Assert.assertTrue(ordermsg);
 //
 //	}
+
+	@AfterMethod
+
+	public void teardown(ITestResult result) throws Throwable {
+
+		if (result.getStatus() == ITestResult.FAILURE) {
+
+			capture(result.getMethod().getMethodName());
+
+		}
+
+	}
+
+	public void capture(String methodname) throws Throwable {
+
+		Utils.CapturescreenShot(methodname);
+
+	}
 
 }

@@ -6,9 +6,12 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Set;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.annotations.DataProvider;
 
 import com.base.TestBase;
@@ -19,7 +22,7 @@ public class Utils extends TestBase {
 	static FileInputStream stream;
 	static XSSFWorkbook workbook;
 
-	public static String[][] FetchData(String sheetname)  {
+	public static String[][] FetchData(String sheetname) {
 
 		file = new File("./src/main/java/com/testdata/TestData.xlsx");
 		try {
@@ -45,12 +48,11 @@ public class Utils extends TestBase {
 
 				DataFormatter df = new DataFormatter();
 				data[i][j] = df.formatCellValue(sheet.getRow(i + 1).getCell(j));
-			
 
 			}
-			
+
 		}
-		
+
 		try {
 			workbook.close();
 		} catch (IOException e) {
@@ -64,7 +66,6 @@ public class Utils extends TestBase {
 			e.printStackTrace();
 		}
 		return data;
-	
 
 	}
 
@@ -81,12 +82,20 @@ public class Utils extends TestBase {
 
 	}
 	
-	public void javaScriptExecuter() {
-		
-		
-		
+	
+	
+	
+
+	public static void CapturescreenShot(String methodname) throws Throwable {
+
+		TakesScreenshot ts = (TakesScreenshot) driver;
+
+		File src = ts.getScreenshotAs(OutputType.FILE);
+
+		File tgt = new File("./shots/" + methodname + ".png");
+
+		FileUtils.copyFile(src, tgt);
+
 	}
-	
-	
-	
+
 }
