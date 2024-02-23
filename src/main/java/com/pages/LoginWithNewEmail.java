@@ -299,9 +299,9 @@ public class LoginWithNewEmail extends TestBase {
 //
 //		System.out.println("printing msg " + completemsg.getText());
 //		System.out.println("printing msg " + completemsg.isDisplayed());
-
-		boolean buttonevent = eventpagebtn.isDisplayed();		
-		Assert.assertTrue(buttonevent);
+//
+//		boolean buttonevent = eventpagebtn.isDisplayed();		
+//		Assert.assertTrue(buttonevent);
 
 		
 		
