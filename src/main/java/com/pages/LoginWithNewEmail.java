@@ -85,7 +85,7 @@ public class LoginWithNewEmail extends TestBase {
 	@FindBy(id = "isWhatsappYes")
 	WebElement whatsappcheckbox;
 
-	@FindBy(id = "btnproceed")
+	@FindBy(id = "btnproceedcheck")
 	WebElement proceedlast;
 
 	@FindBy(xpath = "(//button[@onclick='return ViewMyTicket(this);'])[1]")
@@ -144,14 +144,14 @@ public class LoginWithNewEmail extends TestBase {
 
 	@FindBy(xpath = "//input[@onblur='return ValidateOnBlurEmailId(this)']")
 	WebElement Attendee2emailvalue;
-	
+
 	@FindBy(xpath = "//h3[text()='Your order is completed']")
 	WebElement ordersuccessFul;
-	
-	@FindBy (id="btnproceed")
+
+	@FindBy(id = "btnproceed")
 	WebElement proceedPayment;
-	
-	@FindBy (xpath="(//button[@id='btnproceed'])[1]")
+
+	@FindBy(xpath = "(//button[@id='btnproceed'])[1]")
 	WebElement proceed2;
 
 	public LoginWithNewEmail(WebDriver driver) {
@@ -307,8 +307,7 @@ public class LoginWithNewEmail extends TestBase {
 //		Assert.assertTrue(buttonevent);
 
 	}
-	
-	
+
 	public void verifyAttendee_orderConfirmantion(String fname, String lname, String email, String mobile) {
 
 		String attendee = prop.getProperty("ticketforattendee"); // Verifying the Order confirmation by validating order
@@ -330,13 +329,11 @@ public class LoginWithNewEmail extends TestBase {
 //		js.executeScript("arguments[0].scrollIntoView(true);", proceedlast);
 //		js.executeScript("arguments[0].click();", proceedlast);
 //		
-		//proceedPayment.click();
+		// proceedPayment.click();
 		js.executeScript("arguments[0].click();", proceedPayment);
-		
+
 		js.executeScript("arguments[0].click();", proceed2);
 
-		
-		
 		boolean orderSuccessMsg = ordersuccessFul.isDisplayed();
 		Assert.assertTrue(orderSuccessMsg); // checked
 

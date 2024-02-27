@@ -83,7 +83,7 @@ public class LoginWithGoogle extends TestBase {
 	@FindBy(id = "isWhatsappYes")
 	WebElement whatsappcheckbox;
 
-	@FindBy(xpath = "//button[@onclick='proceedfromcheckout()']")
+	@FindBy(id = "btnproceedcheck")
 	WebElement proceedlast;
 
 	@FindBy(xpath = "//h3[text()='Your order is completed']")
@@ -134,7 +134,7 @@ public class LoginWithGoogle extends TestBase {
 	@FindBy(id = "btneventpage")
 	WebElement eventpagebtn;
 	
-	@FindBy (id="btnproceed")
+	@FindBy (id="btnproceedcheck")
 	WebElement proceedPayment;
 
 	public LoginWithGoogle(WebDriver driver) { // initializing the webelements address using constructor
@@ -211,20 +211,26 @@ public class LoginWithGoogle extends TestBase {
 //		js.executeScript("arguments[0].click();", proceedlast);
 //		
 		//proceedPayment.click();
-		js.executeScript("arguments[0].click();", proceedPayment);
+	//	js.executeScript("arguments[0].click();", proceedPayment);
+	}	
+	
+	
+	public void verifyOrderSuccessMessage() {
+	
 		
+		js.executeScript("arguments[0].click();", proceedPayment);
 		boolean orderSuccessMsg = ordersuccessFul.isDisplayed();
 		Assert.assertTrue(orderSuccessMsg); // checked
 
+	
 	}
-
 	public void verifyViewticketUrl() throws Throwable { // verify when user clicks on view ticket url
 
 //		viewTickets.click();
 //		String viewTicketUrl = driver.getCurrentUrl();
 //
 //		Assert.assertEquals("https://admin.tickets99.com/ticket/ASuLvCVm9%204uT6W-PPjrBw==", viewTicketUrl);
-
+		
 		String window1 = driver.getWindowHandle();
 		viewTickets.click();
 		Thread.sleep(1000);
@@ -255,13 +261,15 @@ public class LoginWithGoogle extends TestBase {
 	public void verifyOrderId() {
 
 		String ticketwindow = driver.getWindowHandle();
-		String orderID = orderid.getText();
+		String ORDERID = orderid.getText();
 		viewTickets.click();
 		Utils.Windowhandless(ticketwindow);
 		String ticketID = ticketverify.getText();
-		Assert.assertEquals(orderID, ticketID);
+		Assert.assertEquals(ORDERID, ticketID);
 
 		driver.switchTo().window(ticketwindow);
+		
+		Utils.writeInToExcel(ORDERID);
 
 	}
 
