@@ -48,7 +48,7 @@ public class LoginGoogleTests extends TestBase {
 //	}
 
 	@Test(priority = 1, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
-	public void validateDisableEmail_google (String[] rowindex) throws Throwable {
+	public void validateDisableEmail_google(String[] rowindex) throws Throwable {
 
 		loginWithGoogle.VerifyGooglesignIn(rowindex[1], rowindex[2]);
 
@@ -69,6 +69,13 @@ public class LoginGoogleTests extends TestBase {
 	}
 
 	@Test(priority = 4)
+	public void validateOrderSuccessMessage() {
+
+		loginWithGoogle.verifyOrderSuccessMessage();
+
+	}
+
+	@Test(priority = 5)
 
 	public void validateViewTicketUrl_google() throws Throwable {
 
@@ -76,33 +83,31 @@ public class LoginGoogleTests extends TestBase {
 
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 6)
 	public void ValidateRegUrl_google() {
 
 		loginWithGoogle.VerifyRegistrationUrl();
 
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 7)
 	public void ValidateOrderId_google() {
 		loginWithGoogle.verifyOrderId();
 	}
 
-	@Test(priority = 7, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	@Test(priority = 8, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
 	public void validateBuyerDetails_google(String[] rowindex) throws Throwable {
 
 		loginWithGoogle.verifyBuyerdetails(rowindex[7], rowindex[8]);
 
 	}
 
-	@Test(priority  = 8, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	@Test(priority = 9, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
 	public void validateRegistration_google(String[] rowindex) throws Throwable {
 
 		loginWithGoogle.verifyCompleteRegistration(rowindex[10], rowindex[11], rowindex[12], rowindex[13]);
 
 	}
-
-
 
 	@AfterMethod
 

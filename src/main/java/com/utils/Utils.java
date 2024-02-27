@@ -3,15 +3,22 @@ package com.utils;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.Set;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.DataFormatter;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.DataProvider;
 
 import com.base.TestBase;
@@ -81,10 +88,30 @@ public class Utils extends TestBase {
 		}
 
 	}
+
+	public static void javaScriptClick(WebElement webelement) {
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", webelement);
+
+	}
+
+	public static void javaScriptScroll(WebElement webelement) {
+
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", webelement);
+
+	}
 	
 	
-	
-	
+	public static void scrollDown() {
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("windows.scrollBy(0,150)");
+		
+		
+		
+	}
 
 	public static void CapturescreenShot(String methodname) throws Throwable {
 
@@ -97,5 +124,63 @@ public class Utils extends TestBase {
 		FileUtils.copyFile(src, tgt);
 
 	}
+	
+	public static void writeInToExcel(String ORDERID) {
+		
 
-}
+        // Create a workbook
+        try (Workbook workbook = new XSSFWorkbook()) {
+            // Create a sheet
+            Sheet sheet = workbook.createSheet("Order IDs");
+
+            // Create a row
+            Row row = sheet.createRow(0);
+
+            // Create a cell and set its value
+            Cell cell = row.createCell(0);
+            cell.setCellValue("Order ID");
+
+            // Create another row for data
+            Row dataRow = sheet.createRow(1);
+
+            // Create a cell for data and set its value
+            Cell dataCell = dataRow.createCell(0);
+            dataCell.setCellValue(ORDERID);
+
+            // Write the workbook to a file
+            try (FileOutputStream outputStream = new FileOutputStream("./src/main/java/com/testdata/demo.xlsx")) {
+                workbook.write(outputStream);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+		
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

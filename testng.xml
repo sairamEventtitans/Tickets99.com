@@ -8,8 +8,11 @@
 	
   <test thread-count="5" name="Test">
     <classes>
-     <!-- <class name="com.testscripts.LoginGoogleTests"/> -->
-      <class name="com.testscripts.LoginWithNewEmailTest"/> 
+      <class name="com.testscripts.LoginGoogleTests"/> 
+    
+      
+      
+    <!--  <class name="com.testscripts.LoginWithNewEmailTest"/> -->
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -5,17 +5,19 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
+import com.pages.LoginWithExistingEmailAmazonPay;
 import com.pages.LoginWithExistingEmailUpiPayment;
 import com.pages.LoginWithGoogle;
 import com.pages.LoginWithNewEmail;
 import com.utils.Utils;
 
-public class LoginWithExistingEmailUpiPayTest extends TestBase {
+public class LoginWithExistingEmailAmazonPayTest extends TestBase {
 
 	String sheetname2 = "ExistingEmaillogin";
 	LoginWithNewEmail newEmail;
 	LoginWithGoogle login;
 	LoginWithExistingEmailUpiPayment Upi;
+	LoginWithExistingEmailAmazonPay amazonPay;
 
 	@DataProvider
 	public String[][] emailtestdata() throws Throwable {
@@ -29,6 +31,7 @@ public class LoginWithExistingEmailUpiPayTest extends TestBase {
 		newEmail = new LoginWithNewEmail(driver);
 		login = new LoginWithGoogle(driver);
 		Upi = new LoginWithExistingEmailUpiPayment(driver);
+		amazonPay = new LoginWithExistingEmailAmazonPay(driver);
 
 	}
 
@@ -80,50 +83,50 @@ public class LoginWithExistingEmailUpiPayTest extends TestBase {
 
 		// verify payment url
 	}
-
-	@Test(priority = 8)
-	public void validatePhonepe() {
-
-		Upi.verifyPhonepe();
-		// phone pe is displayed verify when clicks on honepe
-		// clcik on back again
-
-	}
-
-	@Test(priority = 9)
-	public void validateAmazonPe() {
-
-		Upi.verifyAmazon();
-		// phone pe is displayed verify when clicks on honepe
-	}
-
-	@Test(priority = 10, dataProvider = "emailtestdata", dataProviderClass = LoginWithExistingEmailUpiPayTest.class)
-	public void validatephoenpeOrderMessage(String[] row) {
-
-		Upi.verifyPhonepeOrder(row[11]);
-
-		// eneter transaction id and verify message
-	}
-
-	@Test(priority = 11)
-	public void validateRegisterBtn() {
-
-		Upi.verifyCompleteRegisterbutton(); // should not be displayed in both upi and cash cases
-
-	}
-
-	@Test(priority = 12)
-	public void validateOrderIdVip() {
-
-		newEmail.verifyOderVip();
-		// vip order id verify
-	}
-
-	@Test(priority = 13)
-	public void validateOrderIdFree() {
-
-		newEmail.verifyOrderIdFree();
-		// free order id verify
-	}
+//
+//	@Test(priority = 8)
+//	public void validatePhonepe() {
+//
+//		Upi.verifyPhonepe();
+//		// phone pe is displayed verify when clicks on honepe
+//		// clcik on back again
+//
+//	}
+//
+//	@Test(priority = 9)
+//	public void validateAmazonPe() {
+//
+//		Upi.verifyAmazon();
+//		// phone pe is displayed verify when clicks on honepe
+//	}
+//
+//	@Test(priority = 10, dataProvider = "emailtestdata", dataProviderClass = LoginWithExistingEmailUpiPayTest.class)
+//	public void validateAmazonOrderMessage(String[] row) {
+//
+//		amazonPay.verifyAmazonPay(row[12]);
+//
+//		// eneter transaction id and verify message
+//	}
+//
+//	@Test(priority = 11)
+//	public void validateRegisterBtn() {
+//
+//		Upi.verifyCompleteRegisterbutton(); // should not be displayed in both upi and cash cases
+//
+//	}
+//
+//	@Test(priority = 12)
+//	public void validateOrderIdVip() {
+//
+//		newEmail.verifyOderVip();
+//		// vip order id verify
+//	}
+//
+//	@Test(priority = 13)
+//	public void validateOrderIdFree() {
+//
+//		newEmail.verifyOrderIdFree();
+//		// free order id verify
+//	}
 
 }

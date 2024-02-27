@@ -6,23 +6,12 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="com.testscripts.LoginWithNewEmailTest">
-        <methods>
-          <include name="setup"/>
-          <include name="ValidateOrderIdFree_email"/>
-          <include name="validateAttendeeRegistration_Vip" invocation-numbers="0"/>
-          <include name="teardown"/>
-          <include name="validateAttendeeEmail" invocation-numbers="0"/>
-          <include name="validateOrderifVip_email"/>
-        </methods>
-      </class> <!-- com.testscripts.LoginWithNewEmailTest -->
       <class name="com.testscripts.LoginGoogleTests">
         <methods>
-          <include name="validateTicketForAttendee_google" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="ValidateRegUrl_google"/>
-          <include name="validateRegistration_google" invocation-numbers="0"/>
-          <include name="validateBuyerDetails_google" invocation-numbers="0"/>
+          <include name="validateRegistration_google"/>
+          <include name="validateBuyerDetails_google"/>
           <include name="validateViewTicketUrl_google"/>
           <include name="teardown"/>
           <include name="ValidateOrderId_google"/>

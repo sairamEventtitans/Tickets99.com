@@ -79,8 +79,17 @@ public class LoginWithNewEmailTest extends TestBase {
 		login.verifyAttendee_orderConfirmantion(row[6], row[7], row[8], row[9]);
 
 	}
-
+	
 	@Test(priority = 6)
+	public void validateOrderSuccessMessage() {
+		
+		login.verifyOrderSuccessMessage();
+	}
+	
+	
+	
+
+	@Test(priority = 7)
 	public void validateOrderifVip_email() {
 
 		newEmail.verifyOderVip();
@@ -98,14 +107,14 @@ public class LoginWithNewEmailTest extends TestBase {
 //		
 //	}
 
-	@Test(priority = 7)
+	@Test(priority = 8)
 	public void ValidateOrderIdFree_email() {
 
 		newEmail.verifyOrderIdFree();
 
 	}
 
-	@Test(priority = 8, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
+	@Test(priority = 9, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
 	public void validateAttendeeRegistration_Vip(String[] row) {
 
 		newEmail.VerifyAttendeeRegistration_Vip(row[10], row[11], row[12], row[13], row[14], row[15], row[16]);
