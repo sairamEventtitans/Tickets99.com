@@ -6,15 +6,44 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.testscripts.LoginGoogleUPIPaidTicketTest">
+        <methods>
+          <include name="setup"/>
+          <include name="validateRegisterBtn"/>
+          <include name="teardown"/>
+          <include name="validateDisableEmail_google_Upi" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.testscripts.LoginGoogleUPIPaidTicketTest -->
+      <class name="com.testscripts.LoginGoogleAmazonPayTest">
+        <methods>
+          <include name="validateRegisterBtn"/>
+          <include name="validateDisableEmail_google_Upi" invocation-numbers="0"/>
+          <include name="validatePhonepe"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.testscripts.LoginGoogleAmazonPayTest -->
+      <class name="com.testscripts.LoginWithExistingEmailUpiPayTest">
+        <methods>
+          <include name="teardown"/>
+          <include name="validateRegisterBtn"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.testscripts.LoginWithExistingEmailUpiPayTest -->
+      <class name="com.testscripts.LoginWithExistingEmailAmazonPayTest">
+        <methods>
+          <include name="validateRegisterBtn"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.testscripts.LoginWithExistingEmailAmazonPayTest -->
       <class name="com.testscripts.LoginGoogleTests">
         <methods>
           <include name="setup"/>
-          <include name="ValidateRegUrl_google"/>
-          <include name="validateRegistration_google"/>
-          <include name="validateBuyerDetails_google"/>
-          <include name="validateViewTicketUrl_google"/>
+          <include name="validateDisableEmail_google" invocation-numbers="0"/>
+          <include name="validateRegistration_google" invocation-numbers="0"/>
+          <include name="validateBuyerDetails_google" invocation-numbers="0"/>
           <include name="teardown"/>
-          <include name="ValidateOrderId_google"/>
         </methods>
       </class> <!-- com.testscripts.LoginGoogleTests -->
     </classes>

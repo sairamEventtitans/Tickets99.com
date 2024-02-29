@@ -158,29 +158,45 @@ public class Utils extends TestBase {
         }
     }
 		
+		public static void WriteInExistingExcel(String ORDERID,String sheetName,int cellNum) {
+			
+			 String filePath = "./src/main/java/com/testdata/TestData.xlsx";
+		        // Sheet name
+		     //   String sheetName = "Sheet1";
+		        // Order ID obtained from Selenium
+		       // String orderId = "Your_Order_ID_Goes_Here";
+		        
+		        try {
+		            FileInputStream fileInputStream = new FileInputStream(new File(filePath));
+		            Workbook workbook = new XSSFWorkbook(fileInputStream);
+		            Sheet sheet = workbook.getSheet(sheetName);
+		            
+		            // Find the next empty row in the sheet
+		           // int rowCount = sheet.getLastRowNum() + 1;
+		            Row row = sheet.getRow(1);
+		            
+		            // Write the order ID to the given cell of the row
+		            Cell cell = row.createCell(cellNum);
+		            cell.setCellValue(ORDERID);
+		            
+		            // Write the updated workbook back to the file
+		            FileOutputStream fileOutputStream = new FileOutputStream(filePath);
+		            workbook.write(fileOutputStream);
+		            fileOutputStream.close();
+		            workbook.close();
+		            
+		            System.out.println("Order ID added successfully to the Excel file.");
+		        } catch (FileNotFoundException e) {
+		            e.printStackTrace();
+		        } catch (IOException e) {
+		            e.printStackTrace();
+		        }
+		    }	
+			
+			
+			
+		}
 		
 		
 		
-		
-	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-

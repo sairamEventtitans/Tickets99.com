@@ -28,6 +28,20 @@ public class LoginWithExistingEmailAmazonPay extends TestBase {
 
 	@FindBy(xpath = "//h3[text()='Your order is pending']")
 	WebElement orderPendingMsg;
+	
+	@FindBy(xpath = "//div[@id='OrderDiv']//span")
+	WebElement orderid;
+	
+	@FindBy(xpath = "//td//span[@id='orderid']")
+	WebElement ticketverify;
+	
+	@FindBy(xpath = "(//button[@onclick='return ViewMyTicket(this);'])[2]")
+	WebElement viewTickets;
+	
+	@FindBy(xpath = "(//button[@onclick='return ViewMyTicket(this);'])[1]")
+	WebElement Ticketurlbtn;
+	
+	
 
 	public LoginWithExistingEmailAmazonPay(WebDriver driver) {
 
@@ -44,6 +58,32 @@ public class LoginWithExistingEmailAmazonPay extends TestBase {
 		boolean OrderpendingMsg = orderPendingMsg.isDisplayed();
 
 		Assert.assertTrue(OrderpendingMsg);
+
+	}
+	
+	public void verifyOderVip_amazon() {
+
+		String ticketwindow = driver.getWindowHandle();
+		String orderID = orderid.getText();
+		Ticketurlbtn.click();
+		Utils.Windowhandless(ticketwindow);
+		String ticketID = ticketverify.getText();
+		Assert.assertEquals(orderID, ticketID);
+		
+		Utils.WriteInExistingExcel(orderID, "ExistingEmaillogin", 16);
+		driver.switchTo().window(ticketwindow);
+	}
+
+	public void verifyOrderIdFree_amazon() {
+
+		String ticketwindow = driver.getWindowHandle();
+		String orderID = orderid.getText();
+		viewTickets.click();
+		Utils.Windowhandless(ticketwindow);
+		String ticketID = ticketverify.getText();
+		Assert.assertEquals(orderID, ticketID);
+		Utils.WriteInExistingExcel(orderID, "ExistingEmaillogin", 15);
+		driver.switchTo().window(ticketwindow);
 
 	}
 
