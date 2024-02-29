@@ -1,5 +1,7 @@
 package com.testscripts;
 
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -64,13 +66,13 @@ public class LoginWithExistingEmailUpiPayTest extends TestBase {
 	@Test(priority = 5, dataProvider = "emailtestdata", dataProviderClass = LoginWithExistingEmailUpiPayTest.class)
 	public void validateBuyForSomeone(String[] row) {
 
-		login.verifyAttendee_orderConfirmantion(row[4], row[5], row[6], row[7]);
+		login.verifyAttendee_orderConfirmantion(row[4], row[5], row[6], row[7], row[17]);
 	}
 
 	@Test(priority = 6, dataProvider = "emailtestdata", dataProviderClass = LoginWithExistingEmailUpiPayTest.class)
 	public void validateWhatsappIsPresent(String[] row) {
 		newEmail.verifyWhatsAppCheckbox(row[8], row[9], row[10]);
-		// after validating clcick on proceed
+		// after validating click on proceed
 	}
 
 	@Test(priority = 7)
@@ -115,15 +117,32 @@ public class LoginWithExistingEmailUpiPayTest extends TestBase {
 	@Test(priority = 12)
 	public void validateOrderIdVip() {
 
-		newEmail.verifyOderVip();
+		Upi.verifyOderVip_upi();
 		// vip order id verify
 	}
 
 	@Test(priority = 13)
 	public void validateOrderIdFree() {
 
-		newEmail.verifyOrderIdFree();
+		Upi.verifyOrderIdFree_upi();
 		// free order id verify
+	}
+
+	@AfterMethod
+
+	public void teardown(ITestResult result) throws Throwable {
+
+		if (result.getStatus() == ITestResult.FAILURE) {
+
+			capture(result.getMethod().getMethodName());
+		}
+
+	}
+
+	public void capture(String methodname) throws Throwable {
+
+		Utils.CapturescreenShot(methodname);
+
 	}
 
 }

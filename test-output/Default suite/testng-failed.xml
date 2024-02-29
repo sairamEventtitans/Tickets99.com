@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testscripts.LoginWithExistingEmailUpiPayTest">
+      <class name="com.testscripts.LoginWithMobileAmazonPayTest">
         <methods>
-          <include name="validateOrderIdVip"/>
-          <include name="validatePhonepe"/>
-          <include name="validateOrderIdFree"/>
-          <include name="validatephoenpeOrderMessage" invocation-numbers="0"/>
           <include name="validateRegisterBtn"/>
-          <include name="validateAmazonPe"/>
           <include name="setup"/>
+          <include name="teardown"/>
         </methods>
-      </class> <!-- com.testscripts.LoginWithExistingEmailUpiPayTest -->
+      </class> <!-- com.testscripts.LoginWithMobileAmazonPayTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

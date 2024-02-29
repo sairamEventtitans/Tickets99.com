@@ -71,12 +71,27 @@ public class LoginWithExistingEmailUpiPayment extends TestBase {
 
 	@FindBy(id = "acompletepayment")
 	WebElement completeOrderPhonepe;
-	
-	@FindBy (xpath="//h3[text()='Your order is pending']")
+
+	@FindBy(xpath = "//h3[text()='Your order is pending']")
 	WebElement orderPendingMsg;
-	
-	@FindBy (xpath="//button[text()='Complete Registration']")
+
+	@FindBy(xpath = "//button[@onclick='return OpenCompleteProfile(this);']")
 	WebElement completeRegBtn;
+
+	@FindBy(xpath = "//*[@id='radioupi']")
+	WebElement Upibutton;
+
+	@FindBy(xpath = "//div[@id='OrderDiv']//span")
+	WebElement orderid;
+
+	@FindBy(xpath = "//td//span[@id='orderid']")
+	WebElement ticketverify;
+
+	@FindBy(xpath = "(//button[@onclick='return ViewMyTicket(this);'])[2]")
+	WebElement viewTickets;
+
+	@FindBy(xpath = "(//button[@onclick='return ViewMyTicket(this);'])[1]")
+	WebElement Ticketurlbtn;
 
 	public LoginWithExistingEmailUpiPayment(WebDriver driver) {
 
@@ -116,6 +131,8 @@ public class LoginWithExistingEmailUpiPayment extends TestBase {
 		boolean paymentMessage = paymentPageMessage.isDisplayed();
 
 		Assert.assertTrue(paymentMessage);
+
+		Upibutton.click();
 		proceedBtn.click();
 
 	}
@@ -144,25 +161,43 @@ public class LoginWithExistingEmailUpiPayment extends TestBase {
 		Utils.javaScriptClick(doneBtn);
 		enterTransIdValue.sendKeys(phnepeTransID);
 		completeOrderPhonepe.click();
-		boolean OrderpendingMsg=orderPendingMsg.isDisplayed();
-		
+		boolean OrderpendingMsg = orderPendingMsg.isDisplayed();
+
 		Assert.assertTrue(OrderpendingMsg);
 	}
 
 	public void verifyCompleteRegisterbutton() {
-		
-		boolean RegBtn=completeRegBtn.isDisplayed();
+
+		boolean RegBtn = completeRegBtn.isDisplayed();
 		Assert.assertFalse(RegBtn);
-		
+
 	}
-	
-	public void verifyOrderIdVip() {
-		
-		
-		
+
+	public void verifyOrderIdFree_upi() {
+
+		String ticketwindow = driver.getWindowHandle();
+		String orderID = orderid.getText();
+		viewTickets.click();
+		Utils.Windowhandless(ticketwindow);
+		String ticketID = ticketverify.getText();
+		Assert.assertEquals(orderID, ticketID);
+		Utils.WriteInExistingExcel(orderID, "ExistingEmaillogin", 13);
+		driver.switchTo().window(ticketwindow);
+
 	}
-	
-	
-	
-	
+
+	public void verifyOderVip_upi() {
+
+		String ticketwindow = driver.getWindowHandle();
+		String orderID = orderid.getText();
+		
+		Ticketurlbtn.click();
+		Utils.Windowhandless(ticketwindow);
+		String ticketID = ticketverify.getText();
+		Assert.assertEquals(orderID, ticketID);
+
+		Utils.WriteInExistingExcel(orderID, "ExistingEmaillogin", 14);
+		driver.switchTo().window(ticketwindow);
+	}
+
 }

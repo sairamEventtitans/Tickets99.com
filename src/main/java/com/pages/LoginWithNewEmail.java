@@ -153,6 +153,9 @@ public class LoginWithNewEmail extends TestBase {
 
 	@FindBy(xpath = "(//button[@id='btnproceed'])[1]")
 	WebElement proceed2;
+	
+	@FindBy (xpath="//input[@id='textbuyeremail']")
+	WebElement b_Email;
 
 	public LoginWithNewEmail(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -194,11 +197,10 @@ public class LoginWithNewEmail extends TestBase {
 
 	}
 
-	public void verifyWhatsAppCheckbox(String mobile_b, String fname_b, String lname_b) {
+	public void verifyWhatsAppCheckbox(String Email_b, String fname_b, String lname_b) {
 
-		buyerMobile.clear();
-		buyerMobile.sendKeys(mobile_b);
-
+		b_Email.sendKeys(Email_b);
+		
 		buyerFname.clear();
 		buyerFname.sendKeys(fname_b);
 
@@ -239,7 +241,8 @@ public class LoginWithNewEmail extends TestBase {
 		Utils.Windowhandless(ticketwindow);
 		String ticketID = ticketverify.getText();
 		Assert.assertEquals(orderID, ticketID);
-
+		
+		Utils.WriteInExistingExcel(orderID, "emaildata", 17);
 		driver.switchTo().window(ticketwindow);
 	}
 
@@ -251,7 +254,7 @@ public class LoginWithNewEmail extends TestBase {
 		Utils.Windowhandless(ticketwindow);
 		String ticketID = ticketverify.getText();
 		Assert.assertEquals(orderID, ticketID);
-
+		Utils.WriteInExistingExcel(orderID, "emaildata", 18);
 		driver.switchTo().window(ticketwindow);
 
 	}

@@ -57,14 +57,14 @@ public class LoginGoogleTests extends TestBase {
 	@Test(priority = 2, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
 	public void ValidateWhatsappConfigEnable(String[] rowindex) throws Throwable {
 
-		loginWithGoogle.verifyWhatsappCongig(rowindex[7], rowindex[8], rowindex[9]);
+		loginWithGoogle.verifyWhatsappCongig(rowindex[7], rowindex[8], rowindex[9],rowindex[1]);
 
 	}
 
 	@Test(priority = 3, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
 	public void validateTicketForAttendee_google(String[] rowindex) throws Throwable {
 
-		loginWithGoogle.verifyAttendee_orderConfirmantion(rowindex[3], rowindex[4], rowindex[5], rowindex[6]);
+		loginWithGoogle.verifyAttendee_orderConfirmantion(rowindex[3], rowindex[4], rowindex[5], rowindex[6],rowindex[15]);
 
 	}
 

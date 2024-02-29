@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	
+
 	<listeners>
-<listener class-name="extentreports.ExtentReporter" />
-</listeners>
-	
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="com.testscripts.LoginGoogleTests"/> 
-    
-      
-      
-    <!--  <class name="com.testscripts.LoginWithNewEmailTest"/> -->
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+		<listener class-name="extentreports.ExtentReporter" />
+	</listeners>
+
+	<test thread-count="5" name="Test">
+		<classes>
+
+			<class name="com.testscripts.LoginGoogleTests" />
+			<class name="com.testscripts.LoginWithNewEmailTest" />
+			<class name="com.testscripts.LoginWithExistingEmailAmazonPayTest" />
+			<class name="com.testscripts.LoginWithExistingEmailUpiPayTest" />
+			<class name="com.testscripts.LoginGoogleAmazonPayTest"></class>
+			<class name="com.testscripts.LoginGoogleUPIPaidTicketTest"></class>
+			
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

@@ -133,9 +133,12 @@ public class LoginWithGoogle extends TestBase {
 
 	@FindBy(id = "btneventpage")
 	WebElement eventpagebtn;
-	
-	@FindBy (id="btnproceedcheck")
+
+	@FindBy(id = "btnproceedcheck")
 	WebElement proceedPayment;
+
+	@FindBy(id = "textbuyeremail")
+	WebElement buyerEmailvalue;
 
 	public LoginWithGoogle(WebDriver driver) { // initializing the webelements address using constructor
 
@@ -166,9 +169,9 @@ public class LoginWithGoogle extends TestBase {
 
 	} // checked
 
-	public void verifyWhatsappCongig(String bfname, String blname, String bmobile) throws Throwable { // verifying
-																										// whatsapp
-																										// configuration
+	public void verifyWhatsappCongig(String bfname, String blname, String bmobile, String bEmail) throws Throwable { // verifying
+		// whatsapp
+		// configuration
 		// link is dispalyed in the
 		// webpage
 //
@@ -178,7 +181,7 @@ public class LoginWithGoogle extends TestBase {
 //		buyerLname.sendKeys(blname);
 //		buyerMobile.clear();
 //		buyerMobile.sendKeys(bmobile);
-//		
+		buyerEmailvalue.sendKeys(bEmail);
 
 		// if whatsapp config not displayed need to pass the data after clicking edit
 		// button
@@ -189,12 +192,13 @@ public class LoginWithGoogle extends TestBase {
 
 	}
 
-	public void verifyAttendee_orderConfirmantion(String fname, String lname, String email, String mobile) {
+	public void verifyAttendee_orderConfirmantion(String fname, String lname, String email, String mobile,
+			String forAttendee) {
 
 		String attendee = prop.getProperty("ticketforattendee"); // Verifying the Order confirmation by validating order
-																	// success message
+		String Attendee = forAttendee; // success message
 
-		if (attendee.equalsIgnoreCase("yes")) { // if ticket is for attendee then give yes in configprop
+		if (Attendee.equalsIgnoreCase("yes")) { // if ticket is for attendee then give yes in configprop
 			attendeebox.click();
 			fnamevalue.clear();
 			fnamevalue.sendKeys(fname);
@@ -210,27 +214,25 @@ public class LoginWithGoogle extends TestBase {
 //		js.executeScript("arguments[0].scrollIntoView(true);", proceedlast);
 //		js.executeScript("arguments[0].click();", proceedlast);
 //		
-		//proceedPayment.click();
-	//	js.executeScript("arguments[0].click();", proceedPayment);
-	}	
-	
-	
+		// proceedPayment.click();
+		// js.executeScript("arguments[0].click();", proceedPayment);
+	}
+
 	public void verifyOrderSuccessMessage() {
-	
-		
+
 		js.executeScript("arguments[0].click();", proceedPayment);
 		boolean orderSuccessMsg = ordersuccessFul.isDisplayed();
 		Assert.assertTrue(orderSuccessMsg); // checked
 
-	
 	}
+
 	public void verifyViewticketUrl() throws Throwable { // verify when user clicks on view ticket url
 
 //		viewTickets.click();
 //		String viewTicketUrl = driver.getCurrentUrl();
 //
 //		Assert.assertEquals("https://admin.tickets99.com/ticket/ASuLvCVm9%204uT6W-PPjrBw==", viewTicketUrl);
-		
+
 		String window1 = driver.getWindowHandle();
 		viewTickets.click();
 		Thread.sleep(1000);
@@ -262,14 +264,19 @@ public class LoginWithGoogle extends TestBase {
 
 		String ticketwindow = driver.getWindowHandle();
 		String ORDERID = orderid.getText();
+
+		System.out.println("Order id is " + ORDERID);
+
 		viewTickets.click();
 		Utils.Windowhandless(ticketwindow);
 		String ticketID = ticketverify.getText();
 		Assert.assertEquals(ORDERID, ticketID);
 
 		driver.switchTo().window(ticketwindow);
-		
-		Utils.writeInToExcel(ORDERID);
+
+		// Utils.writeInToExcel(ORDERID);
+
+		Utils.WriteInExistingExcel(ORDERID, "logincred", 14);
 
 	}
 
