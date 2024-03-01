@@ -48,7 +48,7 @@ public class LoginGoogleTests extends TestBase {
 //	}
 
 	@Test(priority = 1, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
-	public void validateDisableEmail_google(String[] rowindex) throws Throwable {
+	public void validateDisablemail_google(String[] rowindex) throws Throwable {
 
 		loginWithGoogle.VerifyGooglesignIn(rowindex[1], rowindex[2]);
 

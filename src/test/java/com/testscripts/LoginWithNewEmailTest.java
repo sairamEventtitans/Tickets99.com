@@ -76,18 +76,15 @@ public class LoginWithNewEmailTest extends TestBase {
 	@Test(priority = 5, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
 	public void validateAttendeeEmail(String[] row) {
 
-		login.verifyAttendee_orderConfirmantion(row[6], row[7], row[8], row[9],row[19]);
+		login.verifyAttendee_orderConfirmantion(row[6], row[7], row[8], row[9], row[19]);
 
 	}
-	
+
 	@Test(priority = 6)
 	public void validateOrderSuccessMessage() {
-		
+
 		login.verifyOrderSuccessMessage();
 	}
-	
-	
-	
 
 	@Test(priority = 7)
 	public void validateOrderifVip_email() {

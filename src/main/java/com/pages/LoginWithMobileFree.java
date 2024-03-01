@@ -114,6 +114,9 @@ public class LoginWithMobileFree extends TestBase {
 	@FindBy (id="textdesignationname")
 	WebElement Job;
 	
+	@FindBy (xpath="//span[@class='py-0 px-2 text-red-col']")
+	WebElement editButton;
+	
 	public LoginWithMobileFree(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
@@ -127,22 +130,27 @@ public class LoginWithMobileFree extends TestBase {
 		mobileValue.sendKeys(mobile_number);
 		continueBtn.click();
 		Thread.sleep(30000);
-		verifyOtp.click();
+	//	verifyOtp.click();
 
 		boolean orderSummaryMeassage = orderSummary.isDisplayed();
 		Assert.assertTrue(orderSummaryMeassage);
 
 	}
 
-	public void verifydisableEmail(String b_fname, String b_lname, String b_email) {
+	public void verifydisableEmail(String b_fname, String b_lname, String b_email) throws Throwable {
 
+		//editButton.click();
+		
 		buyerfirstname.clear();
 		buyerfirstname.sendKeys(b_fname);
 
 		buyerLastname.clear();
 		buyerLastname.sendKeys(b_lname);
+		
 		buyerEmail.clear();
 		buyerEmail.sendKeys(b_email);
+		
+		Thread.sleep(10000);
 
 		boolean verifyDisable = mobileDisable.isEnabled();
 		Assert.assertFalse(verifyDisable);
@@ -162,7 +170,7 @@ public class LoginWithMobileFree extends TestBase {
 			lnamevalue.sendKeys(lname);
 			attendeeemailvalue.clear();
 			attendeeemailvalue.sendKeys(email);
-			mobilenumvalue.clear();
+			mobilenumvalue.clear(); 
 			mobilenumvalue.sendKeys(mobile);
 		}
 		Utils.javaScriptClick(whatsappcheckbox);

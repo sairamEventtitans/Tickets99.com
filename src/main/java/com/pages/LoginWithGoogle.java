@@ -192,8 +192,7 @@ public class LoginWithGoogle extends TestBase {
 
 	}
 
-	public void verifyAttendee_orderConfirmantion(String fname, String lname, String email, String mobile,
-			String forAttendee) {
+	public void verifyAttendee_orderConfirmantion(String fname, String lname, String email, String mobile,			String forAttendee) {
 
 		String attendee = prop.getProperty("ticketforattendee"); // Verifying the Order confirmation by validating order
 		String Attendee = forAttendee; // success message

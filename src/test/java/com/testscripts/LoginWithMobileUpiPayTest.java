@@ -53,7 +53,7 @@ public class LoginWithMobileUpiPayTest extends TestBase {
 
 	@Test(priority = 2, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileUpiPayTest.class)
 
-	public void validateDisableEmail_MbUpi(String row[]) {
+	public void validateDisableEmail_MbUpi(String row[]) throws Throwable {
 		mobileFree.verifydisableEmail(row[2], row[3], row[4]);
 	}
 
@@ -93,7 +93,7 @@ public class LoginWithMobileUpiPayTest extends TestBase {
 	}
 
 	@Test(priority = 8)
-	public void validatePhonepe() {
+	public void validatePhonepe() throws Throwable {
 
 		Upi.verifyPhonepe();
 		// phone pe is displayed verify when clicks on honepe

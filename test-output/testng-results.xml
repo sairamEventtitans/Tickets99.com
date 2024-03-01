@@ -1,251 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="11" failed="1" skipped="0">
+<testng-results ignored="0" total="13" passed="12" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-02-29T16:05:15 IST" name="Default suite" finished-at="2024-02-29T16:06:41 IST" duration-ms="85504">
+  <suite started-at="2024-03-01T16:29:07 IST" name="Default suite" finished-at="2024-03-01T16:30:03 IST" duration-ms="56570">
     <groups>
     </groups>
-    <test started-at="2024-02-29T16:05:15 IST" name="Default test" finished-at="2024-02-29T16:06:41 IST" duration-ms="85504">
-      <class name="com.testscripts.LoginWithMobileAmazonPayTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:15 IST" name="setup" finished-at="2024-02-29T16:05:21 IST" duration-ms="6095" status="PASS">
+    <test started-at="2024-03-01T16:29:07 IST" name="Default test" finished-at="2024-03-01T16:30:03 IST" duration-ms="56570">
+      <class name="com.testscripts.LoginWithNewMailUpiPayTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:29:07 IST" name="setup" finished-at="2024-03-01T16:29:12 IST" duration-ms="5755" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="validateMobileLogin_MbUpi([Ljava.lang.String;)[pri:1, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:22 IST" name="validateMobileLogin_MbUpi" data-provider="dataFetch" finished-at="2024-02-29T16:05:54 IST" duration-ms="31684" status="PASS">
+        <test-method signature="ValidateSigninWithNewEmail_upiPay([Ljava.lang.String;)[pri:1, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:29:13 IST" name="ValidateSigninWithNewEmail_upiPay" data-provider="emailtestdata" finished-at="2024-03-01T16:29:45 IST" duration-ms="31305" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@656922a0]]>
+                <![CDATA[[Ljava.lang.String;@1a0d96a5]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateMobileLogin_MbUpi -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:54 IST" name="teardown" finished-at="2024-02-29T16:05:54 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- ValidateSigninWithNewEmail_upiPay -->
+        <test-method signature="ValidateCoupon_Email([Ljava.lang.String;)[pri:2, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:29:45 IST" name="ValidateCoupon_Email" data-provider="emailtestdata" finished-at="2024-03-01T16:29:46 IST" duration-ms="889" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateMobileLogin_MbUpi status=SUCCESS method=LoginWithMobileAmazonPayTest.validateMobileLogin_MbUpi([Ljava.lang.String;)[pri:1, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4] output={null}]]]>
+                <![CDATA[[Ljava.lang.String;@7a3e5cd3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="validateDisableEmail_MbUpi([Ljava.lang.String;)[pri:2, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:54 IST" name="validateDisableEmail_MbUpi" data-provider="dataFetch" finished-at="2024-02-29T16:05:55 IST" duration-ms="791" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.String;@2538bc06]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateDisableEmail_MbUpi -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:55 IST" name="teardown" finished-at="2024-02-29T16:05:55 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateDisableEmail_MbUpi status=SUCCESS method=LoginWithMobileAmazonPayTest.validateDisableEmail_MbUpi([Ljava.lang.String;)[pri:2, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="validateOrderConfirmation_MbUpi([Ljava.lang.String;)[pri:3, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:55 IST" name="validateOrderConfirmation_MbUpi" data-provider="dataFetch" finished-at="2024-02-29T16:05:55 IST" duration-ms="60" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.String;@737db7f8]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateOrderConfirmation_MbUpi -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:55 IST" name="teardown" finished-at="2024-02-29T16:05:55 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateOrderConfirmation_MbUpi status=SUCCESS method=LoginWithMobileAmazonPayTest.validateOrderConfirmation_MbUpi([Ljava.lang.String;)[pri:3, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="validateCoupon([Ljava.lang.String;)[pri:4, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:55 IST" name="validateCoupon" data-provider="dataFetch" finished-at="2024-02-29T16:05:56 IST" duration-ms="1020" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.String;@2440022a]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateCoupon -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:56 IST" name="teardown" finished-at="2024-02-29T16:05:56 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateCoupon status=SUCCESS method=LoginWithMobileAmazonPayTest.validateCoupon([Ljava.lang.String;)[pri:4, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="validateCouponRemove()[pri:5, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:56 IST" name="validateCouponRemove" finished-at="2024-02-29T16:05:56 IST" duration-ms="120" status="PASS">
+        </test-method> <!-- ValidateCoupon_Email -->
+        <test-method signature="validateCouponRemove()[pri:3, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:29:46 IST" name="validateCouponRemove" finished-at="2024-03-01T16:29:46 IST" duration-ms="129" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateCouponRemove -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:56 IST" name="teardown" finished-at="2024-02-29T16:05:56 IST" duration-ms="0" status="PASS">
+        <test-method signature="ValidateEmailDisable_Email()[pri:4, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:29:46 IST" name="ValidateEmailDisable_Email" finished-at="2024-03-01T16:29:46 IST" duration-ms="191" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateEmailDisable_Email -->
+        <test-method signature="validateWhatsappCheckbox([Ljava.lang.String;)[pri:5, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:29:46 IST" name="validateWhatsappCheckbox" data-provider="emailtestdata" finished-at="2024-03-01T16:29:47 IST" duration-ms="501" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateCouponRemove status=SUCCESS method=LoginWithMobileAmazonPayTest.validateCouponRemove()[pri:5, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4] output={null}]]]>
+                <![CDATA[[Ljava.lang.String;@4a37191a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="validateWhatsappIsPresent([Ljava.lang.String;)[pri:6, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:56 IST" name="validateWhatsappIsPresent" data-provider="dataFetch" finished-at="2024-02-29T16:05:57 IST" duration-ms="516" status="PASS">
+        </test-method> <!-- validateWhatsappCheckbox -->
+        <test-method signature="validateAttendeeEmail([Ljava.lang.String;)[pri:6, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:29:47 IST" name="validateAttendeeEmail" data-provider="emailtestdata" finished-at="2024-03-01T16:29:47 IST" duration-ms="65" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@44784e2f]]>
+                <![CDATA[[Ljava.lang.String;@3c79088e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateWhatsappIsPresent -->
-        <test-method signature="validatePaymentUrl()[pri:7, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:57 IST" name="validatePaymentUrl" finished-at="2024-02-29T16:05:57 IST" duration-ms="429" status="PASS">
+        </test-method> <!-- validateAttendeeEmail -->
+        <test-method signature="validatePaymentUrl()[pri:7, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:29:47 IST" name="validatePaymentUrl" finished-at="2024-03-01T16:29:47 IST" duration-ms="441" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validatePaymentUrl -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:57 IST" name="teardown" finished-at="2024-02-29T16:05:57 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateWhatsappIsPresent status=SUCCESS method=LoginWithMobileAmazonPayTest.validateWhatsappIsPresent([Ljava.lang.String;)[pri:6, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:57 IST" name="teardown" finished-at="2024-02-29T16:05:57 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validatePaymentUrl status=SUCCESS method=LoginWithMobileAmazonPayTest.validatePaymentUrl()[pri:7, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="validatePhonepe()[pri:8, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:57 IST" name="validatePhonepe" finished-at="2024-02-29T16:05:58 IST" duration-ms="960" status="PASS">
+        <test-method signature="validatePhonepe()[pri:8, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:29:47 IST" name="validatePhonepe" finished-at="2024-03-01T16:29:50 IST" duration-ms="2821" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validatePhonepe -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:58 IST" name="teardown" finished-at="2024-02-29T16:05:58 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validatePhonepe status=SUCCESS method=LoginWithMobileAmazonPayTest.validatePhonepe()[pri:8, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="validateAmazonPe()[pri:9, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:58 IST" name="validateAmazonPe" finished-at="2024-02-29T16:05:59 IST" duration-ms="267" status="PASS">
+        <test-method signature="validateAmazonPe()[pri:9, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:29:50 IST" name="validateAmazonPe" finished-at="2024-03-01T16:29:51 IST" duration-ms="281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateAmazonPe -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:59 IST" name="teardown" finished-at="2024-02-29T16:05:59 IST" duration-ms="0" status="PASS">
+        <test-method signature="validatephoenpeOrderMessage([Ljava.lang.String;)[pri:10, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:29:51 IST" name="validatephoenpeOrderMessage" data-provider="emailtestdata" finished-at="2024-03-01T16:30:01 IST" duration-ms="9992" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateAmazonPe status=SUCCESS method=LoginWithMobileAmazonPayTest.validateAmazonPe()[pri:9, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4] output={null}]]]>
+                <![CDATA[[Ljava.lang.String;@5a02bfe3]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="validateAmazonOrderMessage([Ljava.lang.String;)[pri:10, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:05:59 IST" name="validateAmazonOrderMessage" data-provider="dataFetch" finished-at="2024-02-29T16:06:09 IST" duration-ms="10242" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.String;@61f6d381]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAmazonOrderMessage -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:06:09 IST" name="teardown" finished-at="2024-02-29T16:06:09 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateAmazonOrderMessage status=SUCCESS method=LoginWithMobileAmazonPayTest.validateAmazonOrderMessage([Ljava.lang.String;)[pri:10, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="validateRegisterBtn()[pri:11, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:06:09 IST" name="validateRegisterBtn" finished-at="2024-02-29T16:06:39 IST" duration-ms="30047" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        </test-method> <!-- validatephoenpeOrderMessage -->
+        <test-method signature="validateRegisterBtn()[pri:11, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:30:01 IST" name="validateRegisterBtn" finished-at="2024-03-01T16:30:01 IST" duration-ms="56" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[@onclick='return OpenCompleteProfile(this);']"}
-  (Session info: chrome=121.0.6167.189)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'WINDOWS-I42JNHR', ip: '192.168.0.111', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.189, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\COREVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56873}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3b7f8f726f7ebd6dcb3f28178acf23bb
-*** Element info: {Using=xpath, value=//button[@onclick='return OpenCompleteProfile(this);']}]]>
+              <![CDATA[expected [false] but found [true]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@onclick='return OpenCompleteProfile(this);']"}
-  (Session info: chrome=121.0.6167.189)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.0', revision: '2ecb7d9a', time: '2018-10-31T20:09:30'
-System info: host: 'WINDOWS-I42JNHR', ip: '192.168.0.111', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 121.0.6167.189, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\COREVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56873}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3b7f8f726f7ebd6dcb3f28178acf23bb
-*** Element info: {Using=xpath, value=//button[@onclick='return OpenCompleteProfile(this);']}
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
-at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:171)
-at com.testscripts.LoginWithMobileAmazonPayTest.validateRegisterBtn(LoginWithMobileAmazonPayTest.java:125)
+              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertFalse(Assert.java:67)
+at org.testng.Assert.assertFalse(Assert.java:77)
+at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:179)
+at com.testscripts.LoginWithNewMailUpiPayTest.validateRegisterBtn(LoginWithNewMailUpiPayTest.java:113)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -276,37 +129,19 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validateRegisterBtn -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:06:39 IST" name="teardown" finished-at="2024-02-29T16:06:39 IST" duration-ms="310" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateRegisterBtn status=FAILURE method=LoginWithMobileAmazonPayTest.validateRegisterBtn()[pri:11, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4] output={null}]]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="validateOrderIdVip()[pri:12, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:30:01 IST" name="validateOrderIdVip" finished-at="2024-03-01T16:30:02 IST" duration-ms="1261" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="validateOrderIdVip_amazonpay()[pri:12, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:06:39 IST" name="validateOrderIdVip_amazonpay" finished-at="2024-02-29T16:06:41 IST" duration-ms="1446" status="PASS">
+        </test-method> <!-- validateOrderIdVip -->
+        <test-method signature="validateOrderIdFree()[pri:13, instance:com.testscripts.LoginWithNewMailUpiPayTest@53aac487]" started-at="2024-03-01T16:30:02 IST" name="validateOrderIdFree" finished-at="2024-03-01T16:30:03 IST" duration-ms="1273" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateOrderIdVip_amazonpay -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4]" started-at="2024-02-29T16:06:41 IST" name="teardown" finished-at="2024-02-29T16:06:41 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateOrderIdVip_amazonpay status=SUCCESS method=LoginWithMobileAmazonPayTest.validateOrderIdVip_amazonpay()[pri:12, instance:com.testscripts.LoginWithMobileAmazonPayTest@272113c4] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.testscripts.LoginWithMobileAmazonPayTest -->
+        </test-method> <!-- validateOrderIdFree -->
+      </class> <!-- com.testscripts.LoginWithNewMailUpiPayTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

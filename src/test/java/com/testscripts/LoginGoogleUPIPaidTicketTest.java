@@ -61,7 +61,7 @@ public class LoginGoogleUPIPaidTicketTest extends TestBase {
 	}
 
 	@Test(priority = 5)
-	public void validatePhonepe() {
+	public void validatePhonepe() throws Throwable {
 
 		Upi.verifyPhonepe();
 		// phone pe is displayed verify when clicks on honepe

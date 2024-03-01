@@ -46,7 +46,7 @@ public class LoginWithNewEmail extends TestBase {
 	@FindBy(id = "applycoupon")
 	WebElement couponApplybtn;
 
-	@FindBy(xpath = "//small[text()='Coupon code VISION2024 is applied successfully. Discounted Amount is : ₹ 5.00']")
+	@FindBy(xpath = "//small[text()='Coupon code VISION2025 is applied successfully. Discounted Amount is : ₹ 5.00']")
 	WebElement Couponmessage;
 
 	@FindBy(xpath = "//i[@class='icon-edit-3 fs-6']")
@@ -153,8 +153,8 @@ public class LoginWithNewEmail extends TestBase {
 
 	@FindBy(xpath = "(//button[@id='btnproceed'])[1]")
 	WebElement proceed2;
-	
-	@FindBy (xpath="//input[@id='textbuyeremail']")
+
+	@FindBy(xpath = "//input[@id='textbuyeremail']")
 	WebElement b_Email;
 
 	public LoginWithNewEmail(WebDriver driver) {
@@ -163,17 +163,18 @@ public class LoginWithNewEmail extends TestBase {
 
 	public void verifyNewEmailLogin(String email) throws Throwable {
 
-		String emailVerificationUrl = "https://www.tickets99.com/buy/vision-2024/ticket";
+		String emailVerificationUrl = "https://www.tickets99.com/buy/vision-2025/ticket";
 
 		buyButton.click();
 
 		AddticketFree.click();
 		AddticketVip.click();
-		proceedticketbtn.click();
+		proceedticketbtn.click(); 
 		Emailvalue.sendKeys(email);
 		ContinueMail.click();
 		Thread.sleep(30000);
-		verifymailbtn.click();
+
+		Utils.javaScriptClick(verifymailbtn);
 
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(emailVerificationUrl, actualUrl);
@@ -185,6 +186,8 @@ public class LoginWithNewEmail extends TestBase {
 		couponApplybtn.click();
 
 		boolean couponmessage = Couponmessage.isDisplayed();
+		
+		System.out.println(couponmessage);
 		Assert.assertTrue(couponmessage);
 
 	}
@@ -199,8 +202,9 @@ public class LoginWithNewEmail extends TestBase {
 
 	public void verifyWhatsAppCheckbox(String Email_b, String fname_b, String lname_b) {
 
-		b_Email.sendKeys(Email_b);
-		
+//		b_Email.clear();
+//		b_Email.sendKeys(Email_b);
+
 		buyerFname.clear();
 		buyerFname.sendKeys(fname_b);
 
@@ -241,7 +245,7 @@ public class LoginWithNewEmail extends TestBase {
 		Utils.Windowhandless(ticketwindow);
 		String ticketID = ticketverify.getText();
 		Assert.assertEquals(orderID, ticketID);
-		
+
 		Utils.WriteInExistingExcel(orderID, "emaildata", 17);
 		driver.switchTo().window(ticketwindow);
 	}
