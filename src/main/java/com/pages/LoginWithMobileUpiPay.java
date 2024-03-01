@@ -61,8 +61,8 @@ public class LoginWithMobileUpiPay extends TestBase {
 		proceedticketbtn.click();
 		mobileValue.sendKeys(mobile_number);
 		continueBtn.click();
-		Thread.sleep(30000);
-		verifyOtp.click();
+	//	Thread.sleep(30000);
+	//	verifyOtp.click();
 
 		boolean orderSummaryMeassage = orderSummary.isDisplayed();
 		Assert.assertTrue(orderSummaryMeassage);

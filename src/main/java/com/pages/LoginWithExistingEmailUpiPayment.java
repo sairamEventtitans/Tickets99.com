@@ -137,10 +137,17 @@ public class LoginWithExistingEmailUpiPayment extends TestBase {
 
 	}
 
-	public void verifyPhonepe() {
+	public void verifyPhonepe() throws Throwable {
 
-		phonepeCheckbox.click();
+		Utils.javaScriptClick(phonepeCheckbox);
+		Thread.sleep(2000);
+
+		// phonepeCheckbox.click();
 		boolean phonepeDisplay = phonepeMsg.isDisplayed();
+
+		System.out.println("Phonepe msg " + phonepeDisplay);
+
+		Utils.javaScriptScroll(phonepeMsg);
 
 		Assert.assertTrue(phonepeDisplay);
 		backToPayment.click();
@@ -190,7 +197,7 @@ public class LoginWithExistingEmailUpiPayment extends TestBase {
 
 		String ticketwindow = driver.getWindowHandle();
 		String orderID = orderid.getText();
-		
+
 		Ticketurlbtn.click();
 		Utils.Windowhandless(ticketwindow);
 		String ticketID = ticketverify.getText();

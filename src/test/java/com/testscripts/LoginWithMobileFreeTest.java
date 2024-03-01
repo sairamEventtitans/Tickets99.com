@@ -47,7 +47,7 @@ public class LoginWithMobileFreeTest extends TestBase {
 
 	@Test(priority = 2, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
 
-	public void validateDisableEmail_Mbfree(String row[]) {
+	public void validateDisableEmail_Mbfree(String row[]) throws Throwable {
 		mobileFree.verifydisableEmail(row[2], row[3], row[4]);
 	}
 
@@ -65,20 +65,20 @@ public class LoginWithMobileFreeTest extends TestBase {
 
 	@Test(priority = 5)
 	public void verifyOrderId_Mbfree() {
-		
+
 		mobileFree.verifyOrderId();
 	}
-	
-	@Test(priority = 6,dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
+
+	@Test(priority = 6, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
 	public void verifyBuyerdetails_Mbfree(String row[]) {
 		mobileFree.verifyBuyerdetails(row[2], row[3]);
 	}
-	
-	@Test(priority = 7,dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
-	
+
+	@Test(priority = 7, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
+
 	public void verifyRegistration_Mbfree(String[] row) {
-		
-		mobileFree.verifyCompleteRegistration(row[10],row[11],row[12],row[13],row[14],row[15]);
+
+		mobileFree.verifyCompleteRegistration(row[10], row[11], row[12], row[13], row[14], row[15]);
 	}
-	
+
 }

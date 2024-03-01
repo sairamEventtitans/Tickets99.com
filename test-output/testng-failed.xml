@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testscripts.LoginWithExistingEmailFreeTest">
+      <class name="com.testscripts.LoginWithNewMailUpiPayTest">
         <methods>
           <include name="setup"/>
-          <include name="validateWhatsappIsPresent"/>
+          <include name="validateRegisterBtn"/>
         </methods>
-      </class> <!-- com.testscripts.LoginWithExistingEmailFreeTest -->
+      </class> <!-- com.testscripts.LoginWithNewMailUpiPayTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
