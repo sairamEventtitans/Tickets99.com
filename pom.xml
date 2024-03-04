@@ -75,6 +75,12 @@
 			<version>5.0.9</version>
 		</dependency>
 
+	<dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>5.0.6</version> <!-- Update version to the latest stable release -->
+</dependency>
+
 		<!--
 		https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
 	

@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testscripts.LoginWithNewMailUpiPayTest">
+      <class name="com.testscripts.LoginWithExistingEmailUpiPayTest">
         <methods>
-          <include name="setup"/>
+          <include name="teardown"/>
           <include name="validateRegisterBtn"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.testscripts.LoginWithNewMailUpiPayTest -->
+      </class> <!-- com.testscripts.LoginWithExistingEmailUpiPayTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

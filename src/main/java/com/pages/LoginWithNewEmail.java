@@ -2,6 +2,7 @@ package com.pages;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -46,7 +47,7 @@ public class LoginWithNewEmail extends TestBase {
 	@FindBy(id = "applycoupon")
 	WebElement couponApplybtn;
 
-	@FindBy(xpath = "//small[text()='Coupon code VISION2025 is applied successfully. Discounted Amount is : ₹ 5.00']")
+	@FindBy(xpath = "//small[text()='Coupon code VISION2024 is applied successfully. Discounted Amount is : ₹ 1.00']")
 	WebElement Couponmessage;
 
 	@FindBy(xpath = "//i[@class='icon-edit-3 fs-6']")
@@ -163,21 +164,30 @@ public class LoginWithNewEmail extends TestBase {
 
 	public void verifyNewEmailLogin(String email) throws Throwable {
 
-		String emailVerificationUrl = "https://www.tickets99.com/buy/vision-2025/ticket";
+		String emailVerificationUrl = "https://www.tickets99.com/buy/vision-2024/ticket";
 
 		buyButton.click();
 
 		AddticketFree.click();
 		AddticketVip.click();
-		proceedticketbtn.click(); 
+		proceedticketbtn.click();
 		Emailvalue.sendKeys(email);
 		ContinueMail.click();
-		Thread.sleep(30000);
 
-		Utils.javaScriptClick(verifymailbtn);
+		try {
+
+			//Thread.sleep(30000);
+			Utils.javaScriptClick(verifymailbtn);
+		}
+
+		catch (NoSuchElementException nse) {
+
+			System.out.println("No otp verification required directed to payment page");
+		}
 
 		String actualUrl = driver.getCurrentUrl();
 		Assert.assertEquals(emailVerificationUrl, actualUrl);
+
 	}
 
 	public void verifyCoupon(String Couponcode) {
@@ -186,7 +196,7 @@ public class LoginWithNewEmail extends TestBase {
 		couponApplybtn.click();
 
 		boolean couponmessage = Couponmessage.isDisplayed();
-		
+
 		System.out.println(couponmessage);
 		Assert.assertTrue(couponmessage);
 

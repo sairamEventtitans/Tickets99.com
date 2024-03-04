@@ -8,62 +8,11 @@
     <classes>
       <class name="com.testscripts.LoginGoogleTests">
         <methods>
+          <include name="ValidateWhatsappConfigEnable" invocation-numbers="0"/>
           <include name="setup"/>
-          <include name="validateDisableEmail_google" invocation-numbers="0"/>
-          <include name="validateRegistration_google" invocation-numbers="0"/>
-          <include name="validateBuyerDetails_google" invocation-numbers="0"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- com.testscripts.LoginGoogleTests -->
-      <class name="com.testscripts.LoginWithNewEmailTest">
-        <methods>
-          <include name="validateWhatsappCheckbox" invocation-numbers="0"/>
-          <include name="setup"/>
-          <include name="teardown"/>
-          <include name="ValidateSigninWithNewEmail" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.testscripts.LoginWithNewEmailTest -->
-      <class name="com.testscripts.LoginWithExistingEmailAmazonPayTest">
-        <methods>
-          <include name="validateRegisterBtn"/>
-          <include name="validateWhatsappIsPresent" invocation-numbers="0"/>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.testscripts.LoginWithExistingEmailAmazonPayTest -->
-      <class name="com.testscripts.LoginGoogleAmazonPayTest">
-        <methods>
-          <include name="validateRegisterBtn"/>
-          <include name="ValidateWhatsappConfigEnable_UPi"/>
-          <include name="validateDisableEmail_google_Upi"/>
-          <include name="validatePhonepe"/>
-          <include name="validatePaymentUrl"/>
-          <include name="validateOrderIdVip"/>
-          <include name="validateTicketForAttendee_google_upi"/>
-          <include name="validateAmazonPe"/>
-          <include name="setup"/>
-          <include name="validatephoenpeOrderMessage"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- com.testscripts.LoginGoogleAmazonPayTest -->
-      <class name="com.testscripts.LoginGoogleUPIPaidTicketTest">
-        <methods>
-          <include name="setup"/>
-          <include name="validateRegisterBtn"/>
-          <include name="teardown"/>
-          <include name="validatePhonepe"/>
-          <include name="validateDisableEmail_google_Upi" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.testscripts.LoginGoogleUPIPaidTicketTest -->
-      <class name="com.testscripts.LoginWithExistingEmailUpiPayTest">
-        <methods>
-          <include name="validateWhatsappIsPresent" invocation-numbers="0"/>
-          <include name="validatePhonepe"/>
-          <include name="teardown"/>
-          <include name="validateRegisterBtn"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.testscripts.LoginWithExistingEmailUpiPayTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

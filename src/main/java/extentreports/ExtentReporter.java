@@ -1,7 +1,7 @@
 package extentreports;
 
-
 import java.io.File;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -15,6 +15,7 @@ import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.xml.XmlSuite;
 
+import com.aventstack.extentreports.Status;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
@@ -22,10 +23,8 @@ import com.relevantcodes.extentreports.LogStatus;
 public class ExtentReporter implements IReporter {
 	private ExtentReports extent;
 
-	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites,
-			String outputDirectory) {
-		extent = new ExtentReports(outputDirectory + File.separator
-				+ "Extent.html", true);
+	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
+		extent = new ExtentReports(outputDirectory + File.separator + "Extent.html", true);
 
 		for (ISuite suite : suites) {
 			Map<String, ISuiteResult> result = suite.getResults();
@@ -49,6 +48,8 @@ public class ExtentReporter implements IReporter {
 		if (tests.size() > 0) {
 			for (ITestResult result : tests.getAllResults()) {
 				test = extent.startTest(result.getMethod().getMethodName());
+				// test.log(Status.FAIL, "Test failed");
+				test.addScreenCapture("./shots/test1.png");
 
 				test.setStartedTime(getTime(result.getStartMillis()));
 				test.setEndedTime(getTime(result.getEndMillis()));
@@ -59,12 +60,19 @@ public class ExtentReporter implements IReporter {
 				if (result.getThrowable() != null) {
 					test.log(status, result.getThrowable());
 				} else {
-					test.log(status, "Test " + status.toString().toLowerCase()
-							+ "ed");
+					test.log(status, "Test " + status.toString().toLowerCase() + "ed");
+				}
+
+				String methodName = result.getMethod().getMethodName();
+				String screenshotPath = "./shots/" + methodName + ".png";
+				File screenshot = new File(screenshotPath);
+				if (screenshot.exists()) {
+					test.log(LogStatus.FAIL, "Screenshot below: " + test.addScreenCapture(screenshotPath));
 				}
 
 				extent.endTest(test);
 			}
+
 		}
 	}
 

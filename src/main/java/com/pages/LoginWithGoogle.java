@@ -181,7 +181,7 @@ public class LoginWithGoogle extends TestBase {
 //		buyerLname.sendKeys(blname);
 //		buyerMobile.clear();
 //		buyerMobile.sendKeys(bmobile);
-		buyerEmailvalue.sendKeys(bEmail);
+	//	buyerEmailvalue.sendKeys(bEmail);
 
 		// if whatsapp config not displayed need to pass the data after clicking edit
 		// button
