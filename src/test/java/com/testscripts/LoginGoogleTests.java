@@ -1,10 +1,7 @@
 package com.testscripts;
 
-import java.io.File;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -17,19 +14,17 @@ import com.aventstack.extentreports.ExtentTest;
 import com.base.TestBase;
 import com.pages.LoginWithGoogle;
 import com.utils.Utils;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class LoginGoogleTests extends TestBase {
 
 	LoginWithGoogle loginWithGoogle;
-
 	ExtentReports extent;
 	ExtentTest logger;
-
 	String sheetname = "logincred";
 
-	public LoginGoogleTests() {
+	private Logger logger2; // Declare the logger field
 
+	public LoginGoogleTests() {
 		super();
 	}
 
@@ -47,6 +42,11 @@ public class LoginGoogleTests extends TestBase {
 	}
 
 //	@BeforeMethod
+//	public void loggingSetup() {
+//		logger.info("Starting test method execution");
+//	}
+
+//	@BeforeMethod
 //	public void testsetup() {                               //For quick checking 
 //
 //		Initialization();
@@ -55,9 +55,16 @@ public class LoginGoogleTests extends TestBase {
 //
 //	}
 
+	@BeforeMethod
+	public void setup2() {
+		// Initialize the logger
+		logger2 = LogManager.getLogger(LoginGoogleTests.class);
+		logger2.info("Starting test method execution");
+	}
+
 	@Test(priority = 1, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
 	public void validateDisablemail_google(String[] rowindex) throws Throwable {
-
+		logger2.info("Starting test method execution");
 		loginWithGoogle.VerifyGooglesignIn(rowindex[1], rowindex[2]);
 
 	}
@@ -145,6 +152,16 @@ public class LoginGoogleTests extends TestBase {
 
 		Utils.CapturescreenShot(methodname);
 
+	}
+
+	public void LoggingInfo(ITestResult result) {
+		if (result.getStatus() == ITestResult.SUCCESS) {
+			logger2.info("Test method passed: " + result.getMethod().getMethodName());
+		} else if (result.getStatus() == ITestResult.FAILURE) {
+			logger.error("Test method failed: " + result.getMethod().getMethodName());
+		} else if (result.getStatus() == ITestResult.SKIP) {
+			logger.warning("Test method skipped: " + result.getMethod().getMethodName());
+		}
 	}
 
 }

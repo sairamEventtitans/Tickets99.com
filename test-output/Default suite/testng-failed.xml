@@ -5,18 +5,10 @@
     <classes>
       <class name="com.testscripts.LoginGoogleTests">
         <methods>
-          <include name="validateTicketForAttendee_google"/>
-          <include name="ValidateWhatsappConfigEnable"/>
-          <include name="setUp"/>
           <include name="setup"/>
-          <include name="ValidateRegUrl_google"/>
-          <include name="validateRegistration_google"/>
-          <include name="validateBuyerDetails_google"/>
-          <include name="validateViewTicketUrl_google"/>
-          <include name="ValidateOrderId_google"/>
-          <include name="tearDown"/>
-          <include name="validateDisablemail_google"/>
-          <include name="validateOrderSuccessMessage"/>
+          <include name="teardown"/>
+          <include name="setup2"/>
+          <include name="validateDisablemail_google" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.testscripts.LoginGoogleTests -->
     </classes>

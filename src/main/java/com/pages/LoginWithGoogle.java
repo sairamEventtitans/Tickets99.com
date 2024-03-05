@@ -164,7 +164,7 @@ public class LoginWithGoogle extends TestBase {
 		Thread.sleep(2000);
 		editbtn.click();
 		boolean checkemail = disablemail.isEnabled();
-		Assert.assertTrue(checkemail);
+		Assert.assertFalse(checkemail);
 		System.out.println("checking email is disabled expected false " + checkemail);
 
 	} // checked
