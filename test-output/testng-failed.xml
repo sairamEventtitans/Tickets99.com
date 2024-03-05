@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="extentreports.ExtentReporter"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="com.testscripts.LoginWithNewMailUpiPayTest">
+        <methods>
+          <include name="setup"/>
+          <include name="validateRegisterBtn"/>
+        </methods>
+      </class> <!-- com.testscripts.LoginWithNewMailUpiPayTest -->
       <class name="com.testscripts.LoginWithExistingEmailUpiPayTest">
         <methods>
           <include name="teardown"/>
@@ -10,6 +19,41 @@
           <include name="setup"/>
         </methods>
       </class> <!-- com.testscripts.LoginWithExistingEmailUpiPayTest -->
+      <class name="com.testscripts.LoginGoogleAmazonPayTest">
+        <methods>
+          <include name="validateRegisterBtn"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.testscripts.LoginGoogleAmazonPayTest -->
+      <class name="com.testscripts.LoginGoogleUPIPaidTicketTest">
+        <methods>
+          <include name="setup"/>
+          <include name="validateRegisterBtn"/>
+          <include name="teardown"/>
+        </methods>
+      </class> <!-- com.testscripts.LoginGoogleUPIPaidTicketTest -->
+      <class name="com.testscripts.LoginWithNewMailAmazonPayTest">
+        <methods>
+          <include name="validateRegisterBtn"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.testscripts.LoginWithNewMailAmazonPayTest -->
+      <class name="com.testscripts.LoginGoogleTests">
+        <methods>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="validateDisablemail_google" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- com.testscripts.LoginGoogleTests -->
+      <class name="com.testscripts.LoginWithExistingEmailAmazonPayTest">
+        <methods>
+          <include name="validateRegisterBtn"/>
+          <include name="teardown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.testscripts.LoginWithExistingEmailAmazonPayTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

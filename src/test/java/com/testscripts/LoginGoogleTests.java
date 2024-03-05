@@ -1,8 +1,10 @@
 package com.testscripts;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.testng.Assert;
+import java.io.File;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -10,13 +12,19 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
 import com.base.TestBase;
 import com.pages.LoginWithGoogle;
 import com.utils.Utils;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 
 public class LoginGoogleTests extends TestBase {
 
 	LoginWithGoogle loginWithGoogle;
+
+	ExtentReports extent;
+	ExtentTest logger;
 
 	String sheetname = "logincred";
 
@@ -57,14 +65,15 @@ public class LoginGoogleTests extends TestBase {
 	@Test(priority = 2, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
 	public void ValidateWhatsappConfigEnable(String[] rowindex) throws Throwable {
 
-		loginWithGoogle.verifyWhatsappCongig(rowindex[7], rowindex[8], rowindex[9],rowindex[1]);
+		loginWithGoogle.verifyWhatsappCongig(rowindex[7], rowindex[8], rowindex[9], rowindex[1]);
 
 	}
 
 	@Test(priority = 3, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
 	public void validateTicketForAttendee_google(String[] rowindex) throws Throwable {
 
-		loginWithGoogle.verifyAttendee_orderConfirmantion(rowindex[3], rowindex[4], rowindex[5], rowindex[6],rowindex[15]);
+		loginWithGoogle.verifyAttendee_orderConfirmantion(rowindex[3], rowindex[4], rowindex[5], rowindex[6],
+				rowindex[15]);
 
 	}
 
@@ -108,6 +117,18 @@ public class LoginGoogleTests extends TestBase {
 		loginWithGoogle.verifyCompleteRegistration(rowindex[10], rowindex[11], rowindex[12], rowindex[13]);
 
 	}
+
+//	@AfterMethod
+//
+//	public void testScreenshot(String methodname) {
+//
+//		if (result.getStatus() == result.FAILURE || result.getStatus() == result.SKIP) {
+//			String screenshotPath = Utils.CapturescreenShot(methodname);
+//			result.setAttribute("screenshotPath", screenshotPath); // sets the value the variable/attribute
+//																	// screenshotPath as the path of the sceenshot
+//		}
+//
+//	}
 
 	@AfterMethod
 

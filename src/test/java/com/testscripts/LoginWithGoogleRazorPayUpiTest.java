@@ -9,16 +9,18 @@ import com.base.TestBase;
 import com.pages.LoginWithExistingEmailUpiPayment;
 import com.pages.LoginWithGoogle;
 import com.pages.LoginWithGooglePaidTicket;
+import com.pages.LoginWithGoogleRazorPayUpi;
 import com.pages.LoginWithNewEmail;
 import com.utils.Utils;
 
-public class LoginGoogleUPIPaidTicketTest extends TestBase {
+public class LoginWithGoogleRazorPayUpiTest extends TestBase {
 
 	String sheetname2 = "ExistingEmaillogin";
 	LoginWithNewEmail newEmail;
 	LoginWithGoogle login;
 	LoginWithExistingEmailUpiPayment Upi;
 	LoginWithGooglePaidTicket googlePaid;
+	LoginWithGoogleRazorPayUpi razorUpi;
 
 	@BeforeClass
 	public void setup() { // prerequisites for testmethods are placed here
@@ -28,6 +30,7 @@ public class LoginGoogleUPIPaidTicketTest extends TestBase {
 		login = new LoginWithGoogle(driver);
 		Upi = new LoginWithExistingEmailUpiPayment(driver);
 		googlePaid = new LoginWithGooglePaidTicket(driver);
+		razorUpi = new LoginWithGoogleRazorPayUpi(driver);
 	}
 
 	@Test(priority = 1, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
@@ -53,48 +56,18 @@ public class LoginGoogleUPIPaidTicketTest extends TestBase {
 
 	@Test(priority = 4)
 	public void validatePaymentUrl() {
-
-		Upi.verifyProceedPaymentPage();
-
+		razorUpi.verifyPaymentPage();
 		// verify payment url
 	}
 
 	@Test(priority = 5)
-	public void validatePhonepe() throws Throwable {
-
-		Upi.verifyPhonepe();
-		// phone pe is displayed verify when clicks on honepe
-		// clcik on back again
-
+	public void validateRazorUpiPaymentMsg() throws Throwable {
+		razorUpi.verifyRazorCheckbox();
 	}
 
 	@Test(priority = 6)
-	public void validateAmazonPe() {
-
-		Upi.verifyAmazon();
-		// phone pe is displayed verify when clicks on honepe
-	}
-
-	@Test(priority = 7, dataProvider = "emailtestdata", dataProviderClass = LoginWithExistingEmailUpiPayTest.class)
-	public void validatephoenpeOrderMessage(String[] row) {
-
-		Upi.verifyPhonepeOrder(row[11]);
-
-		// eneter transaction id and verify message
-	}
-
-	@Test(priority = 8)
-	public void validateRegisterBtn() {
-
-		Upi.verifyCompleteRegisterbutton(); // should not be displayed in both upi and cash cases
-
-	}
-
-	@Test(priority = 9)
-	public void validateOrderIdVip() {
-
-		googlePaid.verifyOderVip_upi();
-		// vip order id verify
+	public void validateUpiMobile() throws Throwable {
+		razorUpi.verifyRazorUpiPaymentMethods();
 	}
 
 	@AfterMethod

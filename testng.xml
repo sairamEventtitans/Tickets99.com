@@ -13,7 +13,8 @@
 		<classes>
 
 			<class name="com.testscripts.LoginGoogleTests" />
-		<!--	<class name="com.testscripts.LoginGoogleUPIPaidTicketTest" />
+			
+		<class name="com.testscripts.LoginGoogleUPIPaidTicketTest" />
 			<class name="com.testscripts.LoginGoogleAmazonPayTest" />
 
 			<class name="com.testscripts.LoginWithExistingEmailFreeTest" />
@@ -23,9 +24,9 @@
 
 			<class name="com.testscripts.LoginWithNewEmailTest" />
 			<class name="com.testscripts.LoginWithNewMailUpiPayTest" />
-			<class name="com.testscripts.LoginWithNewMailAmazonPayTest" /> -->
+			<class name="com.testscripts.LoginWithNewMailAmazonPayTest" />
 
-			<!--  <class name="com.testscripts.LoginWithMobileUpiPayTest"/>
+				<!--  <class name="com.testscripts.LoginWithMobileUpiPayTest"/>
       <class name="com.testscripts.LoginWithMobileFreeTest"/>      
       <class name="com.testscripts.LoginWithMobileAmazonPayTest"/> -->
 

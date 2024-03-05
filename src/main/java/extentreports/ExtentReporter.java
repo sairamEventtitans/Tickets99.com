@@ -42,39 +42,81 @@ public class ExtentReporter implements IReporter {
 		extent.close();
 	}
 
+//	private void buildTestNodes(IResultMap tests, LogStatus status) {
+//		ExtentTest test;
+//
+//		if (tests.size() > 0) {
+//			for (ITestResult result : tests.getAllResults()) {
+//				test = extent.startTest(result.getMethod().getMethodName());
+//				// test.log(Status.FAIL, "Test failed");
+//				test.addScreenCapture("./shots/test1.png");
+//
+//				test.setStartedTime(getTime(result.getStartMillis()));
+//				test.setEndedTime(getTime(result.getEndMillis()));
+//
+//				for (String group : result.getMethod().getGroups())
+//					test.assignCategory(group);
+//
+//				if (result.getThrowable() != null) {
+//					test.log(status, result.getThrowable());
+//				} else {
+//					test.log(status, "Test " + status.toString().toLowerCase() + "ed");
+//				}
+//
+//				String methodName = result.getMethod().getMethodName();
+//				String screenshotPath = "./shots/" + methodName + ".png";
+//				File screenshot = new File(screenshotPath);
+//				if (screenshot.exists()) {
+//					test.log(LogStatus.FAIL, "Screenshot below: " + test.addScreenCapture(screenshotPath));
+//				}
+//
+//				extent.endTest(test);
+//			}
+//
+//		}
+//	}
+	
+	
 	private void buildTestNodes(IResultMap tests, LogStatus status) {
-		ExtentTest test;
+	    ExtentTest test;
 
-		if (tests.size() > 0) {
-			for (ITestResult result : tests.getAllResults()) {
-				test = extent.startTest(result.getMethod().getMethodName());
-				// test.log(Status.FAIL, "Test failed");
-				test.addScreenCapture("./shots/test1.png");
+	    if (tests.size() > 0) {
+	        for (ITestResult result : tests.getAllResults()) {
+	            test = extent.startTest(result.getMethod().getMethodName());
+	            test.setStartedTime(getTime(result.getStartMillis()));
+	            test.setEndedTime(getTime(result.getEndMillis()));
 
-				test.setStartedTime(getTime(result.getStartMillis()));
-				test.setEndedTime(getTime(result.getEndMillis()));
+	            for (String group : result.getMethod().getGroups())
+	                test.assignCategory(group);
 
-				for (String group : result.getMethod().getGroups())
-					test.assignCategory(group);
+	            if (result.getThrowable() != null) {
+	                test.log(status, result.getThrowable());
+	            } else {
+	                test.log(status, "Test " + status.toString().toLowerCase() + "ed");
+	            }
 
-				if (result.getThrowable() != null) {
-					test.log(status, result.getThrowable());
-				} else {
-					test.log(status, "Test " + status.toString().toLowerCase() + "ed");
-				}
+	            String methodName = result.getMethod().getMethodName();
+	            String screenshotPath = "./shots/" + methodName + ".png";
+	            File screenshot = new File(screenshotPath);
+	            
+	            if (screenshot.exists()) {
+	                // Ensure the file path is correct and use absolute path
+	                screenshotPath = screenshot.getAbsolutePath();
+	                test.log(LogStatus.FAIL, "Screenshot below: " + test.addScreenCapture(screenshotPath));
+	            }
 
-				String methodName = result.getMethod().getMethodName();
-				String screenshotPath = "./shots/" + methodName + ".png";
-				File screenshot = new File(screenshotPath);
-				if (screenshot.exists()) {
-					test.log(LogStatus.FAIL, "Screenshot below: " + test.addScreenCapture(screenshotPath));
-				}
-
-				extent.endTest(test);
-			}
-
-		}
+	            extent.endTest(test);
+	        }
+	    }
 	}
+
+	
+	
+	
+	
+	
+	
+	
 
 	private Date getTime(long millis) {
 		Calendar calendar = Calendar.getInstance();

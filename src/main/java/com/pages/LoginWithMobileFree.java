@@ -1,6 +1,7 @@
 package com.pages;
 
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -107,16 +108,16 @@ public class LoginWithMobileFree extends TestBase {
 
 	@FindBy(xpath = "//h5[text()='THANKS FOR COMPLETING YOUR REGISTRATION']")
 	WebElement completemsg;
-	
-	@FindBy (id="textcompanyname")
+
+	@FindBy(id = "textcompanyname")
 	WebElement CompanyName;
-	
-	@FindBy (id="textdesignationname")
+
+	@FindBy(id = "textdesignationname")
 	WebElement Job;
-	
-	@FindBy (xpath="//span[@class='py-0 px-2 text-red-col']")
+
+	@FindBy(xpath = "//span[@class='py-0 px-2 text-red-col']")
 	WebElement editButton;
-	
+
 	public LoginWithMobileFree(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
@@ -129,27 +130,33 @@ public class LoginWithMobileFree extends TestBase {
 		proceedticketbtn.click();
 		mobileValue.sendKeys(mobile_number);
 		continueBtn.click();
-		Thread.sleep(30000);
-	//	verifyOtp.click();
+
+		try {
+			Thread.sleep(30000);
+			verifyOtp.click();
+		}
+
+		catch (NoSuchElementException nse) {
+			System.out.println("No otp validation required for this Event");
+		}
 
 		boolean orderSummaryMeassage = orderSummary.isDisplayed();
 		Assert.assertTrue(orderSummaryMeassage);
-
 	}
 
 	public void verifydisableEmail(String b_fname, String b_lname, String b_email) throws Throwable {
 
-		//editButton.click();
-		
+		// editButton.click();
+
 		buyerfirstname.clear();
 		buyerfirstname.sendKeys(b_fname);
 
 		buyerLastname.clear();
 		buyerLastname.sendKeys(b_lname);
-		
+
 		buyerEmail.clear();
 		buyerEmail.sendKeys(b_email);
-		
+
 		Thread.sleep(10000);
 
 		boolean verifyDisable = mobileDisable.isEnabled();
@@ -170,7 +177,7 @@ public class LoginWithMobileFree extends TestBase {
 			lnamevalue.sendKeys(lname);
 			attendeeemailvalue.clear();
 			attendeeemailvalue.sendKeys(email);
-			mobilenumvalue.clear(); 
+			mobilenumvalue.clear();
 			mobilenumvalue.sendKeys(mobile);
 		}
 		Utils.javaScriptClick(whatsappcheckbox);
@@ -226,15 +233,16 @@ public class LoginWithMobileFree extends TestBase {
 
 	}
 
-	public void verifyCompleteRegistration(String companyName,String JobTitle,String intrestin, String helpwith, String about, String Picth) {
+	public void verifyCompleteRegistration(String companyName, String JobTitle, String intrestin, String helpwith,
+			String about, String Picth) {
 
 		String windowregcomplete = driver.getCurrentUrl();
 		Registrationbtn.click();
 		Utils.Windowhandless(windowregcomplete);
-		
+
 		CompanyName.clear();
 		CompanyName.sendKeys(companyName);
-		
+
 		Job.clear();
 		Job.sendKeys(JobTitle);
 
@@ -253,7 +261,7 @@ public class LoginWithMobileFree extends TestBase {
 		pitch.sendKeys(Picth);
 
 		Utils.javaScriptClick(completeregbtn);
- 
+
 		// completeregbtn.click();
 
 		boolean checkcompleteionmsg = completemsg.isDisplayed();

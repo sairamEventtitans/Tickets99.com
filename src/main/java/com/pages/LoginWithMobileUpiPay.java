@@ -1,5 +1,6 @@
 package com.pages;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -61,8 +62,15 @@ public class LoginWithMobileUpiPay extends TestBase {
 		proceedticketbtn.click();
 		mobileValue.sendKeys(mobile_number);
 		continueBtn.click();
-	//	Thread.sleep(30000);
-	//	verifyOtp.click();
+		
+	try {	
+		Thread.sleep(30000);
+		verifyOtp.click();
+	}
+	catch (NoSuchElementException nse) {
+		
+		System.out.println("No otp validation required for this Event");
+	}
 
 		boolean orderSummaryMeassage = orderSummary.isDisplayed();
 		Assert.assertTrue(orderSummaryMeassage);
