@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>12/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Fri Mar 01 16:29:07 IST 2024</td>
+<td>Started on:</td><td>Tue Mar 05 18:04:13 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>56 seconds (56570 ms)</td>
+<tr><td>Total time:</td><td>39 seconds (39013 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,14 +75,36 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateRegisterBtn()'><b>validateRegisterBtn</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
-<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertFalse(Assert.java:67)
-	at org.testng.Assert.assertFalse(Assert.java:77)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:179)
-	at com.testscripts.LoginWithNewMailUpiPayTest.validateRegisterBtn(LoginWithNewMailUpiPayTest.java:113)
+<td title='com.testscripts.LoginGoogleTests.validateDisablemail_google()'><b>validateDisablemail_google</b><br>Test class: com.testscripts.LoginGoogleTests<br>Parameters: [Ljava.lang.String;@157ec23b</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;Passwd&apos;]&quot;}
+  (Session info: chrome=122.0.6261.95)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.0&apos;, revision: &apos;2ecb7d9a&apos;, time: &apos;2018-10-31T20:09:30&apos;
+System info: host: &apos;WINDOWS-I42JNHR&apos;, ip: &apos;192.168.0.111&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\COREVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53025}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 476ae1697cf7a2a71a5e64bf9cd6a2b8
+*** Element info: {Using=name, value=Passwd}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
+	at com.pages.LoginWithGoogle.VerifyGooglesignIn(LoginWithGoogle.java:161)
+	at com.testscripts.LoginGoogleTests.validateDisablemail_google(LoginGoogleTests.java:68)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -111,14 +133,36 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace2022562847", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace2022562847'><pre>java.lang.AssertionError: expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertFalse(Assert.java:67)
-	at org.testng.Assert.assertFalse(Assert.java:77)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:179)
-	at com.testscripts.LoginWithNewMailUpiPayTest.validateRegisterBtn(LoginWithNewMailUpiPayTest.java:113)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1172943149", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1172943149'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;*[name=&apos;Passwd&apos;]&quot;}
+  (Session info: chrome=122.0.6261.95)
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.0&apos;, revision: &apos;2ecb7d9a&apos;, time: &apos;2018-10-31T20:09:30&apos;
+System info: host: &apos;WINDOWS-I42JNHR&apos;, ip: &apos;192.168.0.111&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\COREVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53025}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 476ae1697cf7a2a71a5e64bf9cd6a2b8
+*** Element info: {Using=name, value=Passwd}
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByName(RemoteWebDriver.java:404)
+	at org.openqa.selenium.By$ByName.findElement(By.java:284)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy14.sendKeys(Unknown Source)
+	at com.pages.LoginWithGoogle.VerifyGooglesignIn(LoginWithGoogle.java:161)
+	at com.testscripts.LoginGoogleTests.validateDisablemail_google(LoginGoogleTests.java:68)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -148,76 +192,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@53aac487</td></tr>
-</table><p>
-<table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.ValidateSigninWithNewEmail_upiPay()'><b>ValidateSigninWithNewEmail_upiPay</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest<br>Parameters: [Ljava.lang.String;@1a0d96a5</td>
-<td></td>
-<td>31</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@53aac487</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validatephoenpeOrderMessage()'><b>validatephoenpeOrderMessage</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest<br>Parameters: [Ljava.lang.String;@5a02bfe3</td>
-<td></td>
-<td>9</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@53aac487</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.ValidateCoupon_Email()'><b>ValidateCoupon_Email</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest<br>Parameters: [Ljava.lang.String;@7a3e5cd3</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@53aac487</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateAmazonPe()'><b>validateAmazonPe</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@53aac487</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validatePaymentUrl()'><b>validatePaymentUrl</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@53aac487</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateAttendeeEmail()'><b>validateAttendeeEmail</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest<br>Parameters: [Ljava.lang.String;@3c79088e</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@53aac487</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateOrderIdVip()'><b>validateOrderIdVip</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@53aac487</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validatePhonepe()'><b>validatePhonepe</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
-<td></td>
-<td>2</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@53aac487</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateOrderIdFree()'><b>validateOrderIdFree</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@53aac487</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateWhatsappCheckbox()'><b>validateWhatsappCheckbox</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest<br>Parameters: [Ljava.lang.String;@4a37191a</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@53aac487</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateCouponRemove()'><b>validateCouponRemove</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@53aac487</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.ValidateEmailDisable_Email()'><b>ValidateEmailDisable_Email</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@53aac487</td></tr>
+<td>32</td>
+<td>com.testscripts.LoginGoogleTests@60bd273d</td></tr>
 </table><p>
 </body>
 </html>
