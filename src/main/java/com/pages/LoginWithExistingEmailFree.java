@@ -32,9 +32,23 @@ public class LoginWithExistingEmailFree extends TestBase {
 	@FindBy(xpath = "(//button[@class='btn py-2 btn-block btn-danger bg-red-col w-100'])[1]")
 	WebElement loginButton;
 
-
 	@FindBy(xpath = "//h5[text()='WhatsApp Configuration']")
 	WebElement whatsappConfig;
+
+	@FindBy(xpath = "//span[@id='orderby']")
+	WebElement nameValidate;
+
+	@FindBy(xpath = "//h4[@id='fname']")
+	WebElement FnameAttendee;
+
+	@FindBy(xpath = "//h5[@id='lname']")
+	WebElement lnameAttendee;
+
+	@FindBy(xpath = "(//button[@onclick='return ViewMyTicket(this);'])[1]")
+	WebElement viewTickets;
+	
+	@FindBy(xpath = "//button[text()='Complete Registration']")
+	WebElement completeregbtn;
 
 	public LoginWithExistingEmailFree(WebDriver driver) {
 		PageFactory.initElements(driver, this);
@@ -67,5 +81,70 @@ public class LoginWithExistingEmailFree extends TestBase {
 		Assert.assertTrue(whatsAppCheckbox);
 
 	}
+
+	public void verifyAttendeeDetailsInViewTickets(String attendeeStatus, String firstName, String lastName) {
+
+		String attendee = attendeeStatus;
+
+		String windowmain = driver.getWindowHandle();
+
+		if (attendee.equalsIgnoreCase("yes")) {
+
+			viewTickets.click();
+			Utils.Windowhandless(windowmain);
+
+			String NameOfAttendee_given = firstName + " " + lastName;
+			String attendeeName_inApp = nameValidate.getText();
+
+			Assert.assertEquals(NameOfAttendee_given, attendeeName_inApp);
+
+			driver.switchTo().window(windowmain);
+
+			System.out.println("verified");
+
+		} else {
+
+			System.out.println("Ticket bought for self not for Someone");
+		}
+	}
+
+	public void verifyAttendeeDetailsInRegistration(String attendeeStatus, String firstName, String lastName)
+			throws Throwable {
+
+		String attendee = attendeeStatus;
+
+		String windowmain = driver.getWindowHandle();
+
+		if (attendee.equalsIgnoreCase("yes")) {
+
+			completeregbtn.click();
+
+			Utils.Windowhandless(windowmain);
+
+			String FnameInReg = FnameAttendee.getText();
+
+			String lnameInReg = lnameAttendee.getText();
+
+			String NameInReg = FnameInReg + " " + lnameInReg;
+
+			String NameGivenToAttendee = firstName + " " + lastName;
+
+			System.out.println(NameInReg);
+
+			System.out.println(NameGivenToAttendee);
+
+			Assert.assertEquals(NameGivenToAttendee, NameInReg);
+
+			driver.switchTo().window(windowmain);
+		}
+
+		System.out.println("Ticket bought for self not for Someone");
+
+	}
+	
+	
+	
+	
+	
 
 }

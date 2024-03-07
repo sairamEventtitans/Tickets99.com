@@ -71,7 +71,7 @@ public class LoginWithNewMailUpiPayTest extends TestBase {
 	@Test(priority = 6, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewMailUpiPayTest.class)
 	public void validateAttendeeEmail(String[] row) {
 
-		login.verifyAttendee_orderConfirmantion(row[6], row[7], row[8], row[9], row[19]);
+		login.verifyAttendee_orderConfirmantion(row[6], row[7], row[8], row[9], row[2]);
 
 	}
 
@@ -126,6 +126,13 @@ public class LoginWithNewMailUpiPayTest extends TestBase {
 
 		Upi.verifyOrderIdFree_upi();
 		// free order id verify
+	}
+
+	@Test(priority = 14, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
+
+	public void validateAttendeeDetailsViewticket_NewEmail(String[] rowindex) {
+
+		newEmail.verifyAttendeeDetailsInViewTickets(rowindex[2], rowindex[6], rowindex[7]);
 	}
 
 }

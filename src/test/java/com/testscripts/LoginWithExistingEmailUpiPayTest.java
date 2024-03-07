@@ -7,6 +7,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
+import com.pages.LoginWithExistingEmailFree;
 import com.pages.LoginWithExistingEmailUpiPayment;
 import com.pages.LoginWithGoogle;
 import com.pages.LoginWithNewEmail;
@@ -18,6 +19,7 @@ public class LoginWithExistingEmailUpiPayTest extends TestBase {
 	LoginWithNewEmail newEmail;
 	LoginWithGoogle login;
 	LoginWithExistingEmailUpiPayment Upi;
+	LoginWithExistingEmailFree ExistingEmail_free;
 
 	@DataProvider
 	public String[][] emailtestdata() throws Throwable {
@@ -31,6 +33,7 @@ public class LoginWithExistingEmailUpiPayTest extends TestBase {
 		newEmail = new LoginWithNewEmail(driver);
 		login = new LoginWithGoogle(driver);
 		Upi = new LoginWithExistingEmailUpiPayment(driver);
+		ExistingEmail_free = new LoginWithExistingEmailFree(driver);
 
 	}
 
@@ -126,6 +129,13 @@ public class LoginWithExistingEmailUpiPayTest extends TestBase {
 
 		Upi.verifyOrderIdFree_upi();
 		// free order id verify
+	}
+
+	@Test(priority = 14, dataProvider = "dataFetch", dataProviderClass = LoginWithExistingEmailFreeTest.class)
+
+	public void validateAttendeeDetails_ExistingEmail(String[] rowindex) {
+
+		ExistingEmail_free.verifyAttendeeDetailsInViewTickets(rowindex[17], rowindex[4], rowindex[5]);
 	}
 
 	@AfterMethod

@@ -1,6 +1,5 @@
 package com.pages;
 
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -27,7 +26,7 @@ public class LoginWithGoogleRazorPayUpi extends TestBase {
 	@FindBy(xpath = "//h3[text()='Pay With UPI QR']")
 	WebElement qr_msg;
 
-	@FindBy(xpath = "//div[@class='stack svelte-j1plw7 vertical']")
+	@FindBy(xpath = "//button[@class='new-method has-tooltip false svelte-1d17g67']//div[text()='UPI / QR']")
 	WebElement Upibutton;
 
 	@FindBy(xpath = "//div[@class='vpa-title svelte-wbn63g']")
@@ -84,7 +83,7 @@ public class LoginWithGoogleRazorPayUpi extends TestBase {
 		Upibutton.click();
 		Upi_mobile.click();
 		Mobile_upiValue.clear();
-		Mobile_upiValue.sendKeys("8106637137");
+		Mobile_upiValue.sendKeys("jakkam.sairam@ybl");
 		Thread.sleep(3000);
 		Paybtn.click();
 

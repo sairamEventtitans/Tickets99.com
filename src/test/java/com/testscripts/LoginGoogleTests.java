@@ -55,16 +55,16 @@ public class LoginGoogleTests extends TestBase {
 //
 //	}
 
-	@BeforeMethod
-	public void setup2() {
-		// Initialize the logger
-		logger2 = LogManager.getLogger(LoginGoogleTests.class);
-		logger2.info("Starting test method execution");
-	}
+//	@BeforeMethod
+//	public void setup2() {
+//		// Initialize the logger
+//		logger2 = LogManager.getLogger(LoginGoogleTests.class);
+//		logger2.info("Starting test method execution");
+//	}
 
 	@Test(priority = 1, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
 	public void validateDisablemail_google(String[] rowindex) throws Throwable {
-		logger2.info("Starting test method execution");
+		// logger2.info("Starting test method execution");
 		loginWithGoogle.VerifyGooglesignIn(rowindex[1], rowindex[2]);
 
 	}
@@ -119,49 +119,44 @@ public class LoginGoogleTests extends TestBase {
 	}
 
 	@Test(priority = 9, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
-	public void validateRegistration_google(String[] rowindex) throws Throwable {
-
-		loginWithGoogle.verifyCompleteRegistration(rowindex[10], rowindex[11], rowindex[12], rowindex[13]);
-
+	public void validateAttendeeDetails_googleloginViewTickets(String rowindex[]) {
+		loginWithGoogle.verifyAttendeeDetailsInViewTickets(rowindex[15], rowindex[3], rowindex[4]);
 	}
 
-//	@AfterMethod
+	@Test(priority = 10, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	public void validateAttendeeDetails_googleCompleteReg(String rowindex[]) throws Throwable {
+		loginWithGoogle.verifyAttendeeDetailsInRegistration(rowindex[15], rowindex[3], rowindex[4]);
+	}
+
+//	@Test(priority = 9, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+//	public void validateRegistration_google(String[] rowindex) throws Throwable {
 //
-//	public void testScreenshot(String methodname) {
+//		loginWithGoogle.verifyCompleteRegistration(rowindex[10], rowindex[11], rowindex[12], rowindex[13]);
 //
-//		if (result.getStatus() == result.FAILURE || result.getStatus() == result.SKIP) {
-//			String screenshotPath = Utils.CapturescreenShot(methodname);
-//			result.setAttribute("screenshotPath", screenshotPath); // sets the value the variable/attribute
-//																	// screenshotPath as the path of the sceenshot
-//		}
-//
-//	}
+//	} 
 
 	@AfterMethod
 
 	public void teardown(ITestResult result) throws Throwable {
 
 		if (result.getStatus() == ITestResult.FAILURE) {
-
 			capture(result.getMethod().getMethodName());
 		}
 
 	}
 
 	public void capture(String methodname) throws Throwable {
-
 		Utils.CapturescreenShot(methodname);
-
 	}
 
-	public void LoggingInfo(ITestResult result) {
-		if (result.getStatus() == ITestResult.SUCCESS) {
-			logger2.info("Test method passed: " + result.getMethod().getMethodName());
-		} else if (result.getStatus() == ITestResult.FAILURE) {
-			logger.error("Test method failed: " + result.getMethod().getMethodName());
-		} else if (result.getStatus() == ITestResult.SKIP) {
-			logger.warning("Test method skipped: " + result.getMethod().getMethodName());
-		}
-	}
+//	public void LoggingInfo(ITestResult result) {
+//		if (result.getStatus() == ITestResult.SUCCESS) {
+//			logger2.info("Test method passed: " + result.getMethod().getMethodName());
+//		} else if (result.getStatus() == ITestResult.FAILURE) {
+//			logger2.error("Test method failed: " + result.getMethod().getMethodName());
+//		} else if (result.getStatus() == ITestResult.SKIP) {
+//			logger2.warn("Test method skipped: " + result.getMethod().getMethodName());
+//		}
+//	}
 
 }

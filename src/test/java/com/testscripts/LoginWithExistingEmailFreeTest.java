@@ -78,9 +78,23 @@ public class LoginWithExistingEmailFreeTest extends TestBase {
 		mobileFree.verifyOrderId();
 	}
 	
-	@Test(priority = 7,dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
-	public void verifyBuyerdetails_Mbfree(String row[]) {
-		mobileFree.verifyBuyerdetails(row[2], row[3]);
+//	@Test(priority = 7,dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
+//	public void verifyBuyerdetails_Mbfree(String row[]) {
+//		mobileFree.verifyBuyerdetails(row[2], row[3]);
+//	}
+	
+	@Test(priority = 8, dataProvider = "dataFetch", dataProviderClass = LoginWithExistingEmailFreeTest.class)
+
+	public void validateAttendeeDetails_ExistingEmail(String[] rowindex) {
+
+		ExistingEmail_free.verifyAttendeeDetailsInViewTickets(rowindex[17], rowindex[4], rowindex[5]);
 	}
+	
+	@Test(priority = 10, dataProvider = "dataFetch", dataProviderClass = LoginWithExistingEmailFreeTest.class)
+	public void validateAttendeeDetails_googleCompleteReg(String rowindex[]) throws Throwable {
+		ExistingEmail_free.verifyAttendeeDetailsInRegistration(rowindex[17], rowindex[4], rowindex[5]);
+	}
+	
+	
 	
 }
