@@ -96,6 +96,14 @@ public class LoginGoogleUPIPaidTicketTest extends TestBase {
 		googlePaid.verifyOderVip_upi();
 		// vip order id verify
 	}
+	
+	@Test(priority = 10, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+
+	public void validateAttendeeDetails_GoogleAmazon(String[] rowindex) {
+
+		login.verifyAttendeeDetailsInViewTickets(rowindex[15], rowindex[3], rowindex[4]);
+	}
+	
 
 	@AfterMethod
 

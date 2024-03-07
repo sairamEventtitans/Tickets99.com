@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 
 import com.base.TestBase;
 import com.pages.LoginWithExistingEmailAmazonPay;
+import com.pages.LoginWithExistingEmailFree;
 import com.pages.LoginWithExistingEmailUpiPayment;
 import com.pages.LoginWithGoogle;
 import com.pages.LoginWithNewEmail;
@@ -20,6 +21,7 @@ public class LoginWithExistingEmailAmazonPayTest extends TestBase {
 	LoginWithGoogle login;
 	LoginWithExistingEmailUpiPayment Upi;
 	LoginWithExistingEmailAmazonPay amazonPay;
+	LoginWithExistingEmailFree ExistingEmail_free;
 
 	@DataProvider
 	public String[][] emailtestdata() throws Throwable {
@@ -34,6 +36,7 @@ public class LoginWithExistingEmailAmazonPayTest extends TestBase {
 		login = new LoginWithGoogle(driver);
 		Upi = new LoginWithExistingEmailUpiPayment(driver);
 		amazonPay = new LoginWithExistingEmailAmazonPay(driver);
+		ExistingEmail_free=new LoginWithExistingEmailFree(driver);
 
 	}
 
@@ -131,6 +134,20 @@ public class LoginWithExistingEmailAmazonPayTest extends TestBase {
 		amazonPay.verifyOrderIdFree_amazon();
 		// free order id verify
 	}
+	
+	
+	@Test(priority = 14, dataProvider = "dataFetch", dataProviderClass = LoginWithExistingEmailFreeTest.class)
+
+	public void validateAttendeeDetails_ExistingEmail(String[] rowindex) {
+
+		ExistingEmail_free.verifyAttendeeDetailsInViewTickets(rowindex[17], rowindex[4], rowindex[5]);
+	}
+	
+//	@Test(priority = 10, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+//	public void validateAttendeeDetails_googleCompleteReg(String rowindex[]) throws Throwable {
+//		ExistingEmail_free.verifyAttendeeDetailsInRegistration(rowindex[17], rowindex[4], rowindex[5]);
+//	}
+	
 
 	@AfterMethod
 

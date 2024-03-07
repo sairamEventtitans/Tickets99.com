@@ -122,7 +122,7 @@ public class LoginWithNewEmail extends TestBase {
 	@FindBy(id = "btneventpage")
 	WebElement eventpagebtn;
 
-	@FindBy(xpath = "//button[text()='  Complete Registration']")
+	@FindBy(xpath = "(//button[text()='Complete Registration'])[1]")
 	WebElement completeregbtn;
 
 	@FindBy(xpath = "//h5[text()='THANKS FOR COMPLETING YOUR REGISTRATION']")
@@ -158,6 +158,15 @@ public class LoginWithNewEmail extends TestBase {
 	@FindBy(xpath = "//input[@id='textbuyeremail']")
 	WebElement b_Email;
 
+	@FindBy(xpath = "//h4[@id='fname']")
+	WebElement FnameAttendee;
+
+	@FindBy(xpath = "//h5[@id='lname']")
+	WebElement lnameAttendee;
+
+	@FindBy(xpath = "//span[@id='orderby']")
+	WebElement nameValidate;
+
 	public LoginWithNewEmail(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
@@ -176,7 +185,7 @@ public class LoginWithNewEmail extends TestBase {
 
 		try {
 
-			//Thread.sleep(30000);
+			// Thread.sleep(30000);
 			Utils.javaScriptClick(verifymailbtn);
 		}
 
@@ -276,9 +285,9 @@ public class LoginWithNewEmail extends TestBase {
 	public void VerifyAttendeeRegistration_Vip(String company, String job, String intrestin, String helpwith,
 			String about, String Picth, String attendee2mail) {
 
-		String windowregcomplete = driver.getCurrentUrl();
+		String window1 = driver.getCurrentUrl();
 		Registrationbtnvip.click();
-		Utils.Windowhandless(windowregcomplete);
+		Utils.Windowhandless(window1);
 
 		countrydropdown1.click();
 		countryphonenumber.click();
@@ -309,9 +318,11 @@ public class LoginWithNewEmail extends TestBase {
 		Attendee2emailvalue.clear();
 		Attendee2emailvalue.sendKeys(attendee2mail);
 
+	//	driver.switchTo().window(window1);
+
 //		js.executeScript("arguments[0].value='sairam234@gmail.com';", Attendee2emailvalue);
 
-		js.executeScript("arguments[0].click();", completeregbtn);
+		// js.executeScript("arguments[0].click();", completeregbtn);
 
 		// completeregbtn.click();
 
@@ -353,6 +364,66 @@ public class LoginWithNewEmail extends TestBase {
 
 		boolean orderSuccessMsg = ordersuccessFul.isDisplayed();
 		Assert.assertTrue(orderSuccessMsg); // checked
+
+	}
+
+	public void verifyAttendeeDetailsInViewTickets(String attendeeStatus, String firstName, String lastName) {
+
+		String attendee = attendeeStatus;
+
+		String windowmain = driver.getWindowHandle();
+
+		if (attendee.equalsIgnoreCase("yes")) {
+
+			viewTickets.click();
+			Utils.Windowhandless(windowmain);
+
+			String NameOfAttendee_given = firstName + " " + lastName;
+			String attendeeName_inApp = nameValidate.getText();
+
+			Assert.assertEquals(NameOfAttendee_given, attendeeName_inApp);
+
+			driver.switchTo().window(windowmain);
+
+			System.out.println("verified");
+
+		} else {
+
+			System.out.println("Ticket bought for self not for Someone");
+		}
+	}
+
+	public void verifyAttendeeDetailsInRegistration(String attendeeStatus, String firstName, String lastName)
+			throws Throwable {
+
+		String attendee = attendeeStatus;
+
+		String windowmain = driver.getWindowHandle();
+
+		if (attendee.equalsIgnoreCase("yes")) {
+
+			completeregbtn.click();
+
+			Utils.Windowhandless(windowmain);
+
+			String FnameInReg = FnameAttendee.getText();
+
+			String lnameInReg = lnameAttendee.getText();
+
+			String NameInReg = FnameInReg + " " + lnameInReg;
+
+			String NameGivenToAttendee = firstName + " " + lastName;
+
+			System.out.println(NameInReg);
+
+			System.out.println(NameGivenToAttendee);
+
+			Assert.assertEquals(NameGivenToAttendee, NameInReg);
+
+			driver.switchTo().window(windowmain);
+		}
+
+		System.out.println("Ticket bought for self not for Someone");
 
 	}
 

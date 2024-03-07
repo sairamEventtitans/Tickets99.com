@@ -14,7 +14,7 @@ import com.pages.LoginWithNewEmail;
 import com.utils.Utils;
 
 public class LoginGoogleAmazonPayTest extends TestBase {
-	
+
 	String sheetname2 = "ExistingEmaillogin";
 	LoginWithNewEmail newEmail;
 	LoginWithGoogle login;
@@ -31,8 +31,8 @@ public class LoginGoogleAmazonPayTest extends TestBase {
 		Upi = new LoginWithExistingEmailUpiPayment(driver);
 
 		googlePaid = new LoginWithGooglePaidTicket(driver);
-		 loginamazonpay=new LoginGoogleAmazonPay(driver);
-		
+		loginamazonpay = new LoginGoogleAmazonPay(driver);
+
 	}
 
 	@Test(priority = 1, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
@@ -102,6 +102,13 @@ public class LoginGoogleAmazonPayTest extends TestBase {
 		// vip order id verify
 	}
 
+	@Test(priority = 10, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+
+	public void validateAttendeeDetails_GoogleAmazon(String[] rowindex) {
+
+		login.verifyAttendeeDetailsInViewTickets(rowindex[15], rowindex[3], rowindex[4]);
+	}
+
 	@AfterMethod
 
 	public void teardown(ITestResult result) throws Throwable {
@@ -118,7 +125,5 @@ public class LoginGoogleAmazonPayTest extends TestBase {
 		Utils.CapturescreenShot(methodname);
 
 	}
-	
-	
 
 }

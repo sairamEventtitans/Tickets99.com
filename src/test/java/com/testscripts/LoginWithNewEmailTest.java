@@ -76,7 +76,7 @@ public class LoginWithNewEmailTest extends TestBase {
 	@Test(priority = 5, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
 	public void validateAttendeeEmail(String[] row) {
 
-		login.verifyAttendee_orderConfirmantion(row[6], row[7], row[8], row[9], row[19]);
+		login.verifyAttendee_orderConfirmantion(row[6], row[7], row[8], row[9], row[2]);
 
 	}
 
@@ -111,11 +111,23 @@ public class LoginWithNewEmailTest extends TestBase {
 
 	}
 
-	@Test(priority = 9, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
+	@Test(priority = 12, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
 	public void validateAttendeeRegistration_Vip(String[] row) {
 
 		newEmail.VerifyAttendeeRegistration_Vip(row[10], row[11], row[12], row[13], row[14], row[15], row[16]);
 
+	}
+
+	@Test(priority = 10, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
+
+	public void validateAttendeeDetailsViewticket_NewEmail(String[] rowindex) {
+
+		newEmail.verifyAttendeeDetailsInViewTickets(rowindex[2], rowindex[6], rowindex[7]);
+	}
+	
+	@Test(priority = 11, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
+	public void validateAttendeeDetailsReg_NewEmail(String rowindex[]) throws Throwable {
+		newEmail.verifyAttendeeDetailsInRegistration(rowindex[2], rowindex[6], rowindex[7]);
 	}
 
 	@AfterMethod
