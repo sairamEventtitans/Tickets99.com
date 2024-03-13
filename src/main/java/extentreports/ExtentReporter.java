@@ -19,6 +19,7 @@ import com.aventstack.extentreports.Status;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
+import com.utils.Utils;
 
 public class ExtentReporter implements IReporter {
 	private ExtentReports extent;
@@ -75,48 +76,44 @@ public class ExtentReporter implements IReporter {
 //
 //		}
 //	}
-	
-	
+
 	private void buildTestNodes(IResultMap tests, LogStatus status) {
-	    ExtentTest test;
+		ExtentTest test;
 
-	    if (tests.size() > 0) {
-	        for (ITestResult result : tests.getAllResults()) {
-	            test = extent.startTest(result.getMethod().getMethodName());
-	            test.setStartedTime(getTime(result.getStartMillis()));
-	            test.setEndedTime(getTime(result.getEndMillis()));
+		if (tests.size() > 0) {
+			for (ITestResult result : tests.getAllResults()) {
+				test = extent.startTest(result.getMethod().getMethodName());
+				test.setStartedTime(getTime(result.getStartMillis()));
+				test.setEndedTime(getTime(result.getEndMillis()));
 
-	            for (String group : result.getMethod().getGroups())
-	                test.assignCategory(group);
+//				String description = result.getMethod().getDescription();
+//				if (description != null && !description.isEmpty()) {
+//					test.setDescription(description);
+//				}
 
-	            if (result.getThrowable() != null) {
-	                test.log(status, result.getThrowable());
-	            } else {
-	                test.log(status, "Test " + status.toString().toLowerCase() + "ed");
-	            }
+				for (String group : result.getMethod().getGroups())
+					test.assignCategory(group);
 
-	            String methodName = result.getMethod().getMethodName();
-	            String screenshotPath = "./shots/" + methodName + ".png";
-	            File screenshot = new File(screenshotPath);
-	            
-	            if (screenshot.exists()) {
-	                // Ensure the file path is correct and use absolute path
-	                screenshotPath = screenshot.getAbsolutePath();
-	                test.log(LogStatus.FAIL, "Screenshot below: " + test.addScreenCapture(screenshotPath));
-	            }
+				if (result.getThrowable() != null) {
+					test.log(status, result.getThrowable());
+				} else {
+					test.log(status, "Test " + status.toString().toLowerCase() + "ed");
+				}
 
-	            extent.endTest(test);
-	        }
-	    }
+//				String methodName = result.getMethod().getMethodName();
+//				String screenshotPath = "./shots/" + methodName + ".png";
+//				File screenshot = new File(screenshotPath);
+//
+//				if (screenshot.exists()) {
+//					// Ensure the file path is correct and use absolute path
+//					screenshotPath = screenshot.getAbsolutePath();
+//					test.log(LogStatus.FAIL, "Screenshot below: " + test.addScreenCapture(screenshotPath));
+//				}
+
+				extent.endTest(test);
+			}
+		}
 	}
-
-	
-	
-	
-	
-	
-	
-	
 
 	private Date getTime(long millis) {
 		Calendar calendar = Calendar.getInstance();

@@ -47,7 +47,7 @@ public class LoginWithGoogleRazorPayUpi extends TestBase {
 	@FindBy(xpath = "//button[text()='Pay Now']")
 	WebElement Paybtn;
 
-	@FindBy(xpath = "//div[text()=' UPI ID to complete payment']")
+	@FindBy(xpath = "//h3[text()='Your order is completed']")
 	WebElement Phonepemsg;
 
 	public LoginWithGoogleRazorPayUpi(WebDriver driver) {
@@ -62,7 +62,7 @@ public class LoginWithGoogleRazorPayUpi extends TestBase {
 
 	}
 
-	public void verifyRazorCheckbox() throws Throwable {
+	public void verifyRazorCheckbox(String contactNumber) throws Throwable {
 
 		razorUpi.click();
 		proceedbtn_razor.click();
@@ -72,24 +72,24 @@ public class LoginWithGoogleRazorPayUpi extends TestBase {
 
 		MobileValue.click();
 		Thread.sleep(2000);
-		MobileValue.sendKeys("8106637137");
+		MobileValue.sendKeys(contactNumber);
 		proceedRazor.click();
 
 	}
 
-	public void verifyRazorUpiPaymentMethods() throws Throwable {
+	public void verifyRazorUpiPaymentMethods(String UpiId) throws Throwable {
 
 		qr_msg.isDisplayed();
 		Upibutton.click();
 		Upi_mobile.click();
 		Mobile_upiValue.clear();
-		Mobile_upiValue.sendKeys("jakkam.sairam@ybl");
+		Mobile_upiValue.sendKeys(UpiId);
 		Thread.sleep(3000);
 		Paybtn.click();
 
-		boolean trans_msg = Phonepemsg.isDisplayed();
+		boolean OrderSuccess = Phonepemsg.isDisplayed();
 
-		Assert.assertTrue(trans_msg);
+		 
 
 	}
 

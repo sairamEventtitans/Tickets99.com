@@ -77,8 +77,10 @@ public class LoginWithGooglePaidTicket extends TestBase{
 	
 	public void VerifyGooglesignIn(String uname, String pword) throws Throwable {
 
-		buyButton.click(); // verifying the sign in functionality for booking the eventtickets
+	//	buyButton.click(); // verifying the sign in functionality for booking the eventtickets
 
+		Utils.javaScriptClick(buyButton);
+		
 //		for (int i = 1; i <= ticketcount; i++) {
 			Addticket.click(); // adding tickets based on quantity
 //		}

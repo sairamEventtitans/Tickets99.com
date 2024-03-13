@@ -202,7 +202,9 @@ public class LoginWithNewEmail extends TestBase {
 	public void verifyCoupon(String Couponcode) {
 
 		couponValue.sendKeys(Couponcode);
-		couponApplybtn.click();
+		
+		Utils.javaScriptClick(couponApplybtn);
+		//couponApplybtn.click();
 
 		boolean couponmessage = Couponmessage.isDisplayed();
 

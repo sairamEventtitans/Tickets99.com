@@ -1,6 +1,5 @@
 package com.base;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -40,7 +39,7 @@ public class TestBase {
 
 		if (browsername.equals("chrome")) {
 
-			System.setProperty("webdriver.chrome.driver", "./target/chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "./src/main/resources/drivers/chromedriver.exe");
 			driver = new ChromeDriver();
 		}
 

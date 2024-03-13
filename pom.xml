@@ -6,6 +6,22 @@
 	<artifactId>Tickets99</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version>
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencies>
 
 		<!--
@@ -17,12 +33,24 @@
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+		<!--  <dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>6.0.1</version>
+    <scope>test</scope>
+</dependency>  -->
+
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.8</version>
+			<version>6.10</version>
 			<scope>test</scope>
 		</dependency>
+
 
 		<!--
 		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
@@ -69,14 +97,14 @@
 			<version>5.0.6</version>
 		</dependency>
 
-		<dependency>
+		<!--	<dependency>
 			<groupId>com.aventstack</groupId>
 			<artifactId>extentreports</artifactId>
 			<version>4.1.5</version>
-		</dependency>
+		</dependency> -->
 
 
-		<dependency>
+		<!--	<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 			<version>2.14.1</version>
@@ -85,7 +113,7 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
 			<version>2.14.1</version>
-		</dependency>
+		</dependency>   -->
 
 		<!--
 		https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->

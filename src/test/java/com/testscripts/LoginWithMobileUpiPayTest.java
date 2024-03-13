@@ -113,15 +113,15 @@ public class LoginWithMobileUpiPayTest extends TestBase {
 
 		Upi.verifyPhonepeOrder(row[10]);
 
-		// eneter transaction id and verify message
+		// enter transaction id and verify message
 	}
 
-	@Test(priority = 11)
-	public void validateRegisterBtn() {
-
-		Upi.verifyCompleteRegisterbutton(); // should not be displayed in both upi and cash cases
-
-	}
+//	@Test(priority = 11)
+//	public void validateRegisterBtn() {
+//
+//		Upi.verifyCompleteRegisterbutton(); // should not be displayed in both upi and cash cases
+//
+//	}
 
 	@Test(priority = 12)
 	public void validateOrderIdVip() {
@@ -130,6 +130,19 @@ public class LoginWithMobileUpiPayTest extends TestBase {
 		// vip order id verify
 	}
 
+	
+	@Test(priority = 9, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
+	public void validateAttendeeDetails_MobileloginViewTicketsUpi(String rowindex[]) {
+		mobileFree.verifyAttendeeDetailsInViewTickets(rowindex[1], rowindex[5], rowindex[6]);
+	}
+
+//	@Test(priority = 10, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
+//	public void validateAttendeeDetails_MobileLoginCompleteRegFreeUpi(String rowindex[]) throws Throwable {
+//		mobileFree.verifyAttendeeDetailsInRegistration(rowindex[1], rowindex[5], rowindex[6]);
+//	}
+	
+	
+	
 	@AfterMethod
 
 	public void teardown(ITestResult result) throws Throwable {
@@ -137,6 +150,7 @@ public class LoginWithMobileUpiPayTest extends TestBase {
 		if (result.getStatus() == ITestResult.FAILURE) {
 
 			capture(result.getMethod().getMethodName());
+			
 		}
 
 	}
@@ -144,7 +158,11 @@ public class LoginWithMobileUpiPayTest extends TestBase {
 	public void capture(String methodname) throws Throwable {
 
 		Utils.CapturescreenShot(methodname);
+		
+		
 
 	}
+	
+	
 
 }

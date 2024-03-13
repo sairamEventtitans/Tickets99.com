@@ -66,6 +66,7 @@ public class LoginWithMobileUpiPay extends TestBase {
 	try {	
 		Thread.sleep(30000);
 		verifyOtp.click();
+		
 	}
 	catch (NoSuchElementException nse) {
 		

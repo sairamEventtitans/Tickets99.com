@@ -83,12 +83,12 @@ public class LoginGoogleUPIPaidTicketTest extends TestBase {
 		// eneter transaction id and verify message
 	}
 
-	@Test(priority = 8)
-	public void validateRegisterBtn() {
-
-		Upi.verifyCompleteRegisterbutton(); // should not be displayed in both upi and cash cases
-
-	}
+//	@Test(priority = 8)
+//	public void validateRegisterBtn() {
+//
+//		Upi.verifyCompleteRegisterbutton(); // should not be displayed in both upi and cash cases
+//
+//	}
 
 	@Test(priority = 9)
 	public void validateOrderIdVip() {

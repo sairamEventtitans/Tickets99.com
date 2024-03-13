@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testscripts.LoginWithNewMailAmazonPayTest">
+      <class name="com.testscripts.LoginGoogleTests">
         <methods>
-          <include name="validateRegisterBtn"/>
-          <include name="teardown"/>
           <include name="setup"/>
+          <include name="teardown"/>
+          <include name="validateDisablemail_google" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.testscripts.LoginWithNewMailAmazonPayTest -->
+      </class> <!-- com.testscripts.LoginGoogleTests -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

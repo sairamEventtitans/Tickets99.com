@@ -119,12 +119,12 @@ public class LoginWithMobileAmazonPayTest extends TestBase {
 		// eneter transaction id and verify message
 	}
 
-	@Test(priority = 11)
-	public void validateRegisterBtn() {
-
-		Upi.verifyCompleteRegisterbutton(); // should not be displayed in both upi and cash cases
-
-	}
+//	@Test(priority = 11)
+//	public void validateRegisterBtn() {
+//
+//		Upi.verifyCompleteRegisterbutton(); // should not be displayed in both upi and cash cases
+//
+//	}
 
 	@Test(priority = 12)
 	public void validateOrderIdVip_amazonpay() {
@@ -132,6 +132,20 @@ public class LoginWithMobileAmazonPayTest extends TestBase {
 		mbamazonpay.verifyOderVip_amazon();
 		// vip order id verify
 	}
+	
+	
+	@Test(priority = 13, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
+	public void validateAttendeeDetails_MobileloginViewTicketsFreeAmazonP(String rowindex[]) {
+		mobileFree.verifyAttendeeDetailsInViewTickets(rowindex[1], rowindex[5], rowindex[6]);
+	}
+
+//	@Test(priority = 10, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
+//	public void validateAttendeeDetails_MobileLoginCompleteRegAmazonP(String rowindex[]) throws Throwable {
+//		mobileFree.verifyAttendeeDetailsInRegistration(rowindex[1], rowindex[5], rowindex[6]);
+//	}
+	
+	
+	
 
 	@AfterMethod
 

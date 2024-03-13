@@ -20,7 +20,7 @@ public class LoginGoogleTests extends TestBase {
 	LoginWithGoogle loginWithGoogle;
 	ExtentReports extent;
 	ExtentTest logger;
-	String sheetname = "logincred";
+	static String sheetname = "logincred";
 
 	private Logger logger2; // Declare the logger field
 
@@ -29,7 +29,7 @@ public class LoginGoogleTests extends TestBase {
 	}
 
 	@DataProvider
-	public String[][] dataFetch() throws Throwable {
+	public static String[][] dataFetch() throws Throwable {
 		return Utils.FetchData(sheetname);
 	}
 
@@ -73,7 +73,6 @@ public class LoginGoogleTests extends TestBase {
 	public void ValidateWhatsappConfigEnable(String[] rowindex) throws Throwable {
 
 		loginWithGoogle.verifyWhatsappCongig(rowindex[7], rowindex[8], rowindex[9], rowindex[1]);
-
 	}
 
 	@Test(priority = 3, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)

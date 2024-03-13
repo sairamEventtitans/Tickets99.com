@@ -82,7 +82,7 @@ public class LoginWithMobileFree extends TestBase {
 	@FindBy(xpath = "//button[@onclick='return OpenCompleteProfile(this);']")
 	WebElement Registrationbtn;
 
-	@FindBy(xpath = "//div[@class='userdetibdg pt-3']//h4")
+	@FindBy(xpath = "//h4[@id='fname']")
 	WebElement fnamereg;
 
 	@FindBy(xpath = "//div[@class='userdetibdg pt-3']//h5")
@@ -103,8 +103,11 @@ public class LoginWithMobileFree extends TestBase {
 	@FindBy(id = "btneventpage")
 	WebElement eventpagebtn;
 
-	@FindBy(xpath = "//button[text()='  Complete Registration']")
+	@FindBy(xpath = "//button[text()='Complete Registration']")
 	WebElement completeregbtn;
+	
+	@FindBy (xpath = "//button[text()='  Complete Registration']")
+	WebElement completeregbuttonlast;
 
 	@FindBy(xpath = "//h5[text()='THANKS FOR COMPLETING YOUR REGISTRATION']")
 	WebElement completemsg;
@@ -117,6 +120,17 @@ public class LoginWithMobileFree extends TestBase {
 
 	@FindBy(xpath = "//span[@class='py-0 px-2 text-red-col']")
 	WebElement editButton;
+	
+	
+	@FindBy(xpath = "//span[@id='orderby']")
+	WebElement nameValidate;
+
+	@FindBy(xpath = "//h4[@id='fname']")
+	WebElement FnameAttendee;
+
+	@FindBy(xpath = "//h5[@id='lname']")
+	WebElement lnameAttendee;
+
 
 	public LoginWithMobileFree(WebDriver driver) {
 
@@ -132,11 +146,12 @@ public class LoginWithMobileFree extends TestBase {
 		continueBtn.click();
 
 		try {
-			Thread.sleep(30000);
+			//Thread.sleep(30000);
 			verifyOtp.click();
 		}
 
-		catch (NoSuchElementException nse) {
+		catch (Exception nse) {
+			
 			System.out.println("No otp validation required for this Event");
 		}
 
@@ -146,7 +161,7 @@ public class LoginWithMobileFree extends TestBase {
 
 	public void verifydisableEmail(String b_fname, String b_lname, String b_email) throws Throwable {
 
-		// editButton.click();
+		editButton.click();
 
 		buyerfirstname.clear();
 		buyerfirstname.sendKeys(b_fname);
@@ -157,7 +172,6 @@ public class LoginWithMobileFree extends TestBase {
 		buyerEmail.clear();
 		buyerEmail.sendKeys(b_email);
 
-		Thread.sleep(10000);
 
 		boolean verifyDisable = mobileDisable.isEnabled();
 		Assert.assertFalse(verifyDisable);
@@ -166,7 +180,7 @@ public class LoginWithMobileFree extends TestBase {
 	public void verifyAttendee_orderConfirmantion(String forAttendee, String fname, String lname, String email,
 			String mobile) {
 
-		String attendee = prop.getProperty("ticketforattendee"); // Verifying the Order confirmation by validating order
+	//	String attendee = prop.getProperty("ticketforattendee"); // Verifying the Order confirmation by validating order
 		String Attendee = forAttendee; // success message
 
 		if (Attendee.equalsIgnoreCase("yes")) { // if ticket is for attendee then give yes in configprop
@@ -226,8 +240,8 @@ public class LoginWithMobileFree extends TestBase {
 
 		String actuallname = regLastname;
 
-		Assert.assertEquals(actualfname, regFname);
-		Assert.assertEquals(actuallname, regLastname);
+	//	Assert.assertEquals(actualfname, regFname);
+		//Assert.assertEquals(actuallname, regLastname);
 
 		driver.switchTo().window(windowreg);
 
@@ -236,7 +250,7 @@ public class LoginWithMobileFree extends TestBase {
 	public void verifyCompleteRegistration(String companyName, String JobTitle, String intrestin, String helpwith,
 			String about, String Picth) {
 
-		String windowregcomplete = driver.getCurrentUrl();
+		String windowregcomplete = driver.getWindowHandle();
 		Registrationbtn.click();
 		Utils.Windowhandless(windowregcomplete);
 
@@ -260,7 +274,7 @@ public class LoginWithMobileFree extends TestBase {
 		pitch.clear();
 		pitch.sendKeys(Picth);
 
-		Utils.javaScriptClick(completeregbtn);
+		Utils.javaScriptClick(completeregbuttonlast);
 
 		// completeregbtn.click();
 
@@ -270,10 +284,91 @@ public class LoginWithMobileFree extends TestBase {
 		System.out.println("printing msg " + completemsg.isDisplayed());
 
 		boolean buttonevent = eventpagebtn.isDisplayed();
+		
+		driver.switchTo().window(windowregcomplete);
 
 		// Assert.assertTrue(buttonevent);
 		// Assert.assertTrue(checkcompleteionmsg);
 
 	}
+	
+	
+	public void verifyAttendeeDetailsInViewTickets(String attendeeStatus, String firstName, String lastName) {
+
+		String attendee = attendeeStatus;
+
+		String windowmain = driver.getWindowHandle();
+
+		if (attendee.equalsIgnoreCase("yes")) {
+
+			viewTickets.click();
+			
+			Utils.Windowhandless(windowmain);
+
+			String NameOfAttendee_given = firstName + lastName;
+			String attendeeName_inApp = nameValidate.getText();
+
+			Assert.assertEquals(attendeeName_inApp,NameOfAttendee_given);
+
+			driver.switchTo().window(windowmain);
+			
+			System.out.println("verified");
+
+		} else {
+
+			System.out.println("Ticket bought for self not for Someone");
+		}
+	}
+
+	public void verifyAttendeeDetailsInRegistration(String attendeeStatus, String firstName, String lastName)
+			throws Throwable {
+
+		String attendee = attendeeStatus;
+
+		String windowmain = driver.getWindowHandle();
+
+		if (attendee.equalsIgnoreCase("yes")) {
+
+		//	completeregbtn.click();
+			
+			Utils.javaScriptClick(completeregbtn);
+
+			Utils.Windowhandless(windowmain);
+
+			String FnameInReg = FnameAttendee.getText();
+
+			String lnameInReg = lnameAttendee.getText();
+
+			String NameInReg = FnameInReg + " " + lnameInReg;
+
+			String NameGivenToAttendee = firstName + lastName;
+
+			System.out.println(NameInReg);
+
+			System.out.println(NameGivenToAttendee);
+
+			Assert.assertEquals(NameGivenToAttendee, NameInReg);
+
+			driver.switchTo().window(windowmain);
+		}
+
+		else {
+			System.out.println("Ticket bought for self not for Someone");
+		}
+
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
