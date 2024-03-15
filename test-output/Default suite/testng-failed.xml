@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testscripts.LoginGoogleTests">
+      <class name="com.testscripts.LoginWithExistingEmailRazorPayTest">
         <methods>
-          <include name="setup"/>
+          <include name="validateUpiMobile_ExistingEmailRzr" invocation-numbers="0"/>
           <include name="teardown"/>
-          <include name="validateDisablemail_google" invocation-numbers="0"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- com.testscripts.LoginGoogleTests -->
+      </class> <!-- com.testscripts.LoginWithExistingEmailRazorPayTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

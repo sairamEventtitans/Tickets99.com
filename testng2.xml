@@ -3,10 +3,11 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-
-      <class name="com.testscripts.LoginWithNewEmailTest">
-      </class>
+      
+      <class name="com.testscripts.LoginGoogleUPIPaidTicketTest" />			
+			<class name="com.testscripts.LoginWithGoogleRazorPayUpiTest" />
+           
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
-

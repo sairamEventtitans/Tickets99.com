@@ -20,7 +20,7 @@ public class LoginGoogleUPIPaidTicketTest extends TestBase {
 	LoginWithExistingEmailUpiPayment Upi;
 	LoginWithGooglePaidTicket googlePaid;
 
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void setup() { // prerequisites for testmethods are placed here
 
 		Initialization();
@@ -30,28 +30,28 @@ public class LoginGoogleUPIPaidTicketTest extends TestBase {
 		googlePaid = new LoginWithGooglePaidTicket(driver);
 	}
 
-	@Test(priority = 1, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	@Test(priority = 1, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class,groups = "GupiPhonepe")
 	public void validateDisableEmail_google_Upi(String[] rowindex) throws Throwable {
 
 		googlePaid.VerifyGooglesignIn(rowindex[1], rowindex[2]);
 
 	}
 
-	@Test(priority = 2, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	@Test(priority = 2, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class,groups = "GupiPhonepe")
 	public void ValidateWhatsappConfigEnable_UPi(String[] rowindex) throws Throwable {
 
 		login.verifyWhatsappCongig(rowindex[7], rowindex[8], rowindex[9], rowindex[1]);
 
 	}
 
-	@Test(priority = 3, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	@Test(priority = 3, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class,groups = "GupiPhonepe")
 	public void validateTicketForAttendee_google_upi(String[] rowindex) throws Throwable {
 
 		login.verifyAttendee_orderConfirmantion(rowindex[3], rowindex[4], rowindex[5], rowindex[6], rowindex[15]);
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4,groups = "GupiPhonepe")
 	public void validatePaymentUrl() {
 
 		Upi.verifyProceedPaymentPage();
@@ -59,7 +59,7 @@ public class LoginGoogleUPIPaidTicketTest extends TestBase {
 		// verify payment url
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5,groups = "GupiPhonepe")
 	public void validatePhonepe() throws Throwable {
 
 		Upi.verifyPhonepe();
@@ -68,14 +68,14 @@ public class LoginGoogleUPIPaidTicketTest extends TestBase {
 
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6,groups = "GupiPhonepe")
 	public void validateAmazonPe() {
 
 		Upi.verifyAmazon();
 		// phone pe is displayed verify when clicks on honepe
 	}
 
-	@Test(priority = 7, dataProvider = "emailtestdata", dataProviderClass = LoginWithExistingEmailUpiPayTest.class)
+	@Test(priority = 7, dataProvider = "emailtestdata", dataProviderClass = LoginWithExistingEmailUpiPayTest.class,groups = "GupiPhonepe")
 	public void validatephoenpeOrderMessage(String[] row) {
 
 		Upi.verifyPhonepeOrder(row[11]);
@@ -90,14 +90,14 @@ public class LoginGoogleUPIPaidTicketTest extends TestBase {
 //
 //	}
 
-	@Test(priority = 9)
+	@Test(priority = 9,groups = "GupiPhonepe")
 	public void validateOrderIdVip() {
 
 		googlePaid.verifyOderVip_upi();
 		// vip order id verify
 	}
 	
-	@Test(priority = 10, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	@Test(priority = 10, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class,groups = "GupiPhonepe")
 
 	public void validateAttendeeDetails_GoogleAmazon(String[] rowindex) {
 

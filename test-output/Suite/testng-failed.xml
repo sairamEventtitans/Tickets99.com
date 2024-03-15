@@ -5,71 +5,40 @@
     <listener class-name="extentreports.ExtentReporter"/>
   </listeners>
   <test thread-count="5" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="GFree"/>
+        <include name="GupiPhonepe"/>
+      </run>
+    </groups>
     <classes>
-      <class name="com.testscripts.LoginWithNewMailAmazonPayTest">
-        <methods>
-          <include name="validateRegisterBtn"/>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.testscripts.LoginWithNewMailAmazonPayTest -->
-      <class name="com.testscripts.LoginWithExistingEmailAmazonPayTest">
-        <methods>
-          <include name="validateRegisterBtn"/>
-          <include name="validatePhonepe"/>
-          <include name="teardown"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- com.testscripts.LoginWithExistingEmailAmazonPayTest -->
-      <class name="com.testscripts.LoginWithNewMailUpiPayTest">
-        <methods>
-          <include name="setup"/>
-          <include name="validateRegisterBtn"/>
-        </methods>
-      </class> <!-- com.testscripts.LoginWithNewMailUpiPayTest -->
-      <class name="com.testscripts.LoginWithMobileAmazonPayTest">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-          <include name="validateMobileLogin_MbUpi" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.testscripts.LoginWithMobileAmazonPayTest -->
-      <class name="com.testscripts.LoginGoogleTests">
-        <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
-          <include name="validateDisablemail_google" invocation-numbers="0"/>
-        </methods>
-      </class> <!-- com.testscripts.LoginGoogleTests -->
-      <class name="com.testscripts.LoginGoogleAmazonPayTest">
-        <methods>
-          <include name="validateDisableEmail_google_Upi" invocation-numbers="0"/>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- com.testscripts.LoginGoogleAmazonPayTest -->
-      <class name="com.testscripts.LoginWithMobileUpiPayTest">
-        <methods>
-          <include name="validateMobileLogin_MbUpi" invocation-numbers="0"/>
-          <include name="validateAttendeeDetails_MobileloginViewTicketsUpi" invocation-numbers="0"/>
-          <include name="setup"/>
-          <include name="teardown"/>
-        </methods>
-      </class> <!-- com.testscripts.LoginWithMobileUpiPayTest -->
       <class name="com.testscripts.LoginGoogleUPIPaidTicketTest">
         <methods>
-          <include name="setup"/>
-          <include name="teardown"/>
+          <include name="validateTicketForAttendee_google_upi" invocation-numbers="0"/>
+          <include name="validateAttendeeDetails_GoogleAmazon" invocation-numbers="0"/>
+          <include name="validateAmazonPe"/>
+          <include name="validatephoenpeOrderMessage" invocation-numbers="0"/>
+          <include name="validatePhonepe"/>
           <include name="validateDisableEmail_google_Upi" invocation-numbers="0"/>
+          <include name="ValidateWhatsappConfigEnable_UPi" invocation-numbers="0"/>
+          <include name="validatePaymentUrl"/>
+          <include name="validateOrderIdVip"/>
         </methods>
       </class> <!-- com.testscripts.LoginGoogleUPIPaidTicketTest -->
-      <class name="com.testscripts.LoginWithExistingEmailUpiPayTest">
+      <class name="com.testscripts.LoginGoogleTests">
         <methods>
-          <include name="teardown"/>
-          <include name="validateRegisterBtn"/>
-          <include name="setup"/>
+          <include name="validateTicketForAttendee_google" invocation-numbers="0"/>
+          <include name="ValidateWhatsappConfigEnable" invocation-numbers="0"/>
+          <include name="validateAttendeeDetails_googleCompleteReg" invocation-numbers="0"/>
+          <include name="ValidateRegUrl_google"/>
+          <include name="validateAttendeeDetails_googleloginViewTickets" invocation-numbers="0"/>
+          <include name="validateBuyerDetails_google" invocation-numbers="0"/>
+          <include name="validateViewTicketUrl_google"/>
+          <include name="ValidateOrderId_google"/>
+          <include name="validateDisablemail_google" invocation-numbers="0"/>
+          <include name="validateOrderSuccessMessage"/>
         </methods>
-      </class> <!-- com.testscripts.LoginWithExistingEmailUpiPayTest -->
+      </class> <!-- com.testscripts.LoginGoogleTests -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->
