@@ -181,15 +181,15 @@ public class LoginWithNewEmail extends TestBase {
 		AddticketVip.click();
 		proceedticketbtn.click();
 		Emailvalue.sendKeys(email);
-		ContinueMail.click();
+		
 
 		try {
-
-			// Thread.sleep(30000);
+			ContinueMail.click();
+			 Thread.sleep(25000);
 			Utils.javaScriptClick(verifymailbtn);
 		}
 
-		catch (NoSuchElementException nse) {
+		catch (Exception nse) {
 
 			System.out.println("No otp verification required directed to payment page");
 		}

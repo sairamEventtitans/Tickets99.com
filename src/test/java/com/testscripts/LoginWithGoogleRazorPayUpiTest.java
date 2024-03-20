@@ -78,6 +78,7 @@ public class LoginWithGoogleRazorPayUpiTest extends TestBase {
 	public void validateUpiMobile(String row[]) throws Throwable {
 		razorUpi.verifyRazorUpiPaymentMethods(row[1]);
 	}
+	
 
 	@AfterMethod
 

@@ -47,7 +47,7 @@ public class LoginWithExistingEmailUpiPayment extends TestBase {
 	@FindBy(xpath = "//button[text()='Proceed']")
 	WebElement proceedBtn;
 
-	@FindBy(id = "radioupiqr-1")
+	@FindBy(id = "radioupiqr-2")
 	WebElement phonepeCheckbox;
 
 	@FindBy(xpath = "(//span[text()='PhonePe'])[2]")
@@ -56,7 +56,7 @@ public class LoginWithExistingEmailUpiPayment extends TestBase {
 	@FindBy(xpath = "//span[text()=' Back to change UPI option']")
 	WebElement backToPayment;
 
-	@FindBy(id = "radioupiqr-2")
+	@FindBy(id = "radioupiqr-1")
 	WebElement amazonCheckbox;
 
 	@FindBy(xpath = "(//span[text()='AmazonPay'])[2]")
@@ -142,12 +142,12 @@ public class LoginWithExistingEmailUpiPayment extends TestBase {
 		Thread.sleep(2000);
 
 		// phonepeCheckbox.click();
-		boolean phonepeDisplay = phonepeMsg.isDisplayed();
+		
 
-		System.out.println("Phonepe msg " + phonepeDisplay);
+		//System.out.println("Phonepe msg " + phonepeDisplay);
 
 		Utils.javaScriptScroll(phonepeMsg);
-
+		boolean phonepeDisplay = phonepeMsg.isDisplayed();
 		Assert.assertTrue(phonepeDisplay);
 		backToPayment.click();
 

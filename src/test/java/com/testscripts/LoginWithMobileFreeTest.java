@@ -83,10 +83,6 @@ public class LoginWithMobileFreeTest extends TestBase {
 	
 	
 	
-	
-	
-	
-	
 	@Test(priority = 8, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
 	public void validateAttendeeDetails_MobileloginViewTicketsFree(String rowindex[]) {
 		mobileFree.verifyAttendeeDetailsInViewTickets(rowindex[1], rowindex[5], rowindex[6]);
@@ -96,6 +92,10 @@ public class LoginWithMobileFreeTest extends TestBase {
 	public void validateAttendeeDetails_MobileLoginCompleteRegFree(String rowindex[]) throws Throwable {
 		mobileFree.verifyAttendeeDetailsInRegistration(rowindex[1], rowindex[5], rowindex[6]);
 	}
+	
+	
+	
+	
 	
 	
 	

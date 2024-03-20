@@ -131,7 +131,7 @@ public class LoginWithMobileUpiPayTest extends TestBase {
 	}
 
 	
-	@Test(priority = 9, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
+	@Test(priority = 13, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
 	public void validateAttendeeDetails_MobileloginViewTicketsUpi(String rowindex[]) {
 		mobileFree.verifyAttendeeDetailsInViewTickets(rowindex[1], rowindex[5], rowindex[6]);
 	}

@@ -81,7 +81,6 @@ public class LoginWithNewMailAmazonPayTest extends TestBase {
 	public void validatePaymentUrl() {
 
 		Upi.verifyProceedPaymentPage();
-
 		// verify payment url
 	}
 
@@ -129,9 +128,7 @@ public class LoginWithNewMailAmazonPayTest extends TestBase {
 		amazonPay.verifyOrderIdFree_amazon();
 		// free order id verify
 	}
-	
-	
-	
+
 	@Test(priority = 14, dataProvider = "emailtestdata", dataProviderClass = LoginWithNewEmailTest.class)
 
 	public void validateAttendeeDetailsViewticket_NewEmail(String[] rowindex) {

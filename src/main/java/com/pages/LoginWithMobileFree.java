@@ -143,10 +143,11 @@ public class LoginWithMobileFree extends TestBase {
 		Addticket.click();
 		proceedticketbtn.click();
 		mobileValue.sendKeys(mobile_number);
-		continueBtn.click();
+		
 
 		try {
-			//Thread.sleep(30000);
+			continueBtn.click();
+			Thread.sleep(25000);
 			verifyOtp.click();
 		}
 

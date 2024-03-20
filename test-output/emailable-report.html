@@ -8,86 +8,84 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">Test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">19</td><td class="num">1,360</td><td>GupiPhonepe, GFree</td><td></td></tr>
+<tr><th colspan="8">Default suite</th></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">30,995</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="10">com.testscripts.LoginGoogleTests</td><td><a href="#m0">ValidateOrderId_google</a></td><td rowspan="1">1710486017824</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m1">ValidateRegUrl_google</a></td><td rowspan="1">1710486017820</td><td rowspan="1">2</td></tr><tr class="failedeven"><td><a href="#m2">ValidateWhatsappConfigEnable</a></td><td rowspan="1">1710486017746</td><td rowspan="1">0</td></tr><tr class="failedeven"><td><a href="#m3">validateAttendeeDetails_googleCompleteReg</a></td><td rowspan="1">1710486017989</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m4">validateAttendeeDetails_googleloginViewTickets</a></td><td rowspan="1">1710486017937</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m5">validateBuyerDetails_google</a></td><td rowspan="1">1710486017886</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m6">validateDisablemail_google</a></td><td rowspan="1">1710486017664</td><td rowspan="1">6</td></tr><tr class="failedeven"><td><a href="#m7">validateOrderSuccessMessage</a></td><td rowspan="1">1710486017814</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m8">validateTicketForAttendee_google</a></td><td rowspan="1">1710486017811</td><td rowspan="1">1</td></tr><tr class="failedeven"><td><a href="#m9">validateViewTicketUrl_google</a></td><td rowspan="1">1710486017817</td><td rowspan="1">1</td></tr><tr class="failedodd"><td rowspan="9">com.testscripts.LoginGoogleUPIPaidTicketTest</td><td><a href="#m10">ValidateWhatsappConfigEnable_UPi</a></td><td rowspan="1">1710486018087</td><td rowspan="1">1</td></tr><tr class="failedodd"><td><a href="#m11">validateAmazonPe</a></td><td rowspan="1">1710486018144</td><td rowspan="1">1</td></tr><tr class="failedodd"><td><a href="#m12">validateAttendeeDetails_GoogleAmazon</a></td><td rowspan="1">1710486018227</td><td rowspan="1">1</td></tr><tr class="failedodd"><td><a href="#m13">validateDisableEmail_google_Upi</a></td><td rowspan="1">1710486018033</td><td rowspan="1">3</td></tr><tr class="failedodd"><td><a href="#m14">validateOrderIdVip</a></td><td rowspan="1">1710486018189</td><td rowspan="1">1</td></tr><tr class="failedodd"><td><a href="#m15">validatePaymentUrl</a></td><td rowspan="1">1710486018138</td><td rowspan="1">2</td></tr><tr class="failedodd"><td><a href="#m16">validatePhonepe</a></td><td rowspan="1">1710486018142</td><td rowspan="1">1</td></tr><tr class="failedodd"><td><a href="#m17">validateTicketForAttendee_google_upi</a></td><td rowspan="1">1710486018135</td><td rowspan="1">1</td></tr><tr class="failedodd"><td><a href="#m18">validatephoenpeOrderMessage</a></td><td rowspan="1">1710486018186</td><td rowspan="1">1</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="2">com.testscripts.OrderValidation</td><td><a href="#m0">validateCartTest</a></td><td rowspan="2">1710939000567</td><td rowspan="2">5329</td></tr><tr class="failedeven"><td><a href="#m1">validateCartTest</a></td></tr><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">com.testscripts.OrderValidation</td><td><a href="#m2">validateAppLogin</a></td><td rowspan="1">1710938982217</td><td rowspan="1">4522</td></tr><tr class="passedeven"><td><a href="#m3">validateCheckIn</a></td><td rowspan="1">1710938986745</td><td rowspan="1">3961</td></tr></tbody>
 </table>
-<h2>Test</h2><h3 id="m0">com.testscripts.LoginGoogleTests#ValidateOrderId_google</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGoogle.verifyOrderId()&quot; because &quot;this.loginWithGoogle&quot; is null
-	at com.testscripts.LoginGoogleTests.ValidateOrderId_google(LoginGoogleTests.java:110)
+<h2>Default test</h2><h3 id="m0">com.testscripts.OrderValidation#validateCartTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[, , , , , , , , , , , , , , ,  , ]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.appPages.ApplicationLogin.cartValue(ApplicationLogin.java:132)
+	at com.testscripts.OrderValidation.validateCartTest(OrderValidation.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">com.testscripts.LoginGoogleTests#ValidateRegUrl_google</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGoogle.VerifyRegistrationUrl()&quot; because &quot;this.loginWithGoogle&quot; is null
-	at com.testscripts.LoginGoogleTests.ValidateRegUrl_google(LoginGoogleTests.java:104)
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">com.testscripts.OrderValidation#validateCartTest</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[I(org) Will Pay completely, 2, 3, Vip, 20240320060614136412, test, test, 1, , 1, 1, C2/100*K2, 18/100*L2, K2+L2+M2, +B2/100*K2, K2+O2, +P2-L2-M2-O2]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:99)
+	at org.testng.Assert.failNotEquals(Assert.java:1037)
+	at org.testng.Assert.assertTrue(Assert.java:45)
+	at org.testng.Assert.assertTrue(Assert.java:55)
+	at com.appPages.ApplicationLogin.cartValue(ApplicationLogin.java:132)
+	at com.testscripts.OrderValidation.validateCartTest(OrderValidation.java:60)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">com.testscripts.LoginGoogleTests#ValidateWhatsappConfigEnable</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[Checkout_001_OnlyFree, sairam@eventtitans.com, Namo@12345, Rupesh, Kumar, sairam810@mailinator.com, 8106637137, Sairam, jakkam, 8106637137, robotics, automobile, Hi there! I&apos;m sairam, a walking paradox of caffeine-fueled energy and occasional nap enthusiast. By day, I&apos;m a Qa, tackling tasks with the grace of a ninja and the charm of a puppy. By night, I transform into a Netflix connoisseur, expertly navigating the treacherous waters of endless scrolling, Picture this: You, cruising down the highway with the wind in your hair and your favorite tunes blasting from the speakers. Whether you&apos;re a speed demon or a laid-back Sunday driver, our range of automobiles has something for everyone., 20240315051355136412, yes, 20240315051422136412, 20240315062934136412]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGoogle.verifyWhatsappCongig(String, String, String, String)&quot; because &quot;this.loginWithGoogle&quot; is null
-	at com.testscripts.LoginGoogleTests.ValidateWhatsappConfigEnable(LoginGoogleTests.java:75)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m3">com.testscripts.LoginGoogleTests#validateAttendeeDetails_googleCompleteReg</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[Checkout_001_OnlyFree, sairam@eventtitans.com, Namo@12345, Rupesh, Kumar, sairam810@mailinator.com, 8106637137, Sairam, jakkam, 8106637137, robotics, automobile, Hi there! I&apos;m sairam, a walking paradox of caffeine-fueled energy and occasional nap enthusiast. By day, I&apos;m a Qa, tackling tasks with the grace of a ninja and the charm of a puppy. By night, I transform into a Netflix connoisseur, expertly navigating the treacherous waters of endless scrolling, Picture this: You, cruising down the highway with the wind in your hair and your favorite tunes blasting from the speakers. Whether you&apos;re a speed demon or a laid-back Sunday driver, our range of automobiles has something for everyone., 20240315051355136412, yes, 20240315051422136412, 20240315062934136412]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGoogle.verifyAttendeeDetailsInRegistration(String, String, String)&quot; because &quot;this.loginWithGoogle&quot; is null
-	at com.testscripts.LoginGoogleTests.validateAttendeeDetails_googleCompleteReg(LoginGoogleTests.java:127)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m4">com.testscripts.LoginGoogleTests#validateAttendeeDetails_googleloginViewTickets</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[Checkout_001_OnlyFree, sairam@eventtitans.com, Namo@12345, Rupesh, Kumar, sairam810@mailinator.com, 8106637137, Sairam, jakkam, 8106637137, robotics, automobile, Hi there! I&apos;m sairam, a walking paradox of caffeine-fueled energy and occasional nap enthusiast. By day, I&apos;m a Qa, tackling tasks with the grace of a ninja and the charm of a puppy. By night, I transform into a Netflix connoisseur, expertly navigating the treacherous waters of endless scrolling, Picture this: You, cruising down the highway with the wind in your hair and your favorite tunes blasting from the speakers. Whether you&apos;re a speed demon or a laid-back Sunday driver, our range of automobiles has something for everyone., 20240315051355136412, yes, 20240315051422136412, 20240315062934136412]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGoogle.verifyAttendeeDetailsInViewTickets(String, String, String)&quot; because &quot;this.loginWithGoogle&quot; is null
-	at com.testscripts.LoginGoogleTests.validateAttendeeDetails_googleloginViewTickets(LoginGoogleTests.java:122)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m5">com.testscripts.LoginGoogleTests#validateBuyerDetails_google</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[Checkout_001_OnlyFree, sairam@eventtitans.com, Namo@12345, Rupesh, Kumar, sairam810@mailinator.com, 8106637137, Sairam, jakkam, 8106637137, robotics, automobile, Hi there! I&apos;m sairam, a walking paradox of caffeine-fueled energy and occasional nap enthusiast. By day, I&apos;m a Qa, tackling tasks with the grace of a ninja and the charm of a puppy. By night, I transform into a Netflix connoisseur, expertly navigating the treacherous waters of endless scrolling, Picture this: You, cruising down the highway with the wind in your hair and your favorite tunes blasting from the speakers. Whether you&apos;re a speed demon or a laid-back Sunday driver, our range of automobiles has something for everyone., 20240315051355136412, yes, 20240315051422136412, 20240315062934136412]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGoogle.verifyBuyerdetails(String, String)&quot; because &quot;this.loginWithGoogle&quot; is null
-	at com.testscripts.LoginGoogleTests.validateBuyerDetails_google(LoginGoogleTests.java:116)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m6">com.testscripts.LoginGoogleTests#validateDisablemail_google</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[Checkout_001_OnlyFree, sairam@eventtitans.com, Namo@12345, Rupesh, Kumar, sairam810@mailinator.com, 8106637137, Sairam, jakkam, 8106637137, robotics, automobile, Hi there! I&apos;m sairam, a walking paradox of caffeine-fueled energy and occasional nap enthusiast. By day, I&apos;m a Qa, tackling tasks with the grace of a ninja and the charm of a puppy. By night, I transform into a Netflix connoisseur, expertly navigating the treacherous waters of endless scrolling, Picture this: You, cruising down the highway with the wind in your hair and your favorite tunes blasting from the speakers. Whether you&apos;re a speed demon or a laid-back Sunday driver, our range of automobiles has something for everyone., 20240315051355136412, yes, 20240315051422136412, 20240315062934136412]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGoogle.VerifyGooglesignIn(String, String)&quot; because &quot;this.loginWithGoogle&quot; is null
-	at com.testscripts.LoginGoogleTests.validateDisablemail_google(LoginGoogleTests.java:68)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m7">com.testscripts.LoginGoogleTests#validateOrderSuccessMessage</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGoogle.verifyOrderSuccessMessage()&quot; because &quot;this.loginWithGoogle&quot; is null
-	at com.testscripts.LoginGoogleTests.validateOrderSuccessMessage(LoginGoogleTests.java:89)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m8">com.testscripts.LoginGoogleTests#validateTicketForAttendee_google</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[Checkout_001_OnlyFree, sairam@eventtitans.com, Namo@12345, Rupesh, Kumar, sairam810@mailinator.com, 8106637137, Sairam, jakkam, 8106637137, robotics, automobile, Hi there! I&apos;m sairam, a walking paradox of caffeine-fueled energy and occasional nap enthusiast. By day, I&apos;m a Qa, tackling tasks with the grace of a ninja and the charm of a puppy. By night, I transform into a Netflix connoisseur, expertly navigating the treacherous waters of endless scrolling, Picture this: You, cruising down the highway with the wind in your hair and your favorite tunes blasting from the speakers. Whether you&apos;re a speed demon or a laid-back Sunday driver, our range of automobiles has something for everyone., 20240315051355136412, yes, 20240315051422136412, 20240315062934136412]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGoogle.verifyAttendee_orderConfirmantion(String, String, String, String, String)&quot; because &quot;this.loginWithGoogle&quot; is null
-	at com.testscripts.LoginGoogleTests.validateTicketForAttendee_google(LoginGoogleTests.java:81)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m9">com.testscripts.LoginGoogleTests#validateViewTicketUrl_google</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGoogle.verifyViewticketUrl()&quot; because &quot;this.loginWithGoogle&quot; is null
-	at com.testscripts.LoginGoogleTests.validateViewTicketUrl_google(LoginGoogleTests.java:97)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m10">com.testscripts.LoginGoogleUPIPaidTicketTest#ValidateWhatsappConfigEnable_UPi</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[Checkout_001_OnlyFree, sairam@eventtitans.com, Namo@12345, Rupesh, Kumar, sairam810@mailinator.com, 8106637137, Sairam, jakkam, 8106637137, robotics, automobile, Hi there! I&apos;m sairam, a walking paradox of caffeine-fueled energy and occasional nap enthusiast. By day, I&apos;m a Qa, tackling tasks with the grace of a ninja and the charm of a puppy. By night, I transform into a Netflix connoisseur, expertly navigating the treacherous waters of endless scrolling, Picture this: You, cruising down the highway with the wind in your hair and your favorite tunes blasting from the speakers. Whether you&apos;re a speed demon or a laid-back Sunday driver, our range of automobiles has something for everyone., 20240315051355136412, yes, 20240315051422136412, 20240315062934136412]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGoogle.verifyWhatsappCongig(String, String, String, String)&quot; because &quot;this.login&quot; is null
-	at com.testscripts.LoginGoogleUPIPaidTicketTest.ValidateWhatsappConfigEnable_UPi(LoginGoogleUPIPaidTicketTest.java:43)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m11">com.testscripts.LoginGoogleUPIPaidTicketTest#validateAmazonPe</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithExistingEmailUpiPayment.verifyAmazon()&quot; because &quot;this.Upi&quot; is null
-	at com.testscripts.LoginGoogleUPIPaidTicketTest.validateAmazonPe(LoginGoogleUPIPaidTicketTest.java:74)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m12">com.testscripts.LoginGoogleUPIPaidTicketTest#validateAttendeeDetails_GoogleAmazon</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[Checkout_001_OnlyFree, sairam@eventtitans.com, Namo@12345, Rupesh, Kumar, sairam810@mailinator.com, 8106637137, Sairam, jakkam, 8106637137, robotics, automobile, Hi there! I&apos;m sairam, a walking paradox of caffeine-fueled energy and occasional nap enthusiast. By day, I&apos;m a Qa, tackling tasks with the grace of a ninja and the charm of a puppy. By night, I transform into a Netflix connoisseur, expertly navigating the treacherous waters of endless scrolling, Picture this: You, cruising down the highway with the wind in your hair and your favorite tunes blasting from the speakers. Whether you&apos;re a speed demon or a laid-back Sunday driver, our range of automobiles has something for everyone., 20240315051355136412, yes, 20240315051422136412, 20240315062934136412]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGoogle.verifyAttendeeDetailsInViewTickets(String, String, String)&quot; because &quot;this.login&quot; is null
-	at com.testscripts.LoginGoogleUPIPaidTicketTest.validateAttendeeDetails_GoogleAmazon(LoginGoogleUPIPaidTicketTest.java:104)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m13">com.testscripts.LoginGoogleUPIPaidTicketTest#validateDisableEmail_google_Upi</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[Checkout_001_OnlyFree, sairam@eventtitans.com, Namo@12345, Rupesh, Kumar, sairam810@mailinator.com, 8106637137, Sairam, jakkam, 8106637137, robotics, automobile, Hi there! I&apos;m sairam, a walking paradox of caffeine-fueled energy and occasional nap enthusiast. By day, I&apos;m a Qa, tackling tasks with the grace of a ninja and the charm of a puppy. By night, I transform into a Netflix connoisseur, expertly navigating the treacherous waters of endless scrolling, Picture this: You, cruising down the highway with the wind in your hair and your favorite tunes blasting from the speakers. Whether you&apos;re a speed demon or a laid-back Sunday driver, our range of automobiles has something for everyone., 20240315051355136412, yes, 20240315051422136412, 20240315062934136412]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGooglePaidTicket.VerifyGooglesignIn(String, String)&quot; because &quot;this.googlePaid&quot; is null
-	at com.testscripts.LoginGoogleUPIPaidTicketTest.validateDisableEmail_google_Upi(LoginGoogleUPIPaidTicketTest.java:36)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m14">com.testscripts.LoginGoogleUPIPaidTicketTest#validateOrderIdVip</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGooglePaidTicket.verifyOderVip_upi()&quot; because &quot;this.googlePaid&quot; is null
-	at com.testscripts.LoginGoogleUPIPaidTicketTest.validateOrderIdVip(LoginGoogleUPIPaidTicketTest.java:96)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m15">com.testscripts.LoginGoogleUPIPaidTicketTest#validatePaymentUrl</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithExistingEmailUpiPayment.verifyProceedPaymentPage()&quot; because &quot;this.Upi&quot; is null
-	at com.testscripts.LoginGoogleUPIPaidTicketTest.validatePaymentUrl(LoginGoogleUPIPaidTicketTest.java:57)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m16">com.testscripts.LoginGoogleUPIPaidTicketTest#validatePhonepe</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithExistingEmailUpiPayment.verifyPhonepe()&quot; because &quot;this.Upi&quot; is null
-	at com.testscripts.LoginGoogleUPIPaidTicketTest.validatePhonepe(LoginGoogleUPIPaidTicketTest.java:65)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m17">com.testscripts.LoginGoogleUPIPaidTicketTest#validateTicketForAttendee_google_upi</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[Checkout_001_OnlyFree, sairam@eventtitans.com, Namo@12345, Rupesh, Kumar, sairam810@mailinator.com, 8106637137, Sairam, jakkam, 8106637137, robotics, automobile, Hi there! I&apos;m sairam, a walking paradox of caffeine-fueled energy and occasional nap enthusiast. By day, I&apos;m a Qa, tackling tasks with the grace of a ninja and the charm of a puppy. By night, I transform into a Netflix connoisseur, expertly navigating the treacherous waters of endless scrolling, Picture this: You, cruising down the highway with the wind in your hair and your favorite tunes blasting from the speakers. Whether you&apos;re a speed demon or a laid-back Sunday driver, our range of automobiles has something for everyone., 20240315051355136412, yes, 20240315051422136412, 20240315062934136412]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithGoogle.verifyAttendee_orderConfirmantion(String, String, String, String, String)&quot; because &quot;this.login&quot; is null
-	at com.testscripts.LoginGoogleUPIPaidTicketTest.validateTicketForAttendee_google_upi(LoginGoogleUPIPaidTicketTest.java:50)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m18">com.testscripts.LoginGoogleUPIPaidTicketTest#validatephoenpeOrderMessage</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[sairam@eventtitans.com, Test@123, https://www.tickets99.com/buy/vision-2024/ticket, VISION2024, Rahul, Jakkam, jakkamsairam333@gmail.com, 8106637137, 8106637137, Sairam, Jakkam, T1234567891234567890123, T1234567891234567890123, 20240315051833137789, 20240315051833137789, 20240315051818137789, 20240315051818137789, yes]</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;com.pages.LoginWithExistingEmailUpiPayment.verifyPhonepeOrder(String)&quot; because &quot;this.Upi&quot; is null
-	at com.testscripts.LoginGoogleUPIPaidTicketTest.validatephoenpeOrderMessage(LoginGoogleUPIPaidTicketTest.java:81)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.testng.TestRunner.privateRun(TestRunner.java:794)
+	at org.testng.TestRunner.run(TestRunner.java:596)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+	at org.testng.TestNG.runSuites(TestNG.java:1063)
+	at org.testng.TestNG.run(TestNG.java:1031)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">com.testscripts.OrderValidation#validateAppLogin</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>[sairam@eventtitans.com, Test@123]</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m3">com.testscripts.OrderValidation#validateCheckIn</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

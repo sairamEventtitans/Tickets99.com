@@ -50,12 +50,24 @@ public class LoginWithGoogleRazorPayUpi extends TestBase {
 	@FindBy(xpath = "//h3[text()='Your order is completed']")
 	WebElement Phonepemsg;
 
+	@FindBy(xpath = "//span[@class='pl-2 font-weight-bold text-primary']")
+	WebElement order_id;
+	
+	@FindBy (xpath = "//span[@id='spansummarytotalamount']")
+	WebElement TicketAmount;
+
 	public LoginWithGoogleRazorPayUpi(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 
 	public boolean verifyPaymentPage() {
-
+		
+		String ticket_cost=TicketAmount.getText();
+		
+		//double ticketCostNumeric = Double.parseDouble(ticket_cost);
+		
+		Utils.WriteInExistingExcel(ticket_cost, "OrderRazorPay", 7);
+		
 		Utils.javaScriptClick(proceedbtn_topayment);
 		Paymentdetails.isDisplayed();
 		return true;
@@ -80,17 +92,30 @@ public class LoginWithGoogleRazorPayUpi extends TestBase {
 	public void verifyRazorUpiPaymentMethods(String UpiId) throws Throwable {
 
 		qr_msg.isDisplayed();
+		Thread.sleep(2000);
 		Upibutton.click();
 		Upi_mobile.click();
 		Mobile_upiValue.clear();
 		Mobile_upiValue.sendKeys(UpiId);
 		Thread.sleep(3000);
+		
+	
 		Paybtn.click();
-
+			
+		driver.switchTo().defaultContent();
+		
+		Thread.sleep(2000);
+	
+		String orderID = order_id.getText();
+		
+		Utils.WriteInExistingExcel(orderID, "OrderRazorPay", 4); // 6
+		
 		boolean OrderSuccess = Phonepemsg.isDisplayed();
-
-		 
-
+		
+		Assert.assertTrue(OrderSuccess);
+		
+		
+		
 	}
 
 }

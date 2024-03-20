@@ -2,5 +2,4 @@ browser=chrome
 
 url=https://www.tickets99.com/e/vision-2024
 
-
-ticketforattendee=no
+OrganizerUrl=https://admin.tickets99.com/account/login?referral=ietltu

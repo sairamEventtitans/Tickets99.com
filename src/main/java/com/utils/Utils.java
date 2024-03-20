@@ -15,10 +15,13 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.DataProvider;
 
 import com.base.TestBase;
@@ -38,6 +41,7 @@ public class Utils extends TestBase {
 			System.out.println("Check file");
 			e.printStackTrace();
 		}
+
 		try {
 			workbook = new XSSFWorkbook(stream);
 		} catch (IOException e) {
@@ -109,6 +113,39 @@ public class Utils extends TestBase {
 		js.executeScript("windows.scrollBy(0,150)");
 
 	}
+
+	public static void dropDown(WebElement element, String visibletext) {
+
+		Select sel = new Select(element);
+		sel.selectByVisibleText(visibletext);
+
+	}
+
+	public static void mouseHover(WebElement element) {
+
+		Actions ac = new Actions(driver);
+		ac.moveToElement(element).build().perform();
+
+	}
+
+	public static void alertHandleAccept() {
+
+		Alert al = driver.switchTo().alert();
+		al.accept();
+	}
+	
+	public static void frameHandler(WebElement frame) {
+		
+		driver.switchTo().frame(frame);
+		
+	}
+	
+	
+	public static void exitBrowsers() {
+		
+		driver.quit();
+	}
+	
 
 	public static void CapturescreenShot(String methodname) throws Throwable {
 
