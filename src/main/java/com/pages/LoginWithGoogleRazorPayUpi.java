@@ -62,11 +62,11 @@ public class LoginWithGoogleRazorPayUpi extends TestBase {
 
 	public boolean verifyPaymentPage() {
 		
-		String ticket_cost=TicketAmount.getText();
+		String ticket_cost=TicketAmount.getText().replace(".00", "");
 		
 		//double ticketCostNumeric = Double.parseDouble(ticket_cost);
 		
-		Utils.WriteInExistingExcel(ticket_cost, "OrderRazorPay", 7);
+		Utils.WriteInExistingExcel(ticket_cost, "OrderRazorPayValidation", 10);
 		
 		Utils.javaScriptClick(proceedbtn_topayment);
 		Paymentdetails.isDisplayed();
@@ -108,7 +108,7 @@ public class LoginWithGoogleRazorPayUpi extends TestBase {
 	
 		String orderID = order_id.getText();
 		
-		Utils.WriteInExistingExcel(orderID, "OrderRazorPay", 4); // 6
+		Utils.WriteInExistingExcel(orderID, "OrderRazorPayValidation", 4); // 6
 		
 		boolean OrderSuccess = Phonepemsg.isDisplayed();
 		

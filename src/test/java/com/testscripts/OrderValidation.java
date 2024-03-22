@@ -1,19 +1,23 @@
 package com.testscripts;
 
+import org.apache.poi.ss.usermodel.Row;
 import org.testng.Assert;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import com.appPages.ApplicationLogin;
+import com.appPages.verifyIWillPay_razor;
 import com.base.TestBaseOrganizer;
 import com.utils.Utils;
+import com.utils.UtilsApp;
 
 public class OrderValidation extends TestBaseOrganizer {
 
-	ApplicationLogin appLogin;
+	verifyIWillPay_razor appLogin;
 	public static String sheetname = "ApplicationLogin";
-	public static String sheetname2 = "OrderRazorPay";
+	public static String sheetname2 = "OrderRazorPayValidation";
 
 	@DataProvider
 	public static String[][] dataFetch() throws Throwable {
@@ -29,7 +33,7 @@ public class OrderValidation extends TestBaseOrganizer {
 
 	public void setup() {
 		Initialization();
-		appLogin = new ApplicationLogin(driver);
+		appLogin = new verifyIWillPay_razor(driver);
 	}
 
 	@Test(priority = 1, dataProvider = "dataFetch", dataProviderClass = OrderValidation.class)
@@ -45,45 +49,70 @@ public class OrderValidation extends TestBaseOrganizer {
 	}
 
 	@Test(priority = 2)
-	public void validateCheckIn() {
+	public void validateCheckIn() throws Throwable {
 		appLogin.verifyCheckin();
 	}
 
-//	@Test(priority = 3, dataProvider = "dataFetch2", dataProviderClass = OrganizerTest.class)
-//	public void validateSearch(String row[]) throws Throwable {
-//		
-//		appLogin.searchFunctionality(row[4]);
-//	}
+	@Test(priority = 3, dataProvider = "dataFetch2", dataProviderClass = OrderValidation.class)
+	public void validateSearch(String row[]) throws Throwable {
+
+		appLogin.searchFunctionality(row[4]);
+	}
 
 	@Test(priority = 4, dataProvider = "dataFetch2", dataProviderClass = OrderValidation.class)
 	public void validateCartTest(String row[]) throws Throwable {
+
 		appLogin.cartValue(row[10]);
 
 	}
-	
-	@Test()
-	public void validateDiscount() {
-		
-	}
-	
-	
-	@Test()
-	public void validatePlatformFee() {
-		
-	}
-	
-	@Test()
-	public void validatePayment_Collected() {
-		
-	}
-	
-	
-	@Test()
-	public void validateAmount_owe() {
-		
-	}
-	
 
-	
+	@Test(priority = 5, dataProvider = "dataFetch2", dataProviderClass = OrderValidation.class)
+	public void validateDiscount(String row[]) {
+
+		appLogin.verifyDiscount(row[8]);
+
+	}
+
+	@Test(priority = 6, dataProvider = "dataFetch2", dataProviderClass = OrderValidation.class)
+	public void validatePlatformFee(String[] row) {
+
+		appLogin.verifyPlatformFee(row[11]);
+
+	}
+
+	@Test(priority = 7, dataProvider = "dataFetch2", dataProviderClass = OrderValidation.class)
+	public void validatePayment_Collected(String[] row) {
+
+		appLogin.verifyPaymentCollected(row[15]);
+
+	}
+
+	@Test(priority = 8, dataProvider = "dataFetch2", dataProviderClass = OrderValidation.class)
+	public void validateRazorpay_charges(String[] row) {
+
+		appLogin.verifyRazorPay_charges(row[14]);
+
+	}
+
+	@Test(priority = 9, dataProvider = "dataFetch2", dataProviderClass = OrderValidation.class)
+	public void validateAmount_owe(String row[]) {
+
+		appLogin.verifyamountOwe(row[16]);
+
+	}
+
+	@AfterMethod
+
+	public void teardown(ITestResult result) throws Throwable {
+
+		if (result.getStatus() == ITestResult.FAILURE) {
+			capture(result.getMethod().getMethodName());
+		}
+
+	}
+
+	public void capture(String methodname) throws Throwable {
+		UtilsApp.CapturescreenShot(methodname);
+	  }
 
 }

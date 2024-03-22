@@ -23,17 +23,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.annotations.DataProvider;
 
-import com.base.TestBase;
+import com.base.TestBaseOrganizer;
 
-public class Utils extends TestBase {
-
+public class UtilsApp extends TestBaseOrganizer {
+	
 	static File file;
 	static FileInputStream stream;
 	static XSSFWorkbook workbook;
 	
-	public static WebDriver driver;
+//	public static WebDriver driver;
 
 	public static TakesScreenshot ts;
 

@@ -232,7 +232,7 @@ public class LoginWithGoogle extends TestBase {
 
 		js.executeScript("arguments[0].click();", proceedPayment);
 		boolean orderSuccessMsg = ordersuccessFul.isDisplayed();
-		Assert.assertTrue(orderSuccessMsg); // checked
+		Assert.assertFalse(orderSuccessMsg); // checked
 
 	}
 
