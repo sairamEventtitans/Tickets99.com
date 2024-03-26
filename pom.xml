@@ -6,6 +6,25 @@
 	<artifactId>Tickets99</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
+
+	<build>
+		<plugins>
+			<plugin>
+				<!--
+				https://mvnrepository.com/artifact/org.apache.maven.plugins/maven-surefire-plugin -->
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>3.0.0-M5</version>
+
+				<configuration>
+					<suiteXmlFiles>
+						<suiteXmlFile>testng1.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<dependencies>
 
 		<!--
@@ -16,13 +35,14 @@
 			<version>3.141.0</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.8</version>
+			<version>7.8.0</version>
 			<scope>test</scope>
 		</dependency>
+
 
 		<!--
 		https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
@@ -40,6 +60,13 @@
 		</dependency>
 
 
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.15</version> <!-- or the latest version -->
+		</dependency>
+
+
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
@@ -53,7 +80,6 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.2.5</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>com.relevantcodes</groupId>
@@ -69,14 +95,8 @@
 			<version>5.0.6</version>
 		</dependency>
 
-		<dependency>
-			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>4.1.5</version>
-		</dependency>
 
-
-		<dependency>
+		<!--	<dependency>
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-api</artifactId>
 			<version>2.14.1</version>
@@ -85,13 +105,8 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
 			<version>2.14.1</version>
-		</dependency>
-
-		<!--
-		https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-
+		</dependency>   -->
 
 	</dependencies>
-
 
 </project>

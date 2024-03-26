@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+
+	<listeners>
+		<listener class-name="extentreports.ExtentReporter" />
+	</listeners>
+
+	<test thread-count="5" name="Test" >
+
+		<classes>
+
+			<!-- Login in with Google and Verify Ticket booking -->
+
+			<class name="com.testscripts.LoginGoogleTests" />
+			<class name="com.testscripts.LoginGoogleUPIPaidTicketTest" />
+			<class name="com.testscripts.LoginGoogleAmazonPayTest" />   
+
+
+			<!-- Login in with Existing username and password and Verify Ticket
+			booking -->
+
+			<class name="com.testscripts.LoginWithExistingEmailFreeTest" />
+			<class name="com.testscripts.LoginWithExistingEmailUpiPayTest" />
+			<class name="com.testscripts.LoginWithExistingEmailAmazonPayTest" /> 
+
+			<!-- Login in with new email and Verify Ticket booking -->
+
+			<class name="com.testscripts.LoginWithNewMailAmazonPayTest" />
+			<class name="com.testscripts.LoginWithNewMailUpiPayTest" />
+			<class name="com.testscripts.LoginWithNewEmailTest" />   
+
+			<!-- Login in with new mobile number and Verify Ticket booking -->
+
+			<class name="com.testscripts.LoginWithMobileFreeTest" />
+			<class name="com.testscripts.LoginWithMobileUpiPayTest" />
+			<class name="com.testscripts.LoginWithMobileAmazonPayTest" />    
+
+
+			<!-- loging in with various types and booking ticket using razor
+			pay(phonepe) -->
+
+			<!--   <class name="com.testscripts.LoginWithMobileRazorPayTest" />
+			<class name="com.testscripts.LoginWithExistingEmailRazorPayTest" />	 
+			<class name="com.testscripts.LoginWithNewMailRazorPayTest" />
+			<class name="com.testscripts.LoginWithGoogleRazorPayUpiTest" />   -->
+
+
+			
+
+		</classes>
+	</test> 
+	
+	
+	
+	
+	
+	
+	 <!--
+	Test -->
+</suite> <!-- 
+Suite -->

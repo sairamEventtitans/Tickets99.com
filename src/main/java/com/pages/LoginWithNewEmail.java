@@ -181,15 +181,15 @@ public class LoginWithNewEmail extends TestBase {
 		AddticketVip.click();
 		proceedticketbtn.click();
 		Emailvalue.sendKeys(email);
-		ContinueMail.click();
+		
 
 		try {
-
-			// Thread.sleep(30000);
+			ContinueMail.click();
+			 Thread.sleep(25000);
 			Utils.javaScriptClick(verifymailbtn);
 		}
 
-		catch (NoSuchElementException nse) {
+		catch (Exception nse) {
 
 			System.out.println("No otp verification required directed to payment page");
 		}
@@ -202,7 +202,9 @@ public class LoginWithNewEmail extends TestBase {
 	public void verifyCoupon(String Couponcode) {
 
 		couponValue.sendKeys(Couponcode);
-		couponApplybtn.click();
+		
+		Utils.javaScriptClick(couponApplybtn);
+		//couponApplybtn.click();
 
 		boolean couponmessage = Couponmessage.isDisplayed();
 

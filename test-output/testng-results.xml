@@ -1,214 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="14" passed="13" failed="1" skipped="0">
+<testng-results ignored="0" total="9" passed="8" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-03-07T15:32:18 IST" name="Default suite" finished-at="2024-03-07T15:32:45 IST" duration-ms="27365">
+  <suite started-at="2024-03-26T15:57:13 IST" name="Default suite" finished-at="2024-03-26T15:58:59 IST" duration-ms="105340">
     <groups>
     </groups>
-    <test started-at="2024-03-07T15:32:18 IST" name="Default test" finished-at="2024-03-07T15:32:45 IST" duration-ms="27365">
-      <class name="com.testscripts.LoginWithNewMailAmazonPayTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:18 IST" name="setup" finished-at="2024-03-07T15:32:23 IST" duration-ms="4681" status="PASS">
+    <test started-at="2024-03-26T15:57:13 IST" name="Default test" finished-at="2024-03-26T15:58:59 IST" duration-ms="105340">
+      <class name="applicationtests.OrderValidation">
+        <test-method is-config="true" signature="setup()[pri:0, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:57:13 IST" name="setup" finished-at="2024-03-26T15:58:24 IST" duration-ms="70577" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="ValidateSigninWithNewEmail_upiPay([Ljava.lang.String;)[pri:1, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:24 IST" name="ValidateSigninWithNewEmail_upiPay" data-provider="emailtestdata" finished-at="2024-03-07T15:32:25 IST" duration-ms="1187" status="PASS">
+        <test-method signature="validateAppLogin([Ljava.lang.String;)[pri:1, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:26 IST" name="validateAppLogin" data-provider="dataFetch" finished-at="2024-03-26T15:58:31 IST" duration-ms="4899" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@1c240cf2]]>
+                <![CDATA[[Ljava.lang.String;@14ef2482]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateSigninWithNewEmail_upiPay -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:25 IST" name="teardown" finished-at="2024-03-07T15:32:25 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- validateAppLogin -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:31 IST" name="teardown" finished-at="2024-03-26T15:58:31 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidateSigninWithNewEmail_upiPay status=SUCCESS method=LoginWithNewMailAmazonPayTest.ValidateSigninWithNewEmail_upiPay([Ljava.lang.String;)[pri:1, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="ValidateCoupon_Email([Ljava.lang.String;)[pri:2, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:25 IST" name="ValidateCoupon_Email" data-provider="emailtestdata" finished-at="2024-03-07T15:32:26 IST" duration-ms="726" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.String;@193bb809]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- ValidateCoupon_Email -->
-        <test-method signature="validateCouponRemove()[pri:3, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:26 IST" name="validateCouponRemove" finished-at="2024-03-07T15:32:26 IST" duration-ms="59" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateCouponRemove -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:26 IST" name="teardown" finished-at="2024-03-07T15:32:26 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=ValidateCoupon_Email status=SUCCESS method=LoginWithNewMailAmazonPayTest.ValidateCoupon_Email([Ljava.lang.String;)[pri:2, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
+                <![CDATA[[TestResult name=validateAppLogin status=SUCCESS method=OrderValidation.validateAppLogin([Ljava.lang.String;)[pri:1, instance:applicationtests.OrderValidation@273e7444] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="ValidateEmailDisable_Email()[pri:4, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:26 IST" name="ValidateEmailDisable_Email" finished-at="2024-03-07T15:32:26 IST" duration-ms="80" status="PASS">
+        <test-method signature="validateCheckIn()[pri:2, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:31 IST" name="validateCheckIn" finished-at="2024-03-26T15:58:35 IST" duration-ms="4095" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidateEmailDisable_Email -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:26 IST" name="teardown" finished-at="2024-03-07T15:32:26 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- validateCheckIn -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:35 IST" name="teardown" finished-at="2024-03-26T15:58:35 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateCouponRemove status=SUCCESS method=LoginWithNewMailAmazonPayTest.validateCouponRemove()[pri:3, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
+                <![CDATA[[TestResult name=validateCheckIn status=SUCCESS method=OrderValidation.validateCheckIn()[pri:2, instance:applicationtests.OrderValidation@273e7444] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:26 IST" name="teardown" finished-at="2024-03-07T15:32:26 IST" duration-ms="0" status="PASS">
+        <test-method signature="validateSearch([Ljava.lang.String;)[pri:3, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:35 IST" name="validateSearch" data-provider="dataFetch2" finished-at="2024-03-26T15:58:57 IST" duration-ms="22438" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ValidateEmailDisable_Email status=SUCCESS method=LoginWithNewMailAmazonPayTest.ValidateEmailDisable_Email()[pri:4, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
+                <![CDATA[[Ljava.lang.String;@1f0b3cfe]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateSearch -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:57 IST" name="teardown" finished-at="2024-03-26T15:58:57 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateSearch status=SUCCESS method=OrderValidation.validateSearch([Ljava.lang.String;)[pri:3, instance:applicationtests.OrderValidation@273e7444] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="validateWhatsappCheckbox([Ljava.lang.String;)[pri:5, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:26 IST" name="validateWhatsappCheckbox" data-provider="emailtestdata" finished-at="2024-03-07T15:32:26 IST" duration-ms="334" status="PASS">
+        <test-method signature="validateCartTest([Ljava.lang.String;)[pri:4, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:58 IST" name="validateCartTest" data-provider="dataFetch2" finished-at="2024-03-26T15:58:58 IST" duration-ms="48" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[Ljava.lang.String;@20801cbb]]>
+                <![CDATA[[Ljava.lang.String;@75483843]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateWhatsappCheckbox -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:26 IST" name="teardown" finished-at="2024-03-07T15:32:26 IST" duration-ms="0" status="PASS">
+        </test-method> <!-- validateCartTest -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:58 IST" name="teardown" finished-at="2024-03-26T15:58:58 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateWhatsappCheckbox status=SUCCESS method=LoginWithNewMailAmazonPayTest.validateWhatsappCheckbox([Ljava.lang.String;)[pri:5, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="validateAttendeeEmail([Ljava.lang.String;)[pri:6, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:26 IST" name="validateAttendeeEmail" data-provider="emailtestdata" finished-at="2024-03-07T15:32:27 IST" duration-ms="929" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.String;@64b018f3]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAttendeeEmail -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:27 IST" name="teardown" finished-at="2024-03-07T15:32:27 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateAttendeeEmail status=SUCCESS method=LoginWithNewMailAmazonPayTest.validateAttendeeEmail([Ljava.lang.String;)[pri:6, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
+                <![CDATA[[TestResult name=validateCartTest status=SUCCESS method=OrderValidation.validateCartTest([Ljava.lang.String;)[pri:4, instance:applicationtests.OrderValidation@273e7444] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="validatePaymentUrl()[pri:7, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:27 IST" name="validatePaymentUrl" finished-at="2024-03-07T15:32:28 IST" duration-ms="321" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatePaymentUrl -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:28 IST" name="teardown" finished-at="2024-03-07T15:32:28 IST" duration-ms="0" status="PASS">
+        <test-method signature="validateDiscount([Ljava.lang.String;)[pri:5, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:58 IST" name="validateDiscount" data-provider="dataFetch2" finished-at="2024-03-26T15:58:58 IST" duration-ms="59" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validatePaymentUrl status=SUCCESS method=LoginWithNewMailAmazonPayTest.validatePaymentUrl()[pri:7, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
+                <![CDATA[[Ljava.lang.String;@5ec4ff02]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDiscount -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:58 IST" name="teardown" finished-at="2024-03-26T15:58:58 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateDiscount status=SUCCESS method=OrderValidation.validateDiscount([Ljava.lang.String;)[pri:5, instance:applicationtests.OrderValidation@273e7444] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="validatePhonepe()[pri:8, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:28 IST" name="validatePhonepe" finished-at="2024-03-07T15:32:31 IST" duration-ms="2781" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validatePhonepe -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:31 IST" name="teardown" finished-at="2024-03-07T15:32:31 IST" duration-ms="1" status="PASS">
+        <test-method signature="validatePlatformFee([Ljava.lang.String;)[pri:6, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:58 IST" name="validatePlatformFee" data-provider="dataFetch2" finished-at="2024-03-26T15:58:58 IST" duration-ms="50" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validatePhonepe status=SUCCESS method=LoginWithNewMailAmazonPayTest.validatePhonepe()[pri:8, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
+                <![CDATA[[Ljava.lang.String;@65a48602]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validatePlatformFee -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:58 IST" name="teardown" finished-at="2024-03-26T15:58:58 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validatePlatformFee status=SUCCESS method=OrderValidation.validatePlatformFee([Ljava.lang.String;)[pri:6, instance:applicationtests.OrderValidation@273e7444] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="validateAmazonPe()[pri:9, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:31 IST" name="validateAmazonPe" finished-at="2024-03-07T15:32:31 IST" duration-ms="192" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAmazonPe -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:31 IST" name="teardown" finished-at="2024-03-07T15:32:31 IST" duration-ms="0" status="PASS">
+        <test-method signature="validatePayment_Collected([Ljava.lang.String;)[pri:7, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:58 IST" name="validatePayment_Collected" data-provider="dataFetch2" finished-at="2024-03-26T15:58:58 IST" duration-ms="53" status="FAIL">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateAmazonPe status=SUCCESS method=LoginWithNewMailAmazonPayTest.validateAmazonPe()[pri:9, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
+                <![CDATA[[Ljava.lang.String;@7903d448]]>
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="validateAmazonOrderMessage([Ljava.lang.String;)[pri:10, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:31 IST" name="validateAmazonOrderMessage" data-provider="emailtestdata" finished-at="2024-03-07T15:32:44 IST" duration-ms="12849" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.String;@581b1c08]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAmazonOrderMessage -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:44 IST" name="teardown" finished-at="2024-03-07T15:32:44 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateAmazonOrderMessage status=SUCCESS method=LoginWithNewMailAmazonPayTest.validateAmazonOrderMessage([Ljava.lang.String;)[pri:10, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-        <test-method signature="validateRegisterBtn()[pri:11, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:44 IST" name="validateRegisterBtn" finished-at="2024-03-07T15:32:44 IST" duration-ms="33" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[expected [false] but found [true]]]>
+              <![CDATA[expected [1] but found [2]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: expected [false] but found [true]
+              <![CDATA[java.lang.AssertionError: expected [1] but found [2]
 at org.testng.Assert.fail(Assert.java:99)
 at org.testng.Assert.failNotEquals(Assert.java:1037)
-at org.testng.Assert.assertFalse(Assert.java:67)
-at org.testng.Assert.assertFalse(Assert.java:77)
-at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:178)
-at com.testscripts.LoginWithNewMailAmazonPayTest.validateRegisterBtn(LoginWithNewMailAmazonPayTest.java:115)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at com.appPages.verifyIWillPay_razor.verifyPaymentCollected(verifyIWillPay_razor.java:192)
+at applicationtests.OrderValidation.validatePayment_Collected(OrderValidation.java:86)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -242,71 +191,63 @@ at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
           </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validateRegisterBtn -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:44 IST" name="teardown" finished-at="2024-03-07T15:32:44 IST" duration-ms="183" status="PASS">
+        </test-method> <!-- validatePayment_Collected -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:58 IST" name="teardown" finished-at="2024-03-26T15:58:58 IST" duration-ms="213" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateRegisterBtn status=FAILURE method=LoginWithNewMailAmazonPayTest.validateRegisterBtn()[pri:11, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
+                <![CDATA[[TestResult name=validatePayment_Collected status=FAILURE method=OrderValidation.validatePayment_Collected([Ljava.lang.String;)[pri:7, instance:applicationtests.OrderValidation@273e7444] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="validateOrderIdVip_amazonpay()[pri:12, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:44 IST" name="validateOrderIdVip_amazonpay" finished-at="2024-03-07T15:32:45 IST" duration-ms="886" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateOrderIdVip_amazonpay -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:45 IST" name="teardown" finished-at="2024-03-07T15:32:45 IST" duration-ms="1" status="PASS">
+        <test-method signature="validateRazorpay_charges([Ljava.lang.String;)[pri:8, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:58 IST" name="validateRazorpay_charges" data-provider="dataFetch2" finished-at="2024-03-26T15:58:59 IST" duration-ms="77" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateOrderIdVip_amazonpay status=SUCCESS method=LoginWithNewMailAmazonPayTest.validateOrderIdVip_amazonpay()[pri:12, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
+                <![CDATA[[Ljava.lang.String;@336206d8]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateRazorpay_charges -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:59 IST" name="teardown" finished-at="2024-03-26T15:58:59 IST" duration-ms="1" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateRazorpay_charges status=SUCCESS method=OrderValidation.validateRazorpay_charges([Ljava.lang.String;)[pri:8, instance:applicationtests.OrderValidation@273e7444] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="validateOrderIdFree_amazonpay()[pri:13, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:45 IST" name="validateOrderIdFree_amazonpay" finished-at="2024-03-07T15:32:45 IST" duration-ms="366" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateOrderIdFree_amazonpay -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:45 IST" name="teardown" finished-at="2024-03-07T15:32:45 IST" duration-ms="0" status="PASS">
+        <test-method signature="validateAmount_owe([Ljava.lang.String;)[pri:9, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:59 IST" name="validateAmount_owe" data-provider="dataFetch2" finished-at="2024-03-26T15:58:59 IST" duration-ms="50" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=validateOrderIdFree_amazonpay status=SUCCESS method=LoginWithNewMailAmazonPayTest.validateOrderIdFree_amazonpay()[pri:13, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
+                <![CDATA[[Ljava.lang.String;@1f11f64e]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAmount_owe -->
+        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:applicationtests.OrderValidation@273e7444]" started-at="2024-03-26T15:58:59 IST" name="teardown" finished-at="2024-03-26T15:58:59 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=validateAmount_owe status=SUCCESS method=OrderValidation.validateAmount_owe([Ljava.lang.String;)[pri:9, instance:applicationtests.OrderValidation@273e7444] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-        <test-method signature="validateAttendeeDetailsViewticket_NewEmail([Ljava.lang.String;)[pri:14, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:45 IST" name="validateAttendeeDetailsViewticket_NewEmail" data-provider="emailtestdata" finished-at="2024-03-07T15:32:45 IST" duration-ms="281" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[Ljava.lang.String;@125d47c4]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- validateAttendeeDetailsViewticket_NewEmail -->
-        <test-method is-config="true" signature="teardown(org.testng.ITestResult)[pri:0, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e]" started-at="2024-03-07T15:32:45 IST" name="teardown" finished-at="2024-03-07T15:32:45 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=validateAttendeeDetailsViewticket_NewEmail status=SUCCESS method=LoginWithNewMailAmazonPayTest.validateAttendeeDetailsViewticket_NewEmail([Ljava.lang.String;)[pri:14, instance:com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.testscripts.LoginWithNewMailAmazonPayTest -->
+      </class> <!-- applicationtests.OrderValidation -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

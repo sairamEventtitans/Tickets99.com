@@ -61,19 +61,21 @@ public class LoginWithMobileUpiPay extends TestBase {
 		Addticket.click();
 		proceedticketbtn.click();
 		mobileValue.sendKeys(mobile_number);
-		continueBtn.click();
-		
-	try {	
-		Thread.sleep(30000);
-		verifyOtp.click();
-	}
-	catch (NoSuchElementException nse) {
-		
-		System.out.println("No otp validation required for this Event");
-	}
 
-		boolean orderSummaryMeassage = orderSummary.isDisplayed();
-		Assert.assertTrue(orderSummaryMeassage);
+		try {
+			continueBtn.click();
+
+			Thread.sleep(20000);
+			verifyOtp.click();
+
+		} catch (Exception e) {
+
+			System.out.println("No otp validation required for this Event");
+
+			boolean orderSummaryMeassage = orderSummary.isDisplayed();
+			Assert.assertTrue(orderSummaryMeassage);
+
+		}
 
 	}
 

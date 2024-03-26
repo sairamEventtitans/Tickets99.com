@@ -20,7 +20,7 @@ public class LoginGoogleTests extends TestBase {
 	LoginWithGoogle loginWithGoogle;
 	ExtentReports extent;
 	ExtentTest logger;
-	String sheetname = "logincred";
+	static String sheetname = "logincred";
 
 	private Logger logger2; // Declare the logger field
 
@@ -29,11 +29,11 @@ public class LoginGoogleTests extends TestBase {
 	}
 
 	@DataProvider
-	public String[][] dataFetch() throws Throwable {
+	public static String[][] dataFetch() throws Throwable {
 		return Utils.FetchData(sheetname);
 	}
 
-	@BeforeClass
+	@BeforeClass(alwaysRun = true)
 	public void setup() { // prerequisites for test methods are placed here
 
 		Initialization();
@@ -62,21 +62,20 @@ public class LoginGoogleTests extends TestBase {
 //		logger2.info("Starting test method execution");
 //	}
 
-	@Test(priority = 1, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	@Test(groups = "GFree",priority = 1, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
 	public void validateDisablemail_google(String[] rowindex) throws Throwable {
 		// logger2.info("Starting test method execution");
 		loginWithGoogle.VerifyGooglesignIn(rowindex[1], rowindex[2]);
 
 	}
 
-	@Test(priority = 2, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	@Test(priority = 2, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class,groups = "GFree")
 	public void ValidateWhatsappConfigEnable(String[] rowindex) throws Throwable {
 
 		loginWithGoogle.verifyWhatsappCongig(rowindex[7], rowindex[8], rowindex[9], rowindex[1]);
-
 	}
 
-	@Test(priority = 3, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	@Test(priority = 3, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class,groups = "GFree")
 	public void validateTicketForAttendee_google(String[] rowindex) throws Throwable {
 
 		loginWithGoogle.verifyAttendee_orderConfirmantion(rowindex[3], rowindex[4], rowindex[5], rowindex[6],
@@ -84,14 +83,14 @@ public class LoginGoogleTests extends TestBase {
 
 	}
 
-	@Test(priority = 4)
+	@Test(priority = 4,groups = "GFree")
 	public void validateOrderSuccessMessage() {
 
 		loginWithGoogle.verifyOrderSuccessMessage();
 
 	}
 
-	@Test(priority = 5)
+	@Test(priority = 5,groups = "GFree")
 
 	public void validateViewTicketUrl_google() throws Throwable {
 
@@ -99,31 +98,31 @@ public class LoginGoogleTests extends TestBase {
 
 	}
 
-	@Test(priority = 6)
+	@Test(priority = 6,groups = "GFree")
 	public void ValidateRegUrl_google() {
 
 		loginWithGoogle.VerifyRegistrationUrl();
 
 	}
 
-	@Test(priority = 7)
+	@Test(priority = 7,groups = "GFree")
 	public void ValidateOrderId_google() {
 		loginWithGoogle.verifyOrderId();
 	}
 
-	@Test(priority = 8, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	@Test(priority = 8, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class,groups = "GFree")
 	public void validateBuyerDetails_google(String[] rowindex) throws Throwable {
 
 		loginWithGoogle.verifyBuyerdetails(rowindex[7], rowindex[8]);
 
 	}
 
-	@Test(priority = 9, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	@Test(priority = 9, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class,groups = "GFree")
 	public void validateAttendeeDetails_googleloginViewTickets(String rowindex[]) {
 		loginWithGoogle.verifyAttendeeDetailsInViewTickets(rowindex[15], rowindex[3], rowindex[4]);
 	}
 
-	@Test(priority = 10, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class)
+	@Test(priority = 10, dataProvider = "dataFetch", dataProviderClass = LoginGoogleTests.class,groups = "GFree")
 	public void validateAttendeeDetails_googleCompleteReg(String rowindex[]) throws Throwable {
 		loginWithGoogle.verifyAttendeeDetailsInRegistration(rowindex[15], rowindex[3], rowindex[4]);
 	}

@@ -47,22 +47,34 @@ public class LoginWithGoogleRazorPayUpi extends TestBase {
 	@FindBy(xpath = "//button[text()='Pay Now']")
 	WebElement Paybtn;
 
-	@FindBy(xpath = "//div[text()=' UPI ID to complete payment']")
+	@FindBy(xpath = "//h3[text()='Your order is completed']")
 	WebElement Phonepemsg;
+
+	@FindBy(xpath = "//span[@class='pl-2 font-weight-bold text-primary']")
+	WebElement order_id;
+	
+	@FindBy (xpath = "//span[@id='spansummarytotalamount']")
+	WebElement TicketAmount;
 
 	public LoginWithGoogleRazorPayUpi(WebDriver driver) {
 		PageFactory.initElements(driver, this);
 	}
 
 	public boolean verifyPaymentPage() {
-
+		
+		String ticket_cost=TicketAmount.getText().replace(".00", "");
+		
+		//double ticketCostNumeric = Double.parseDouble(ticket_cost);
+		
+		Utils.WriteInExistingExcel(ticket_cost, "OrderRazorPayValidation", 10);
+		
 		Utils.javaScriptClick(proceedbtn_topayment);
 		Paymentdetails.isDisplayed();
 		return true;
 
 	}
 
-	public void verifyRazorCheckbox() throws Throwable {
+	public void verifyRazorCheckbox(String contactNumber) throws Throwable {
 
 		razorUpi.click();
 		proceedbtn_razor.click();
@@ -72,25 +84,38 @@ public class LoginWithGoogleRazorPayUpi extends TestBase {
 
 		MobileValue.click();
 		Thread.sleep(2000);
-		MobileValue.sendKeys("8106637137");
+		MobileValue.sendKeys(contactNumber);
 		proceedRazor.click();
 
 	}
 
-	public void verifyRazorUpiPaymentMethods() throws Throwable {
+	public void verifyRazorUpiPaymentMethods(String UpiId) throws Throwable {
 
 		qr_msg.isDisplayed();
+		Thread.sleep(2000);
 		Upibutton.click();
 		Upi_mobile.click();
 		Mobile_upiValue.clear();
-		Mobile_upiValue.sendKeys("jakkam.sairam@ybl");
+		Mobile_upiValue.sendKeys(UpiId);
 		Thread.sleep(3000);
+		
+	
 		Paybtn.click();
-
-		boolean trans_msg = Phonepemsg.isDisplayed();
-
-		Assert.assertTrue(trans_msg);
-
+			
+		driver.switchTo().defaultContent();
+		
+		Thread.sleep(2000);
+	
+		String orderID = order_id.getText();
+		
+		Utils.WriteInExistingExcel(orderID, "OrderRazorPayValidation", 4); // 6
+		
+		boolean OrderSuccess = Phonepemsg.isDisplayed();
+		
+		Assert.assertTrue(OrderSuccess);
+		
+		
+		
 	}
 
 }

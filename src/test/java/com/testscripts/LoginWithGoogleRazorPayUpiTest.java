@@ -3,6 +3,7 @@ package com.testscripts;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.base.TestBase;
@@ -15,13 +16,21 @@ import com.utils.Utils;
 
 public class LoginWithGoogleRazorPayUpiTest extends TestBase {
 
-	String sheetname2 = "ExistingEmaillogin";
+	static String sheetname = "RazorPay";
 	LoginWithNewEmail newEmail;
 	LoginWithGoogle login;
 	LoginWithExistingEmailUpiPayment Upi;
 	LoginWithGooglePaidTicket googlePaid;
 	LoginWithGoogleRazorPayUpi razorUpi;
 
+	
+	
+	@DataProvider
+	public static String[][] dataFetch() throws Throwable {
+		return Utils.FetchData(sheetname);
+	}
+	
+	
 	@BeforeClass
 	public void setup() { // prerequisites for testmethods are placed here
 
@@ -60,15 +69,16 @@ public class LoginWithGoogleRazorPayUpiTest extends TestBase {
 		// verify payment url
 	}
 
-	@Test(priority = 5)
-	public void validateRazorUpiPaymentMsg() throws Throwable {
-		razorUpi.verifyRazorCheckbox();
+	@Test(priority = 5,dataProvider = "dataFetch", dataProviderClass = LoginWithGoogleRazorPayUpiTest.class)
+	public void validateRazorUpiPaymentMsg(String row[]) throws Throwable {
+		razorUpi.verifyRazorCheckbox(row[0]);
 	}
 
-	@Test(priority = 6)
-	public void validateUpiMobile() throws Throwable {
-		razorUpi.verifyRazorUpiPaymentMethods();
+	@Test(priority = 6,dataProvider = "dataFetch", dataProviderClass = LoginWithGoogleRazorPayUpiTest.class)
+	public void validateUpiMobile(String row[]) throws Throwable {
+		razorUpi.verifyRazorUpiPaymentMethods(row[1]);
 	}
+	
 
 	@AfterMethod
 

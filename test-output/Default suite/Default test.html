@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Default test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>13/1/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>8/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 07 15:32:18 IST 2024</td>
+<td>Started on:</td><td>Tue Mar 26 15:57:13 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>27 seconds (27365 ms)</td>
+<tr><td>Total time:</td><td>105 seconds (105340 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,14 +75,16 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateRegisterBtn()'><b>validateRegisterBtn</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
-<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
+<td title='applicationtests.OrderValidation.validatePayment_Collected()'><b>validatePayment_Collected</b><br>Test class: applicationtests.OrderValidation<br>Parameters: [Ljava.lang.String;@7903d448</td>
+<td><div><pre>java.lang.AssertionError: expected [1] but found [2]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertFalse(Assert.java:67)
-	at org.testng.Assert.assertFalse(Assert.java:77)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:178)
-	at com.testscripts.LoginWithNewMailAmazonPayTest.validateRegisterBtn(LoginWithNewMailAmazonPayTest.java:115)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.appPages.verifyIWillPay_razor.verifyPaymentCollected(verifyIWillPay_razor.java:192)
+	at applicationtests.OrderValidation.validatePayment_Collected(OrderValidation.java:86)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -111,14 +113,16 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div><a href='#' onClick='toggleBox("stack-trace802628402", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace802628402'><pre>java.lang.AssertionError: expected [false] but found [true]
+</pre></div><a href='#' onClick='toggleBox("stack-trace1708490318", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1708490318'><pre>java.lang.AssertionError: expected [1] but found [2]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertFalse(Assert.java:67)
-	at org.testng.Assert.assertFalse(Assert.java:77)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:178)
-	at com.testscripts.LoginWithNewMailAmazonPayTest.validateRegisterBtn(LoginWithNewMailAmazonPayTest.java:115)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+	at org.testng.Assert.assertEquals(Assert.java:122)
+	at org.testng.Assert.assertEquals(Assert.java:629)
+	at org.testng.Assert.assertEquals(Assert.java:639)
+	at com.appPages.verifyIWillPay_razor.verifyPaymentCollected(verifyIWillPay_razor.java:192)
+	at applicationtests.OrderValidation.validatePayment_Collected(OrderValidation.java:86)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -149,7 +153,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
 <td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
+<td>applicationtests.OrderValidation@273e7444</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -159,70 +163,45 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateOrderIdFree_amazonpay()'><b>validateOrderIdFree_amazonpay</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
+<td title='applicationtests.OrderValidation.validateSearch()'><b>validateSearch</b><br>Test class: applicationtests.OrderValidation<br>Parameters: [Ljava.lang.String;@1f0b3cfe</td>
+<td></td>
+<td>22</td>
+<td>applicationtests.OrderValidation@273e7444</td></tr>
+<tr>
+<td title='applicationtests.OrderValidation.validateAppLogin()'><b>validateAppLogin</b><br>Test class: applicationtests.OrderValidation<br>Parameters: [Ljava.lang.String;@14ef2482</td>
+<td></td>
+<td>4</td>
+<td>applicationtests.OrderValidation@273e7444</td></tr>
+<tr>
+<td title='applicationtests.OrderValidation.validatePlatformFee()'><b>validatePlatformFee</b><br>Test class: applicationtests.OrderValidation<br>Parameters: [Ljava.lang.String;@65a48602</td>
 <td></td>
 <td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
+<td>applicationtests.OrderValidation@273e7444</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateAmazonPe()'><b>validateAmazonPe</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
+<td title='applicationtests.OrderValidation.validateCartTest()'><b>validateCartTest</b><br>Test class: applicationtests.OrderValidation<br>Parameters: [Ljava.lang.String;@75483843</td>
 <td></td>
 <td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
+<td>applicationtests.OrderValidation@273e7444</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateAttendeeDetailsViewticket_NewEmail()'><b>validateAttendeeDetailsViewticket_NewEmail</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest<br>Parameters: [Ljava.lang.String;@125d47c4</td>
+<td title='applicationtests.OrderValidation.validateCheckIn()'><b>validateCheckIn</b><br>Test class: applicationtests.OrderValidation</td>
+<td></td>
+<td>4</td>
+<td>applicationtests.OrderValidation@273e7444</td></tr>
+<tr>
+<td title='applicationtests.OrderValidation.validateRazorpay_charges()'><b>validateRazorpay_charges</b><br>Test class: applicationtests.OrderValidation<br>Parameters: [Ljava.lang.String;@336206d8</td>
 <td></td>
 <td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
+<td>applicationtests.OrderValidation@273e7444</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validatePhonepe()'><b>validatePhonepe</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
-<td></td>
-<td>2</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateCouponRemove()'><b>validateCouponRemove</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
+<td title='applicationtests.OrderValidation.validateDiscount()'><b>validateDiscount</b><br>Test class: applicationtests.OrderValidation<br>Parameters: [Ljava.lang.String;@5ec4ff02</td>
 <td></td>
 <td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
+<td>applicationtests.OrderValidation@273e7444</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.ValidateCoupon_Email()'><b>ValidateCoupon_Email</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest<br>Parameters: [Ljava.lang.String;@193bb809</td>
+<td title='applicationtests.OrderValidation.validateAmount_owe()'><b>validateAmount_owe</b><br>Test class: applicationtests.OrderValidation<br>Parameters: [Ljava.lang.String;@1f11f64e</td>
 <td></td>
 <td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateAttendeeEmail()'><b>validateAttendeeEmail</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest<br>Parameters: [Ljava.lang.String;@64b018f3</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateWhatsappCheckbox()'><b>validateWhatsappCheckbox</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest<br>Parameters: [Ljava.lang.String;@20801cbb</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validatePaymentUrl()'><b>validatePaymentUrl</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateAmazonOrderMessage()'><b>validateAmazonOrderMessage</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest<br>Parameters: [Ljava.lang.String;@581b1c08</td>
-<td></td>
-<td>12</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.ValidateSigninWithNewEmail_upiPay()'><b>ValidateSigninWithNewEmail_upiPay</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest<br>Parameters: [Ljava.lang.String;@1c240cf2</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.ValidateEmailDisable_Email()'><b>ValidateEmailDisable_Email</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateOrderIdVip_amazonpay()'><b>validateOrderIdVip_amazonpay</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5a45133e</td></tr>
+<td>applicationtests.OrderValidation@273e7444</td></tr>
 </table><p>
 </body>
 </html>

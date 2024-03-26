@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>98/7/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>17/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu Mar 07 12:57:30 IST 2024</td>
+<td>Started on:</td><td>Tue Mar 19 10:36:22 IST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>360 seconds (360070 ms)</td>
+<tr><td>Total time:</td><td>67 seconds (67027 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,19 +75,19 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validateRegisterBtn()'><b>validateRegisterBtn</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest</td>
+<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validateDisableEmail_google_Upi()'><b>validateDisableEmail_google_Upi</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest<br>Parameters: [Ljava.lang.String;@6b6eae52</td>
 <td><div><pre>java.lang.AssertionError: expected [false] but found [true]
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:178)
-	at com.testscripts.LoginWithExistingEmailAmazonPayTest.validateRegisterBtn(LoginWithExistingEmailAmazonPayTest.java:120)
+	at com.pages.LoginWithGooglePaidTicket.VerifyGooglesignIn(LoginWithGooglePaidTicket.java:99)
+	at com.testscripts.LoginGoogleUPIPaidTicketTest.validateDisableEmail_google_Upi(LoginGoogleUPIPaidTicketTest.java:36)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace732108994", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace732108994'><pre>java.lang.AssertionError: expected [false] but found [true]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1911671810", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1911671810'><pre>java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertFalse(Assert.java:67)
 	at org.testng.Assert.assertFalse(Assert.java:77)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:178)
-	at com.testscripts.LoginWithExistingEmailAmazonPayTest.validateRegisterBtn(LoginWithExistingEmailAmazonPayTest.java:120)
+	at com.pages.LoginWithGooglePaidTicket.VerifyGooglesignIn(LoginWithGooglePaidTicket.java:99)
+	at com.testscripts.LoginGoogleUPIPaidTicketTest.validateDisableEmail_google_Upi(LoginGoogleUPIPaidTicketTest.java:36)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -117,198 +117,22 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
+<td>17</td>
+<td>com.testscripts.LoginGoogleUPIPaidTicketTest@70e9c95d</td></tr>
 <tr>
-<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validateRegisterBtn()'><b>validateRegisterBtn</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@onclick=&apos;return OpenCompleteProfile(this);&apos;]&quot;}
-  (Session info: chrome=122.0.6261.95)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.0&apos;, revision: &apos;2ecb7d9a&apos;, time: &apos;2018-10-31T20:09:30&apos;
-System info: host: &apos;WINDOWS-I42JNHR&apos;, ip: &apos;192.168.0.111&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\COREVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63658}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f14bfa3d9006fc207482169a813cb900
-*** Element info: {Using=xpath, value=//button[@onclick=&apos;return OpenCompleteProfile(this);&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:177)
-	at com.testscripts.LoginGoogleUPIPaidTicketTest.validateRegisterBtn(LoginGoogleUPIPaidTicketTest.java:89)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1633615132", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1633615132'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@onclick=&apos;return OpenCompleteProfile(this);&apos;]&quot;}
-  (Session info: chrome=122.0.6261.95)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.0&apos;, revision: &apos;2ecb7d9a&apos;, time: &apos;2018-10-31T20:09:30&apos;
-System info: host: &apos;WINDOWS-I42JNHR&apos;, ip: &apos;192.168.0.111&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\COREVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63658}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f14bfa3d9006fc207482169a813cb900
-*** Element info: {Using=xpath, value=//button[@onclick=&apos;return OpenCompleteProfile(this);&apos;]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:177)
-	at com.testscripts.LoginGoogleUPIPaidTicketTest.validateRegisterBtn(LoginGoogleUPIPaidTicketTest.java:89)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>30</td>
-<td>com.testscripts.LoginGoogleUPIPaidTicketTest@71ba6d4e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validatePhonepe()'><b>validatePhonepe</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[text()=&apos;PhonePe&apos;])[2]&quot;}
-  (Session info: chrome=122.0.6261.95)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.0&apos;, revision: &apos;2ecb7d9a&apos;, time: &apos;2018-10-31T20:09:30&apos;
-System info: host: &apos;WINDOWS-I42JNHR&apos;, ip: &apos;192.168.0.111&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\COREVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64345}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 243b932aaa4ccf57affe1fb2f24469cf
-*** Element info: {Using=xpath, value=(//span[text()=&apos;PhonePe&apos;])[2]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyPhonepe(LoginWithExistingEmailUpiPayment.java:145)
-	at com.testscripts.LoginWithNewMailAmazonPayTest.validatePhonepe(LoginWithNewMailAmazonPayTest.java:91)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1069736192", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1069736192'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;(//span[text()=&apos;PhonePe&apos;])[2]&quot;}
-  (Session info: chrome=122.0.6261.95)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.0&apos;, revision: &apos;2ecb7d9a&apos;, time: &apos;2018-10-31T20:09:30&apos;
-System info: host: &apos;WINDOWS-I42JNHR&apos;, ip: &apos;192.168.0.111&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\COREVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:64345}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 243b932aaa4ccf57affe1fb2f24469cf
-*** Element info: {Using=xpath, value=(//span[text()=&apos;PhonePe&apos;])[2]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyPhonepe(LoginWithExistingEmailUpiPayment.java:145)
-	at com.testscripts.LoginWithNewMailAmazonPayTest.validatePhonepe(LoginWithNewMailAmazonPayTest.java:91)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>32</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validateRegisterBtn()'><b>validateRegisterBtn</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest</td>
+<td title='com.testscripts.LoginGoogleTests.validateDisablemail_google()'><b>validateDisablemail_google</b><br>Test class: com.testscripts.LoginGoogleTests<br>Parameters: [Ljava.lang.String;@13e5d243</td>
 <td><div><pre>java.lang.AssertionError: expected [false] but found [true]
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:178)
-	at com.testscripts.LoginWithExistingEmailUpiPayTest.validateRegisterBtn(LoginWithExistingEmailUpiPayTest.java:116)
+	at com.pages.LoginWithGoogle.VerifyGooglesignIn(LoginWithGoogle.java:176)
+	at com.testscripts.LoginGoogleTests.validateDisablemail_google(LoginGoogleTests.java:68)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace651726990", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace651726990'><pre>java.lang.AssertionError: expected [false] but found [true]
+... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1552836537", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1552836537'><pre>java.lang.AssertionError: expected [false] but found [true]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertFalse(Assert.java:67)
 	at org.testng.Assert.assertFalse(Assert.java:77)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:178)
-	at com.testscripts.LoginWithExistingEmailUpiPayTest.validateRegisterBtn(LoginWithExistingEmailUpiPayTest.java:116)
+	at com.pages.LoginWithGoogle.VerifyGooglesignIn(LoginWithGoogle.java:176)
+	at com.testscripts.LoginGoogleTests.validateDisablemail_google(LoginGoogleTests.java:68)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -338,186 +162,8 @@ Session ID: 243b932aaa4ccf57affe1fb2f24469cf
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateRegisterBtn()'><b>validateRegisterBtn</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
-<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:178)
-	at com.testscripts.LoginWithNewMailUpiPayTest.validateRegisterBtn(LoginWithNewMailUpiPayTest.java:113)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace508143486", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace508143486'><pre>java.lang.AssertionError: expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertFalse(Assert.java:67)
-	at org.testng.Assert.assertFalse(Assert.java:77)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:178)
-	at com.testscripts.LoginWithNewMailUpiPayTest.validateRegisterBtn(LoginWithNewMailUpiPayTest.java:113)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleAmazonPayTest.validateRegisterBtn()'><b>validateRegisterBtn</b><br>Test class: com.testscripts.LoginGoogleAmazonPayTest</td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@onclick=&apos;return OpenCompleteProfile(this);&apos;]&quot;}
-  (Session info: chrome=122.0.6261.95)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.0&apos;, revision: &apos;2ecb7d9a&apos;, time: &apos;2018-10-31T20:09:30&apos;
-System info: host: &apos;WINDOWS-I42JNHR&apos;, ip: &apos;192.168.0.111&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\COREVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63766}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b98b2fd1c9dbe3749edf866adc81a321
-*** Element info: {Using=xpath, value=//button[@onclick=&apos;return OpenCompleteProfile(this);&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:177)
-	at com.testscripts.LoginGoogleAmazonPayTest.validateRegisterBtn(LoginGoogleAmazonPayTest.java:94)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 32 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1155169971", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1155169971'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[@onclick=&apos;return OpenCompleteProfile(this);&apos;]&quot;}
-  (Session info: chrome=122.0.6261.95)
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.0&apos;, revision: &apos;2ecb7d9a&apos;, time: &apos;2018-10-31T20:09:30&apos;
-System info: host: &apos;WINDOWS-I42JNHR&apos;, ip: &apos;192.168.0.111&apos;, os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 122.0.6261.95, chrome: {chromedriverVersion: 121.0.6167.184 (057a8ae7deb..., userDataDir: C:\Users\COREVA~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:63766}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b98b2fd1c9dbe3749edf866adc81a321
-*** Element info: {Using=xpath, value=//button[@onclick=&apos;return OpenCompleteProfile(this);&apos;]}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at jdk.proxy2/jdk.proxy2.$Proxy13.isDisplayed(Unknown Source)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:177)
-	at com.testscripts.LoginGoogleAmazonPayTest.validateRegisterBtn(LoginGoogleAmazonPayTest.java:94)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>30</td>
-<td>com.testscripts.LoginGoogleAmazonPayTest@738dc9b</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateRegisterBtn()'><b>validateRegisterBtn</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
-<td><div><pre>java.lang.AssertionError: expected [false] but found [true]
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:178)
-	at com.testscripts.LoginWithNewMailAmazonPayTest.validateRegisterBtn(LoginWithNewMailAmazonPayTest.java:115)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace840259832", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace840259832'><pre>java.lang.AssertionError: expected [false] but found [true]
-	at org.testng.Assert.fail(Assert.java:99)
-	at org.testng.Assert.failNotEquals(Assert.java:1037)
-	at org.testng.Assert.assertFalse(Assert.java:67)
-	at org.testng.Assert.assertFalse(Assert.java:77)
-	at com.pages.LoginWithExistingEmailUpiPayment.verifyCompleteRegisterbutton(LoginWithExistingEmailUpiPayment.java:178)
-	at com.testscripts.LoginWithNewMailAmazonPayTest.validateRegisterBtn(LoginWithNewMailAmazonPayTest.java:115)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-	at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-	at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-	at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-	at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-	at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at org.testng.TestRunner.privateRun(TestRunner.java:794)
-	at org.testng.TestRunner.run(TestRunner.java:596)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-	at org.testng.TestNG.runSuites(TestNG.java:1063)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-</pre></div></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
+<td>13</td>
+<td>com.testscripts.LoginGoogleTests@73e9cf30</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
@@ -527,495 +173,90 @@ Session ID: b98b2fd1c9dbe3749edf866adc81a321
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validateOrderIdVip()'><b>validateOrderIdVip</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleUPIPaidTicketTest@71ba6d4e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.ValidateSigninWithNewEmail_upiPay()'><b>ValidateSigninWithNewEmail_upiPay</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest<br>Parameters: [Ljava.lang.String;@44846c76</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.ValidateEmailDisable_Email()'><b>ValidateEmailDisable_Email</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validatePaymentUrl()'><b>validatePaymentUrl</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleUPIPaidTicketTest@71ba6d4e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validateAttendeeDetails_ExistingEmail()'><b>validateAttendeeDetails_ExistingEmail</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest<br>Parameters: [Ljava.lang.String;@1146e32e</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateOrderIdFree()'><b>validateOrderIdFree</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validateOrderIdFree_amazonpay()'><b>validateOrderIdFree_amazonpay</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateWhatsappCheckbox()'><b>validateWhatsappCheckbox</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest<br>Parameters: [Ljava.lang.String;@511ad0dd</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleAmazonPayTest.validatePhonepe()'><b>validatePhonepe</b><br>Test class: com.testscripts.LoginGoogleAmazonPayTest</td>
-<td></td>
-<td>2</td>
-<td>com.testscripts.LoginGoogleAmazonPayTest@738dc9b</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validateBuyForSomeone()'><b>validateBuyForSomeone</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest<br>Parameters: [Ljava.lang.String;@634d56eb</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailFreeTest.validateWhatsappIsPresent_freeExistingEmail()'><b>validateWhatsappIsPresent_freeExistingEmail</b><br>Test class: com.testscripts.LoginWithExistingEmailFreeTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailFreeTest@3c77d488</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validatePhonepe()'><b>validatePhonepe</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest</td>
-<td></td>
-<td>2</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewEmailTest.validateAttendeeRegistration_Vip()'><b>validateAttendeeRegistration_Vip</b><br>Test class: com.testscripts.LoginWithNewEmailTest<br>Parameters: [Ljava.lang.String;@4cd7128</td>
-<td></td>
-<td>3</td>
-<td>com.testscripts.LoginWithNewEmailTest@d86a6f</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleAmazonPayTest.validatePaymentUrl()'><b>validatePaymentUrl</b><br>Test class: com.testscripts.LoginGoogleAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleAmazonPayTest@738dc9b</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleAmazonPayTest.validateDisableEmail_google_Upi()'><b>validateDisableEmail_google_Upi</b><br>Test class: com.testscripts.LoginGoogleAmazonPayTest<br>Parameters: [Ljava.lang.String;@22b4ad0c</td>
-<td></td>
-<td>13</td>
-<td>com.testscripts.LoginGoogleAmazonPayTest@738dc9b</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleTests.validateAttendeeDetails_googleCompleteReg()'><b>validateAttendeeDetails_googleCompleteReg</b><br>Test class: com.testscripts.LoginGoogleTests<br>Parameters: [Ljava.lang.String;@25af1dbf</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleTests@6c1a5b54</td></tr>
-<tr>
 <td title='com.testscripts.LoginGoogleTests.ValidateRegUrl_google()'><b>ValidateRegUrl_google</b><br>Test class: com.testscripts.LoginGoogleTests</td>
 <td></td>
-<td>1</td>
-<td>com.testscripts.LoginGoogleTests@6c1a5b54</td></tr>
+<td>3</td>
+<td>com.testscripts.LoginGoogleTests@73e9cf30</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.ValidateCoupon_Email()'><b>ValidateCoupon_Email</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest<br>Parameters: [Ljava.lang.String;@2cdcedef</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.ValidateEmailDisable_Email()'><b>ValidateEmailDisable_Email</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
+<td title='com.testscripts.LoginGoogleTests.validateTicketForAttendee_google()'><b>validateTicketForAttendee_google</b><br>Test class: com.testscripts.LoginGoogleTests<br>Parameters: [Ljava.lang.String;@35ef439e</td>
 <td></td>
 <td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
+<td>com.testscripts.LoginGoogleTests@73e9cf30</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validatePaymentUrl()'><b>validatePaymentUrl</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
+<td title='com.testscripts.LoginGoogleTests.ValidateWhatsappConfigEnable()'><b>ValidateWhatsappConfigEnable</b><br>Test class: com.testscripts.LoginGoogleTests<br>Parameters: [Ljava.lang.String;@4997552e</td>
 <td></td>
 <td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
+<td>com.testscripts.LoginGoogleTests@73e9cf30</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validatePhonepe()'><b>validatePhonepe</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
-<td></td>
-<td>2</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateAmazonPe()'><b>validateAmazonPe</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
+<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validateAttendeeDetails_GoogleAmazon()'><b>validateAttendeeDetails_GoogleAmazon</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest<br>Parameters: [Ljava.lang.String;@7bcecef6</td>
 <td></td>
 <td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailFreeTest.validateAttendeeDetails_ExistingEmail()'><b>validateAttendeeDetails_ExistingEmail</b><br>Test class: com.testscripts.LoginWithExistingEmailFreeTest<br>Parameters: [Ljava.lang.String;@43778d6d</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailFreeTest@3c77d488</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validateDisableEmail_google_Upi()'><b>validateDisableEmail_google_Upi</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest<br>Parameters: [Ljava.lang.String;@44ac94c2</td>
-<td></td>
-<td>13</td>
-<td>com.testscripts.LoginGoogleUPIPaidTicketTest@71ba6d4e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateOrderIdVip_amazonpay()'><b>validateOrderIdVip_amazonpay</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleTests.ValidateWhatsappConfigEnable()'><b>ValidateWhatsappConfigEnable</b><br>Test class: com.testscripts.LoginGoogleTests<br>Parameters: [Ljava.lang.String;@19b33b0d</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleTests@6c1a5b54</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validateOrderIdVip_amazonpay()'><b>validateOrderIdVip_amazonpay</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validateLogin()'><b>validateLogin</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest<br>Parameters: [Ljava.lang.String;@524b1e41</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validateAttendeeDetails_ExistingEmail()'><b>validateAttendeeDetails_ExistingEmail</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest<br>Parameters: [Ljava.lang.String;@2da8ed80</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validateLogin()'><b>validateLogin</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest<br>Parameters: [Ljava.lang.String;@d827673</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validatePhonepe()'><b>validatePhonepe</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest</td>
-<td></td>
-<td>2</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validateAttendeeDetails_GoogleAmazon()'><b>validateAttendeeDetails_GoogleAmazon</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest<br>Parameters: [Ljava.lang.String;@d695f9d</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleUPIPaidTicketTest@71ba6d4e</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleTests.validateTicketForAttendee_google()'><b>validateTicketForAttendee_google</b><br>Test class: com.testscripts.LoginGoogleTests<br>Parameters: [Ljava.lang.String;@7daf167</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleTests@6c1a5b54</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateAttendeeEmail()'><b>validateAttendeeEmail</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest<br>Parameters: [Ljava.lang.String;@6df4d8f1</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleTests.validateDisablemail_google()'><b>validateDisablemail_google</b><br>Test class: com.testscripts.LoginGoogleTests<br>Parameters: [Ljava.lang.String;@735b1ad2</td>
-<td></td>
-<td>10</td>
-<td>com.testscripts.LoginGoogleTests@6c1a5b54</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateOrderIdVip()'><b>validateOrderIdVip</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleAmazonPayTest.validateOrderIdVip()'><b>validateOrderIdVip</b><br>Test class: com.testscripts.LoginGoogleAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleAmazonPayTest@738dc9b</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validateCouponRemove()'><b>validateCouponRemove</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewEmailTest.validateOrderSuccessMessage()'><b>validateOrderSuccessMessage</b><br>Test class: com.testscripts.LoginWithNewEmailTest</td>
-<td></td>
-<td>19</td>
-<td>com.testscripts.LoginWithNewEmailTest@d86a6f</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateCouponRemove()'><b>validateCouponRemove</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validateCoupon()'><b>validateCoupon</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest<br>Parameters: [Ljava.lang.String;@34893693</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validateCoupon()'><b>validateCoupon</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest<br>Parameters: [Ljava.lang.String;@6408a8ac</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleAmazonPayTest.validatephoenpeOrderMessage()'><b>validatephoenpeOrderMessage</b><br>Test class: com.testscripts.LoginGoogleAmazonPayTest<br>Parameters: [Ljava.lang.String;@2f70d78c</td>
-<td></td>
-<td>11</td>
-<td>com.testscripts.LoginGoogleAmazonPayTest@738dc9b</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validateWhatsappIsPresent()'><b>validateWhatsappIsPresent</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest<br>Parameters: [Ljava.lang.String;@456c53a</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validateEmailDisable()'><b>validateEmailDisable</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailFreeTest.validateOrderConfirmation__freeExistingEmail()'><b>validateOrderConfirmation__freeExistingEmail</b><br>Test class: com.testscripts.LoginWithExistingEmailFreeTest<br>Parameters: [Ljava.lang.String;@7916568d</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailFreeTest@3c77d488</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validateTicketForAttendee_google_upi()'><b>validateTicketForAttendee_google_upi</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest<br>Parameters: [Ljava.lang.String;@58fadccb</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleUPIPaidTicketTest@71ba6d4e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.ValidateCoupon_Email()'><b>ValidateCoupon_Email</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest<br>Parameters: [Ljava.lang.String;@711fbcef</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewEmailTest.ValidateSigninWithNewEmail()'><b>ValidateSigninWithNewEmail</b><br>Test class: com.testscripts.LoginWithNewEmailTest<br>Parameters: [Ljava.lang.String;@43d2c8e3</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginWithNewEmailTest@d86a6f</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewEmailTest.ValidateCoupon_Email()'><b>ValidateCoupon_Email</b><br>Test class: com.testscripts.LoginWithNewEmailTest<br>Parameters: [Ljava.lang.String;@8bb5c2a</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginWithNewEmailTest@d86a6f</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validatePaymentUrl()'><b>validatePaymentUrl</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewEmailTest.validateAttendeeEmail()'><b>validateAttendeeEmail</b><br>Test class: com.testscripts.LoginWithNewEmailTest<br>Parameters: [Ljava.lang.String;@6a9d572</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewEmailTest@d86a6f</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleTests.validateAttendeeDetails_googleloginViewTickets()'><b>validateAttendeeDetails_googleloginViewTickets</b><br>Test class: com.testscripts.LoginGoogleTests<br>Parameters: [Ljava.lang.String;@a5df98c</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleTests@6c1a5b54</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validateOrderIdVip()'><b>validateOrderIdVip</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewEmailTest.validateOrderifVip_email()'><b>validateOrderifVip_email</b><br>Test class: com.testscripts.LoginWithNewEmailTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewEmailTest@d86a6f</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailFreeTest.validateDisableEmail__freeExistingEmail()'><b>validateDisableEmail__freeExistingEmail</b><br>Test class: com.testscripts.LoginWithExistingEmailFreeTest<br>Parameters: [Ljava.lang.String;@5f1dadf4</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailFreeTest@3c77d488</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validatePaymentUrl()'><b>validatePaymentUrl</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateAttendeeDetailsViewticket_NewEmail()'><b>validateAttendeeDetailsViewticket_NewEmail</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest<br>Parameters: [Ljava.lang.String;@d15f031</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailFreeTest.validateOrderSuccessPage_freeExistingEmail()'><b>validateOrderSuccessPage_freeExistingEmail</b><br>Test class: com.testscripts.LoginWithExistingEmailFreeTest</td>
-<td></td>
-<td>12</td>
-<td>com.testscripts.LoginWithExistingEmailFreeTest@3c77d488</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleTests.validateOrderSuccessMessage()'><b>validateOrderSuccessMessage</b><br>Test class: com.testscripts.LoginGoogleTests</td>
-<td></td>
-<td>12</td>
-<td>com.testscripts.LoginGoogleTests@6c1a5b54</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewEmailTest.validateAttendeeDetailsReg_NewEmail()'><b>validateAttendeeDetailsReg_NewEmail</b><br>Test class: com.testscripts.LoginWithNewEmailTest<br>Parameters: [Ljava.lang.String;@45dfb6a4</td>
-<td></td>
-<td>5</td>
-<td>com.testscripts.LoginWithNewEmailTest@d86a6f</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateWhatsappCheckbox()'><b>validateWhatsappCheckbox</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest<br>Parameters: [Ljava.lang.String;@202ba60a</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleTests.validateBuyerDetails_google()'><b>validateBuyerDetails_google</b><br>Test class: com.testscripts.LoginGoogleTests<br>Parameters: [Ljava.lang.String;@12ebcdf6</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleTests@6c1a5b54</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewEmailTest.validateWhatsappCheckbox()'><b>validateWhatsappCheckbox</b><br>Test class: com.testscripts.LoginWithNewEmailTest<br>Parameters: [Ljava.lang.String;@30dd23e2</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewEmailTest@d86a6f</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validateAmazonPe()'><b>validateAmazonPe</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleUPIPaidTicketTest@71ba6d4e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validateCouponRemove()'><b>validateCouponRemove</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewEmailTest.ValidateOrderIdFree_email()'><b>ValidateOrderIdFree_email</b><br>Test class: com.testscripts.LoginWithNewEmailTest</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginWithNewEmailTest@d86a6f</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateAmazonPe()'><b>validateAmazonPe</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.ValidateSigninWithNewEmail_upiPay()'><b>ValidateSigninWithNewEmail_upiPay</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest<br>Parameters: [Ljava.lang.String;@88fc9cb</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validateBuyForSomeone()'><b>validateBuyForSomeone</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest<br>Parameters: [Ljava.lang.String;@75693526</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailFreeTest.validateAttendeeDetails_googleCompleteReg()'><b>validateAttendeeDetails_googleCompleteReg</b><br>Test class: com.testscripts.LoginWithExistingEmailFreeTest<br>Parameters: [Ljava.lang.String;@39a1c200</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginWithExistingEmailFreeTest@3c77d488</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validateEmailDisable()'><b>validateEmailDisable</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validateAmazonOrderMessage()'><b>validateAmazonOrderMessage</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest<br>Parameters: [Ljava.lang.String;@603a34e5</td>
-<td></td>
-<td>9</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleAmazonPayTest.ValidateWhatsappConfigEnable_UPi()'><b>ValidateWhatsappConfigEnable_UPi</b><br>Test class: com.testscripts.LoginGoogleAmazonPayTest<br>Parameters: [Ljava.lang.String;@160d68b8</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleAmazonPayTest@738dc9b</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.ValidateWhatsappConfigEnable_UPi()'><b>ValidateWhatsappConfigEnable_UPi</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest<br>Parameters: [Ljava.lang.String;@2af1bf5a</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleUPIPaidTicketTest@71ba6d4e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validateAmazonPe()'><b>validateAmazonPe</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateAttendeeEmail()'><b>validateAttendeeEmail</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest<br>Parameters: [Ljava.lang.String;@1d77d9c6</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validateAttendeeDetailsViewticket_NewEmail()'><b>validateAttendeeDetailsViewticket_NewEmail</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest<br>Parameters: [Ljava.lang.String;@2c5b4b91</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validatephoenpeOrderMessage()'><b>validatephoenpeOrderMessage</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest<br>Parameters: [Ljava.lang.String;@51eeae0a</td>
-<td></td>
-<td>11</td>
-<td>com.testscripts.LoginGoogleUPIPaidTicketTest@71ba6d4e</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validatephoenpeOrderMessage()'><b>validatephoenpeOrderMessage</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest<br>Parameters: [Ljava.lang.String;@76c2d002</td>
-<td></td>
-<td>11</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleAmazonPayTest.validateTicketForAttendee_google_upi()'><b>validateTicketForAttendee_google_upi</b><br>Test class: com.testscripts.LoginGoogleAmazonPayTest<br>Parameters: [Ljava.lang.String;@55589ef5</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleAmazonPayTest@738dc9b</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleAmazonPayTest.validateAttendeeDetails_GoogleAmazon()'><b>validateAttendeeDetails_GoogleAmazon</b><br>Test class: com.testscripts.LoginGoogleAmazonPayTest<br>Parameters: [Ljava.lang.String;@23a9400c</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleAmazonPayTest@738dc9b</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleTests.validateViewTicketUrl_google()'><b>validateViewTicketUrl_google</b><br>Test class: com.testscripts.LoginGoogleTests</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginGoogleTests@6c1a5b54</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateCouponRemove()'><b>validateCouponRemove</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewEmailTest.validateAttendeeDetailsViewticket_NewEmail()'><b>validateAttendeeDetailsViewticket_NewEmail</b><br>Test class: com.testscripts.LoginWithNewEmailTest<br>Parameters: [Ljava.lang.String;@793248d</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewEmailTest@d86a6f</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewEmailTest.ValidateEmailDisable_Email()'><b>ValidateEmailDisable_Email</b><br>Test class: com.testscripts.LoginWithNewEmailTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithNewEmailTest@d86a6f</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateAmazonOrderMessage()'><b>validateAmazonOrderMessage</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest<br>Parameters: [Ljava.lang.String;@6731b6bd</td>
-<td></td>
-<td>8</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleTests.ValidateOrderId_google()'><b>ValidateOrderId_google</b><br>Test class: com.testscripts.LoginGoogleTests</td>
-<td></td>
-<td>1</td>
-<td>com.testscripts.LoginGoogleTests@6c1a5b54</td></tr>
-<tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validateOrderIdFree()'><b>validateOrderIdFree</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
-<tr>
-<td title='com.testscripts.LoginGoogleAmazonPayTest.validateAmazonPe()'><b>validateAmazonPe</b><br>Test class: com.testscripts.LoginGoogleAmazonPayTest</td>
-<td></td>
-<td>0</td>
-<td>com.testscripts.LoginGoogleAmazonPayTest@738dc9b</td></tr>
+<td>com.testscripts.LoginGoogleUPIPaidTicketTest@70e9c95d</td></tr>
 <tr>
 <td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validatePhonepe()'><b>validatePhonepe</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest</td>
 <td></td>
 <td>2</td>
-<td>com.testscripts.LoginGoogleUPIPaidTicketTest@71ba6d4e</td></tr>
+<td>com.testscripts.LoginGoogleUPIPaidTicketTest@70e9c95d</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithExistingEmailFreeTest.validateMobileWithExistingEmail_free()'><b>validateMobileWithExistingEmail_free</b><br>Test class: com.testscripts.LoginWithExistingEmailFreeTest<br>Parameters: [Ljava.lang.String;@768f2398</td>
+<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validatephoenpeOrderMessage()'><b>validatephoenpeOrderMessage</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest<br>Parameters: [Ljava.lang.String;@46046c06</td>
+<td></td>
+<td>3</td>
+<td>com.testscripts.LoginGoogleUPIPaidTicketTest@70e9c95d</td></tr>
+<tr>
+<td title='com.testscripts.LoginGoogleTests.validateOrderSuccessMessage()'><b>validateOrderSuccessMessage</b><br>Test class: com.testscripts.LoginGoogleTests</td>
+<td></td>
+<td>3</td>
+<td>com.testscripts.LoginGoogleTests@73e9cf30</td></tr>
+<tr>
+<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validateAmazonPe()'><b>validateAmazonPe</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest</td>
+<td></td>
+<td>0</td>
+<td>com.testscripts.LoginGoogleUPIPaidTicketTest@70e9c95d</td></tr>
+<tr>
+<td title='com.testscripts.LoginGoogleTests.validateBuyerDetails_google()'><b>validateBuyerDetails_google</b><br>Test class: com.testscripts.LoginGoogleTests<br>Parameters: [Ljava.lang.String;@93824eb</td>
 <td></td>
 <td>1</td>
-<td>com.testscripts.LoginWithExistingEmailFreeTest@3c77d488</td></tr>
+<td>com.testscripts.LoginGoogleTests@73e9cf30</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validateAmazonPe()'><b>validateAmazonPe</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest</td>
+<td title='com.testscripts.LoginGoogleTests.validateViewTicketUrl_google()'><b>validateViewTicketUrl_google</b><br>Test class: com.testscripts.LoginGoogleTests</td>
+<td></td>
+<td>1</td>
+<td>com.testscripts.LoginGoogleTests@73e9cf30</td></tr>
+<tr>
+<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validateOrderIdVip()'><b>validateOrderIdVip</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest</td>
 <td></td>
 <td>0</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
+<td>com.testscripts.LoginGoogleUPIPaidTicketTest@70e9c95d</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithNewMailAmazonPayTest.validateOrderIdFree_amazonpay()'><b>validateOrderIdFree_amazonpay</b><br>Test class: com.testscripts.LoginWithNewMailAmazonPayTest</td>
+<td title='com.testscripts.LoginGoogleTests.ValidateOrderId_google()'><b>ValidateOrderId_google</b><br>Test class: com.testscripts.LoginGoogleTests</td>
+<td></td>
+<td>1</td>
+<td>com.testscripts.LoginGoogleTests@73e9cf30</td></tr>
+<tr>
+<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validatePaymentUrl()'><b>validatePaymentUrl</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest</td>
 <td></td>
 <td>0</td>
-<td>com.testscripts.LoginWithNewMailAmazonPayTest@5ab956d7</td></tr>
+<td>com.testscripts.LoginGoogleUPIPaidTicketTest@70e9c95d</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithExistingEmailFreeTest.validateOrderID_freeExistingEmail()'><b>validateOrderID_freeExistingEmail</b><br>Test class: com.testscripts.LoginWithExistingEmailFreeTest</td>
+<td title='com.testscripts.LoginGoogleTests.validateAttendeeDetails_googleCompleteReg()'><b>validateAttendeeDetails_googleCompleteReg</b><br>Test class: com.testscripts.LoginGoogleTests<br>Parameters: [Ljava.lang.String;@7af52ec7</td>
 <td></td>
 <td>0</td>
-<td>com.testscripts.LoginWithExistingEmailFreeTest@3c77d488</td></tr>
+<td>com.testscripts.LoginGoogleTests@73e9cf30</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithExistingEmailAmazonPayTest.validatePaymentUrl()'><b>validatePaymentUrl</b><br>Test class: com.testscripts.LoginWithExistingEmailAmazonPayTest</td>
+<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.validateTicketForAttendee_google_upi()'><b>validateTicketForAttendee_google_upi</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest<br>Parameters: [Ljava.lang.String;@77c1e611</td>
 <td></td>
 <td>0</td>
-<td>com.testscripts.LoginWithExistingEmailAmazonPayTest@4145bad8</td></tr>
+<td>com.testscripts.LoginGoogleUPIPaidTicketTest@70e9c95d</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithExistingEmailUpiPayTest.validateWhatsappIsPresent()'><b>validateWhatsappIsPresent</b><br>Test class: com.testscripts.LoginWithExistingEmailUpiPayTest<br>Parameters: [Ljava.lang.String;@1f4fa465</td>
+<td title='com.testscripts.LoginGoogleTests.validateAttendeeDetails_googleloginViewTickets()'><b>validateAttendeeDetails_googleloginViewTickets</b><br>Test class: com.testscripts.LoginGoogleTests<br>Parameters: [Ljava.lang.String;@12c0c0b3</td>
 <td></td>
 <td>0</td>
-<td>com.testscripts.LoginWithExistingEmailUpiPayTest@63376bed</td></tr>
+<td>com.testscripts.LoginGoogleTests@73e9cf30</td></tr>
 <tr>
-<td title='com.testscripts.LoginWithNewMailUpiPayTest.validatephoenpeOrderMessage()'><b>validatephoenpeOrderMessage</b><br>Test class: com.testscripts.LoginWithNewMailUpiPayTest<br>Parameters: [Ljava.lang.String;@1e65c4d</td>
+<td title='com.testscripts.LoginGoogleUPIPaidTicketTest.ValidateWhatsappConfigEnable_UPi()'><b>ValidateWhatsappConfigEnable_UPi</b><br>Test class: com.testscripts.LoginGoogleUPIPaidTicketTest<br>Parameters: [Ljava.lang.String;@5a97b17c</td>
 <td></td>
-<td>7</td>
-<td>com.testscripts.LoginWithNewMailUpiPayTest@2892d68</td></tr>
+<td>0</td>
+<td>com.testscripts.LoginGoogleUPIPaidTicketTest@70e9c95d</td></tr>
 </table><p>
 </body>
 </html>

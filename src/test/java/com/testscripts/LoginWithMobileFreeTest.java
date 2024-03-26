@@ -47,7 +47,7 @@ public class LoginWithMobileFreeTest extends TestBase {
 
 	@Test(priority = 2, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
 
-	public void validateDisableEmail_Mbfree(String row[]) throws Throwable {
+	public void validateDisableMobile_Mbfree(String row[]) throws Throwable {
 		mobileFree.verifydisableEmail(row[2], row[3], row[4]);
 	}
 
@@ -80,5 +80,25 @@ public class LoginWithMobileFreeTest extends TestBase {
 
 		mobileFree.verifyCompleteRegistration(row[10], row[11], row[12], row[13], row[14], row[15]);
 	}
+	
+	
+	
+	@Test(priority = 8, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
+	public void validateAttendeeDetails_MobileloginViewTicketsFree(String rowindex[]) {
+		mobileFree.verifyAttendeeDetailsInViewTickets(rowindex[1], rowindex[5], rowindex[6]);
+	}
+
+	@Test(priority = 9, dataProvider = "dataFetch", dataProviderClass = LoginWithMobileFreeTest.class)
+	public void validateAttendeeDetails_MobileLoginCompleteRegFree(String rowindex[]) throws Throwable {
+		mobileFree.verifyAttendeeDetailsInRegistration(rowindex[1], rowindex[5], rowindex[6]);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 
 }
