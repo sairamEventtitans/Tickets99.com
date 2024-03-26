@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="applicationtests.PayerWillPayRazorTest">
+      <class name="applicationtests.OrderValidation">
         <methods>
           <include name="validatePayment_Collected" invocation-numbers="0"/>
-          <include name="validateAmount_owe" invocation-numbers="0"/>
+          <include name="teardown"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- applicationtests.PayerWillPayRazorTest -->
+      </class> <!-- applicationtests.OrderValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

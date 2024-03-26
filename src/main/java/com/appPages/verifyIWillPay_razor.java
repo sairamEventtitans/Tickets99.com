@@ -74,13 +74,13 @@ public class verifyIWillPay_razor extends TestBaseOrganizer {
 
 	@FindBy(xpath = "//*[@id=\"row5813\"]/td[15]")
 	WebElement paymentCollected_element;
-	
-	@FindBy (xpath = "//*[@id=\"row5813\"]/td[14]")
+
+	@FindBy(xpath = "//*[@id=\"row5813\"]/td[14]")
 	WebElement RazorPay_element;
-	
-	@FindBy (xpath = "//*[@id=\"row5813\"]/td[18]")   ////*[@id="row5813"]/td[18]
+
+	@FindBy(xpath = "//*[@id=\"row5813\"]/td[18]") //// *[@id="row5813"]/td[18]
 	WebElement amountOwe_element;
-	
+
 	public verifyIWillPay_razor(WebDriver driver) {
 
 		PageFactory.initElements(driver, this);
@@ -94,7 +94,7 @@ public class verifyIWillPay_razor extends TestBaseOrganizer {
 
 		Login_button.click();
 
-		Thread.sleep(2000); 
+		Thread.sleep(2000);
 
 	}
 
@@ -141,7 +141,7 @@ public class verifyIWillPay_razor extends TestBaseOrganizer {
 	public void cartValue(String cartvalue) throws Throwable {
 
 		JavascriptExecutor js = (JavascriptExecutor) driver;
-	//	js.executeScript("document.body.style.zoom='33%'");
+		// js.executeScript("document.body.style.zoom='33%'");
 
 		String cartAmount = cartvalue;
 		System.out.println("The cart value from excel " + cartAmount);
@@ -159,12 +159,12 @@ public class verifyIWillPay_razor extends TestBaseOrganizer {
 
 	}
 
-	//Else conditions and execute when only discount applied
+	// Else conditions and execute when only discount applied
 
 	public void verifyDiscount(String discount) {
 
 		String discount_offered = discount;
-		System.out.println("discount offered "+ discount_offered);
+		System.out.println("discount offered " + discount_offered);
 
 		String discount_table = discount_element.getText().replace("₹", "").trim();
 
@@ -175,7 +175,7 @@ public class verifyIWillPay_razor extends TestBaseOrganizer {
 	public void verifyPlatformFee(String Pfee) {
 
 		String Platform_Fee = Pfee;
-		System.out.println("platform fee in excel "+Platform_Fee);
+		System.out.println("platform fee in excel " + Platform_Fee);
 
 		String platForm_table = platform_Fee.getText().replace("₹", "").trim();
 
@@ -186,29 +186,29 @@ public class verifyIWillPay_razor extends TestBaseOrganizer {
 	public void verifyPaymentCollected(String PayCollected) {
 
 		String payment_Collected = PayCollected;
-		System.out.println("payment collected in excel "+payment_Collected);
+		System.out.println("payment collected in excel " + payment_Collected);
 
 		String paymentCollected_table = paymentCollected_element.getText().replace("₹", "").trim();
 		Assert.assertEquals(payment_Collected, paymentCollected_table);
 
 	}
-	
+
 	public void verifyRazorPay_charges(String razor_pay) {
-		
-		String razorPay_fee=razor_pay;
-		System.out.println("razor pay charges as perexcel "+razorPay_fee);
-		String razorPay_table=RazorPay_element.getText().replace("₹","").trim();
+
+		String razorPay_fee = razor_pay;
+		System.out.println("razor pay charges as perexcel " + razorPay_fee);
+		String razorPay_table = RazorPay_element.getText().replace("₹", "").trim();
 		Assert.assertEquals(razorPay_fee, razorPay_table);
-		
+
 	}
-	
+
 	public void verifyamountOwe(String amountOwe) {
-	
-		String amount_owe=amountOwe;
-		System.out.println("amount owe asper excel "+amount_owe);
-		String amountOwe_table=amountOwe_element.getText();
+
+		String amount_owe = amountOwe;
+		System.out.println("amount owe asper excel " + amount_owe);
+		String amountOwe_table = amountOwe_element.getText();
 		Assert.assertEquals(amountOwe_table, amount_owe);
-		
+
 	}
 
 }

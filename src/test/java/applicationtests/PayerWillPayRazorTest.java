@@ -1,14 +1,13 @@
 package applicationtests;
 
 import org.testng.Assert;
- import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import com.appPages.VerifyPayerWillPay_razor;
 import com.appPages.verifyIWillPay_razor;
 import com.base.TestBaseOrganizer;
-import com.testscripts.OrderValidation;
 import com.utils.Utils;
 
 public class PayerWillPayRazorTest extends TestBaseOrganizer {

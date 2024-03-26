@@ -1,4 +1,4 @@
-package com.testscripts;
+package applicationtests;
 
 import org.apache.poi.ss.usermodel.Row;
 import org.testng.Assert;
@@ -92,7 +92,7 @@ public class OrderValidation extends TestBaseOrganizer {
 
 		appLogin.verifyRazorPay_charges(row[14]);
 
-	}
+	}   
 
 	@Test(priority = 9, dataProvider = "dataFetch2", dataProviderClass = OrderValidation.class)
 	public void validateAmount_owe(String row[]) {
@@ -113,6 +113,6 @@ public class OrderValidation extends TestBaseOrganizer {
 
 	public void capture(String methodname) throws Throwable {
 		UtilsApp.CapturescreenShot(methodname);
-	  }
+	}
 
 }
